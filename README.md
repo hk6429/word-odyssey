@@ -48,6 +48,8 @@ Google 登入使用 Google Identity Services：將 Google Cloud 網頁用戶端�
 
 英倫插畫以內建 imagegen 產生；章節圖以每張 10 格的圖集呈現，100 個章節畫面不是 100 個圖片檔。見 [主視覺來源](docs/art-prompt.md) 與 [章節圖提示](docs/chapter-art-prompts.md)。
 
+冒險地圖另有 10 張完整區域地景，每 10 關切換一張，包含科茲窩、牛津、倫敦、劍橋、約克、湖區、峰區、愛丁堡、蘇格蘭高地與歸途。手機以局部左右捲動保留完整風景與可讀路標；詳見 [地圖素材與驗證](docs/map-qa.md)。
+
 ## 儲存與隱私
 
 訪客進度存於瀏覽器 localStorage。登入後，伺服器驗證 Google ID token，使用 HttpOnly、SameSite session cookie，依 Google 帳號儲存單字進度、角色、故事選擇與語言偏好。資料庫位於 `data/progress.sqlite`，不提交至 Git。HTTPS 環境會加上 Secure cookie。

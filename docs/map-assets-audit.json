@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-03",
+  "method": "Built-in image_gen; original PNG files; local HTTP SHA-256 readback",
+  "images": [
+    {
+      "region": "cotswolds",
+      "src": "assets/map-region-01.png",
+      "bytes": 3791953,
+      "width": 1774,
+      "height": 887,
+      "sha256": "0c2469f443a28c3a75c07e6909c937f9f96d3c841d865689548fd0e85119bc97",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    },
+    {
+      "region": "oxford",
+      "src": "assets/map-region-02.png",
+      "bytes": 3754022,
+      "width": 1774,
+      "height": 887,
+      "sha256": "6420e5ac20850df136c1c3a8985807c04cd4d39003b7904bb34a1b8929db958b",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    },
+    {
+      "region": "london",
+      "src": "assets/map-region-03.png",
+      "bytes": 3711109,
+      "width": 1774,
+      "height": 887,
+      "sha256": "33ef087dadeed727fed5153b14fe00f2aa5fc5d45d8cbf14e440110e42aeba4e",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    },
+    {
+      "region": "cambridge",
+      "src": "assets/map-region-04.png",
+      "bytes": 3728570,
+      "width": 1774,
+      "height": 887,
+      "sha256": "05cfbe46d83e2abbf0cbfc13904ce1b60d6803dc00ea2e6246e28d72b0f4e47a",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    },
+    {
+      "region": "york",
+      "src": "assets/map-region-05.png",
+      "bytes": 3804446,
+      "width": 1774,
+      "height": 887,
+      "sha256": "d2634e1a3e541eee730046cf1de5326fc1378522a793344079390ffd49a4f590",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    },
+    {
+      "region": "lake-district",
+      "src": "assets/map-region-06.png",
+      "bytes": 3663053,
+      "width": 1774,
+      "height": 887,
+      "sha256": "a12bec11e642a5f35a2e2dfd4bf44d650b245f1728e158aff4a5ae389eb89d19",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    },
+    {
+      "region": "peak-district",
+      "src": "assets/map-region-07.png",
+      "bytes": 3844712,
+      "width": 1774,
+      "height": 887,
+      "sha256": "fffae535e370b3352f71c7f635d97d8bd8f683a16a81627cfb8672f1c6850ed6",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    },
+    {
+      "region": "edinburgh",
+      "src": "assets/map-region-08.png",
+      "bytes": 3767221,
+      "width": 1774,
+      "height": 887,
+      "sha256": "18279d91d935f58241afb94ac27ea0b1be570a4becfc7bb8e6cf9318c5da219c",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    },
+    {
+      "region": "highlands",
+      "src": "assets/map-region-09.png",
+      "bytes": 3705917,
+      "width": 1774,
+      "height": 887,
+      "sha256": "1e014e6a0c271ce1346ad686d618bcda17aaf9baaab72b1f10118a85a4c52ef8",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    },
+    {
+      "region": "homeward",
+      "src": "assets/map-region-10.png",
+      "bytes": 3859422,
+      "width": 1774,
+      "height": 887,
+      "sha256": "772d198ba530d88b1762371e0b87692ec1f3dd5c3c7196c71d7a76dd09275ad1",
+      "httpStatus": 200,
+      "mime": "image/png",
+      "readbackMatch": true
+    }
+  ]
+}

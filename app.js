@@ -4,6 +4,7 @@ import { locale, t, setLocale, applyTranslations, wordMeaning, wordPos, hasEngli
 import { initAuth, queueCloudSave, refreshAuthLanguage, canUseLocalSnapshot } from './auth.js';
 import { getAdventure, setAdventure, setStoryLocale, mountAdventure, getStoryOpening, getReading, mountEncounter, mountReading } from './story.js';
 import { stages, MILESTONES, TARGET_WORDS } from './data.js';
+import { MAP_SCENES, MAP_POINTS } from './map-scenes.js';
 import { createState, loadState, startSession, reviewSession, answer, learnNext, getStats } from './engine.js';
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
@@ -88,13 +89,73 @@ function renderMilestones(stats){
  $('#milestones').innerHTML=MILESTONES.map((band,i)=>`<button class="milestone ${stats.learned>=band.target?'achieved':''}" data-band="${band.from}"><span class="milestone-index">0${i+1}</span><div><small>${t('chapterRange',{from:band.from,to:band.to})} · ${esc(locale==='en'?band.english:band.title)}</small><strong>${band.target.toLocaleString()}<em> ${t('cumulative')}</em></strong><div class="milestone-track"><span style="width:${Math.min(100,stats.learned/band.target*100)}%"></span></div></div>${icon(stats.learned>=band.target?'check':'arrow')}</button>`).join('');
  $$('[data-band]').forEach(b=>b.onclick=()=>{selected=Number(b.dataset.band);mapPage=Math.floor((selected-1)/10);renderMap();renderChapter();$('#map-title').scrollIntoView({behavior:'smooth',block:'center'});});
 }
-const coords=[[10.8,25.6],[34.2,23.4],[59.2,23.4],[88.5,28.5],[78,52],[50,52],[18,58],[16,80],[49,83],[88,81]];
+const mapImages=new Map();
+let displayedMap=-1,mapImageRequest=0,mapImageStatus='loading',mapSelection=null;
+function preloadMapImage(page){
+ const scene=MAP_SCENES[page];
+ if(!scene)return Promise.resolve(null);
+ if(!mapImages.has(page)){
+  const pending=new Promise((resolve,reject)=>{
+   const image=new Image();
+   image.onload=()=>resolve(image);
+   image.onerror=()=>reject(new Error(`Map scene unavailable: ${scene.id}`));
+   image.src=scene.src;
+  });
+  mapImages.set(page,pending);
+  pending.catch(()=>{if(mapImages.get(page)===pending)mapImages.delete(page);});
+ }
+ return mapImages.get(page);
+}
+function describeMapImage(){
+ const image=$('#map-scene'),status=$('#map-scene-status');
+ const loaded=Number(image.dataset.page);
+ image.alt=image.dataset.page!==undefined&&MAP_SCENES[loaded]
+  ? `${locale==='en'?'Watercolour map: ':'水彩旅程地圖：'}${MAP_SCENES[loaded][locale==='en'?'en':'zh']}`
+  : locale==='en'?'A preview of the British countryside journey':'英倫鄉野旅程預覽';
+ status.hidden=mapImageStatus==='ready';
+ status.textContent=mapImageStatus==='error'
+  ? (locale==='en'?'Landscape unavailable · journey preview':'地景暫時無法載入 · 旅程預覽')
+  : (locale==='en'?'Unfolding the landscape…':'正在展開地景⋯');
+ $('.map-canvas').setAttribute('aria-busy',String(mapImageStatus==='loading'));
+}
+function updateMapImage(page){
+ if(displayedMap===page&&mapImageStatus!=='error'){describeMapImage();return;}
+ displayedMap=page;mapImageStatus='loading';describeMapImage();
+ const request=++mapImageRequest;
+ preloadMapImage(page).then(image=>{
+  if(request!==mapImageRequest)return;
+  $('#map-scene').src=image.src;$('#map-scene').dataset.page=String(page);
+  mapImageStatus='ready';describeMapImage();
+ }).catch(()=>{
+  if(request!==mapImageRequest)return;
+  $('#map-scene').src='assets/hero-journey.png';delete $('#map-scene').dataset.page;
+  mapImageStatus='error';describeMapImage();
+ });
+ [page-1,page+1].forEach(neighbour=>preloadMapImage(neighbour).catch(()=>{}));
+}
+function revealMapStage(id,{smooth=false}={}){
+ const viewport=$('#map-viewport'),node=$(`[data-stage="${id}"]`);
+ if(!node||viewport.scrollWidth<=viewport.clientWidth)return;
+ const left=node.offsetLeft-viewport.clientWidth/2;
+ viewport.scrollTo({left:Math.max(0,Math.min(left,viewport.scrollWidth-viewport.clientWidth)),behavior:smooth&&!matchMedia('(prefers-reduced-motion: reduce)').matches?'smooth':'instant'});
+}
 function renderMap(){
  const pageStages=stages.slice(mapPage*10,mapPage*10+10);
- $('#map-nodes').innerHTML=pageStages.map((s,i)=>{const complete=state.completed.includes(s.id),current=s.id===unlocked()&&!complete;return `<button class="map-node ${complete?'complete':current?'current':'locked'} ${selected===s.id?'selected':''}" style="left:${coords[i][0]}%;top:${coords[i][1]}%" data-stage="${s.id}" aria-label="${esc(t('stageLabel',{id:s.id,title:stageTitle(s),status:t(complete?'completed':current?'available':'locked')}))}" ${current?'aria-current="step"':''}><span class="node-circle">${complete?icon('check'):current?s.id:icon('lock')}</span><span class="node-title">${String(s.id).padStart(2,'0')} · ${esc(stageTitle(s))}</span></button>`}).join('');
- $$('[data-stage]').forEach(b=>b.onclick=()=>{selected=Number(b.dataset.stage);renderMap();renderChapter();});
+ const focusStage=document.activeElement?.dataset.stage;
+ $('#map-nodes').innerHTML=pageStages.map((s,i)=>{const complete=state.completed.includes(s.id),current=s.id===unlocked()&&!complete;return `<button class="map-node ${complete?'complete':current?'current':'locked'} ${selected===s.id?'selected':''}" style="left:${MAP_POINTS[i][0]}%;top:${MAP_POINTS[i][1]}%" data-stage="${s.id}" aria-label="${esc(t('stageLabel',{id:s.id,title:stageTitle(s),status:t(complete?'completed':current?'available':'locked')}))}" aria-pressed="${selected===s.id}" ${current?'aria-current="step"':''}>${current?`<span class="node-flag">${icon('flag')} ${locale==='en'?'YOU ARE HERE':'你的足跡'}</span>`:''}<span class="node-circle">${complete?icon('check'):s.id}${!complete&&!current?`<span class="node-lock">${icon('lock')}</span>`:''}</span><span class="node-title">${String(s.id).padStart(2,'0')} · ${esc(stageTitle(s))}</span></button>`}).join('');
+ $$('[data-stage]').forEach(b=>{
+  b.onclick=()=>{selected=Number(b.dataset.stage);renderMap();renderChapter();};
+  b.onfocus=()=>revealMapStage(Number(b.dataset.stage),{smooth:true});
+ });
+ if(focusStage)$(`[data-stage="${focusStage}"]`)?.focus({preventScroll:true});
  $('#chapter-select').value=String(mapPage);$('#previous-map').disabled=mapPage===0;$('#next-map').disabled=mapPage===9;
- $('#region-name').textContent=pageStages[0].region.toUpperCase();$('#map-range').textContent=t('chapterRange',{from:pageStages[0].id,to:pageStages.at(-1).id});
+ $('#region-name').textContent=stagePlace(pageStages[0]);
+ $('#region-number').textContent=`${locale==='en'?'REGION':'旅程區域'} ${String(mapPage+1).padStart(2,'0')} / 10`;
+ $('#map-range').textContent=t('chapterRange',{from:pageStages[0].id,to:pageStages.at(-1).id});
+ $('#map-pan-hint').textContent=locale==='en'?'↔ Swipe to explore the whole landscape':'↔ 左右滑動，探索整片地景';
+ $('#map-viewport').setAttribute('aria-label',locale==='en'?`${stagePlace(pageStages[0])} journey map, scroll horizontally to explore`:`${stagePlace(pageStages[0])}旅程地圖，可左右滑動探索`);
+ updateMapImage(mapPage);
+ if(mapSelection!==selected){const smooth=mapSelection!==null;mapSelection=selected;requestAnimationFrame(()=>revealMapStage(selected,{smooth}));}
 }
 function renderChapter(){
  stopSpeaking(); const s=stages[selected-1],complete=state.completed.includes(s.id),locked=s.id>unlocked(),available=s.words.length===s.quota,remaining=s.quota-learnedIn(s);

@@ -15,3 +15,48 @@
 html[lang="en"] .nav-item{font-size:11px;gap:9px}html[lang="en"] .brand small{font-size:7px;letter-spacing:.5px}html[lang="en"] .chapter-story{font-size:12px}html[lang="en"] .node-title{font-size:8px;max-width:100px;white-space:normal;line-height:1.35;text-align:center}html[lang="en"] .chapter-panel h3{font-size:22px}html[lang="en"] .hero-zh{font-size:16px;max-width:420px;line-height:1.5}html[lang="en"] .hero-description{font-size:12px}
 @media(max-width:1100px){.top-right>span:not(.top-seal){display:none}.topbar{gap:15px}}
 @media(max-width:640px){.topbar{height:auto;min-height:54px;justify-content:flex-end;gap:10px;padding:10px 20px}.topbar>div:first-child{display:none}.top-right{width:100%;justify-content:space-between}.top-right>.top-seal{display:none}.google-login{font-size:11px;min-height:36px}#language-toggle{font-size:11px;min-height:36px}.account-dialog-inner{padding:35px 23px 28px}.account-dialog-inner h2{font-size:23px}.account-dialog-inner p{font-size:12px}html[lang="en"] .hero-zh{font-size:14px}html[lang="en"] .hero-description{font-size:11px}html[lang="en"] .nav-item{font-size:10px}html[lang="en"] .chapter-panel h3{font-size:20px}html[lang="en"] .node-title{font-size:7px;max-width:75px}.lesson-language-note{padding:11px 23px 0;font-size:8px}}
+
+/* Illustrated journey maps retain the whole landscape on narrow screens. */
+.map-section{min-width:0}
+.map-frame{overflow:hidden;border:1px solid #78957e;border-radius:12px;background:#214e43;box-shadow:0 8px 26px #1d3d2820}
+.map-placebar{min-height:55px;display:flex;justify-content:space-between;align-items:center;padding:11px 18px;color:#fff6dc;background:#214e43}
+.map-placebar>div{display:flex;align-items:center;gap:16px}
+.map-placebar small{font-size:8px;letter-spacing:1.8px;color:#d3ddc3}
+.map-placebar strong{font:500 20px/1.25 var(--serif);letter-spacing:1px}
+.map-placebar .map-compass{position:static;opacity:1;color:#ecd79c;display:flex}
+.map-placebar .map-compass svg{width:27px;height:27px}
+.map-viewport{width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#c8b375 #214e43;outline-offset:-3px}
+.map-canvas{width:100%;height:auto;min-height:380px;aspect-ratio:2/1;border:0;border-radius:0;background:#9ba575 url('assets/hero-journey.png') center/100% 100% no-repeat;isolation:isolate}
+.map-scene{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;opacity:1;pointer-events:none;user-select:none}
+.map-canvas .route{pointer-events:none;stroke-dasharray:none;stroke-linecap:round}
+.map-canvas .route-shadow{stroke:#433b21;stroke-width:7;opacity:.35}
+.map-canvas .route-guide{stroke:#fff1bd;stroke-width:2.8;stroke-dasharray:1 10;opacity:.95}
+.map-node{z-index:1;transform:translate(-50%,-21px);width:134px;min-height:74px;padding:0;gap:5px;filter:none!important;outline-offset:4px;scroll-margin:28px}
+.map-node .node-circle{position:relative;flex-shrink:0;width:42px;height:42px;background:#fff8df;border:2px solid #72643a;font:600 17px/1 var(--serif);color:#334c36;box-shadow:0 3px 0 #554421,0 5px 10px #1a342d55;transition:transform .18s}
+.map-node .node-title,html[lang="en"] .map-node .node-title{max-width:134px;padding:5px 8px;border:1px solid #b09c68;border-radius:5px;background:#fff9e9f5;color:#253f31;font-size:10px;font-weight:600;line-height:1.4;white-space:normal;text-align:center;box-shadow:0 2px 5px #263e363d}
+.map-node .node-lock{position:absolute;right:-5px;bottom:-2px;width:18px;height:18px;border:1px solid #fff1cd;border-radius:50%;display:grid;place-items:center;background:#556750;color:#fff8df}
+.map-node.locked .node-circle .node-lock svg{width:10px;height:10px;stroke:currentColor;stroke-width:2}
+.map-node.complete .node-circle{background:#356550;border-color:#fff1cb;color:#fff3c9;box-shadow:0 3px 0 #193e2c,0 5px 10px #17332455}
+.map-node.complete .node-title{background:#e9f1de;color:#24472f;border-color:#668759}
+.map-node.current{z-index:3;transform:translate(-50%,-23px)}
+.map-node.current .node-circle{width:46px;height:46px;background:#1c5543;border:2px solid #ffebad;color:#fff6d2;outline:4px solid #fff9eaa8;box-shadow:0 0 0 8px #d7a837b3,0 6px 18px #17382b88;animation:map-beacon 3s ease-in-out infinite}
+.map-node.current .node-title{background:#1c5543;border-color:#ecd68d;color:#fff6d6;font-weight:600}
+.map-node.selected .node-title{text-decoration:none;outline:2px solid #a66e21;outline-offset:2px}
+.map-node.current.selected .node-title{outline-color:#fff2b8}
+.node-flag{position:absolute;left:50%;bottom:calc(100% + 9px);transform:translateX(-50%);display:flex;align-items:center;gap:5px;white-space:nowrap;padding:5px 8px;border-radius:4px 4px 4px 0;background:#a74729;color:#fff9de;border:1px solid #ffe6b4;box-shadow:0 2px 8px #25382260;font-size:8px;font-weight:700;letter-spacing:.3px}
+.node-flag::after{content:'';position:absolute;top:100%;left:50%;border:4px solid transparent;border-top-color:#a74729}
+.node-flag svg.icon{width:11px;height:11px;stroke-width:2}
+.map-node:hover .node-circle{transform:translateY(-3px)}
+.map-node:focus-visible{outline:3px solid #fff2b8;border-radius:8px;background:#214e433b}
+.map-scene-status{position:absolute;right:12px;bottom:12px;z-index:4;padding:7px 10px;border-radius:4px;background:#214e43ed;color:#fff6d6;font-size:10px;max-width:280px}
+.map-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:13px 17px;background:#f3f0df}
+.map-footer .map-legend{position:static;display:flex;gap:17px;font-size:10px;color:#3b5341}
+.map-footer .map-legend i{width:9px;height:9px;border:1px solid #746a44;background:#fff8df}
+.map-footer .map-legend .legend-current{background:#214e43;border-color:#214e43;box-shadow:0 0 0 2px #ddbc68}
+.map-footer .map-legend .legend-complete{background:#709763;border-color:#507b45}
+.map-pan-hint{display:none;font-size:10px;color:#576b4e;line-height:1.5}
+@keyframes map-beacon{50%{box-shadow:0 0 0 11px #dfb24d50,0 6px 18px #17382b88}}
+@media(min-width:901px) and (max-width:1280px){.journey-layout{grid-template-columns:minmax(0,1fr)}.chapter-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 22px}.chapter-panel .chapter-overline{grid-column:1}.chapter-panel h3{grid-column:1;grid-row:2;margin-top:13px}.chapter-english{grid-column:1;grid-row:3}.chapter-story{grid-column:1;grid-row:4;margin-top:14px;min-height:0}.chapter-meta{grid-column:2;grid-row:2/4;margin-top:0;border-top:0;align-content:center}.chapter-panel .primary{grid-column:2;grid-row:4;align-self:center;margin-top:10px}.chapter-hint{grid-column:2;grid-row:5}}
+@media(max-width:1000px){.map-canvas{min-width:760px;min-height:380px}.map-pan-hint{display:block}.map-footer{gap:8px}}
+@media(max-width:640px){.map-placebar{padding:12px 14px}.map-placebar>div{gap:12px}.map-placebar small{font-size:7px;letter-spacing:1px}.map-placebar strong{font-size:18px}.map-controls{gap:8px;flex-wrap:wrap}.map-controls>div{margin-left:auto}.map-controls select{max-width:190px;font-size:10px}.map-controls .icon-button{width:32px;height:32px;min-height:32px}.map-footer{padding:12px 14px}.map-footer .map-legend{font-size:9px;gap:13px}.map-node{width:134px}}
+@media(prefers-reduced-motion:reduce){.map-node.current .node-circle{animation:none}.map-node .node-circle{transition:none}}
