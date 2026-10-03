@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#214e43">
+  <meta name="description" content="跟著英倫潑墨地圖，走過一百關英雄旅程。先複習、再學習，把每個英文單字變成你的冒險裝備。">
+  <title>Word Odyssey 字旅｜你的英文英雄之旅</title>
+  <link rel="icon" type="image/svg+xml" href="assets/compass.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="story.css">
+  <link rel="stylesheet" href="voice.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">跳到主要內容</a>
+  <aside class="sidebar">
+    <a class="brand" href="#journey" aria-label="字旅首頁" data-i18n-aria="home"><span class="brand-icon" data-icon="compass"></span><span><strong>Word Odyssey</strong><small data-i18n="tagline">字 旅 · 英 文 英 雄 之 旅</small></span></a>
+    <div class="sidebar-section">YOUR ADVENTURE</div>
+    <nav aria-label="主要導覽" data-i18n-aria="navigation">
+      <button class="nav-item active" data-view="journey"><span data-icon="map"></span><span data-i18n="journey">冒險地圖</span><span class="nav-dot"></span></button>
+      <button class="nav-item" data-view="words"><span data-icon="book"></span><span data-i18n="words">我的單字行囊</span><span id="bag-count">0</span></button>
+      <button class="nav-item" data-view="journal"><span data-icon="feather"></span><span data-i18n="journal">成長手札</span></button>
+    </nav>
+    <div class="sidebar-note"><span class="tiny-star">✦</span><p data-i18n="note">每一個單字，<br>都是走向世界的一小步。</p><span class="note-line"></span><small>YOUR STORY STARTS HERE</small></div>
+    <div class="learner"><span class="avatar" data-icon="compass"></span><div><strong id="rank-label">初行旅人</strong><small id="side-level">LEVEL 01 · 故事由你展開</small></div></div>
+    <div class="local-note"><span class="status-dot"></span><span data-i18n="local">進度儲存在此瀏覽器</span></div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><div><span class="eyebrow">THE ADVENTURE</span><span class="crumb"> / </span><span id="page-label" data-i18n="journey">冒險地圖</span></div><div class="top-right"><button class="language-toggle secondary" id="language-toggle" type="button" aria-label="Switch to English">English</button><div id="auth-controls"></div><span data-icon="leaf"></span><span data-i18n="pace">慢慢學，也能走很遠</span><span class="top-seal">W</span></div></header>
+    <main id="main" tabindex="-1">
+      <section id="journey-view" class="view">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-art" role="img" aria-label="彩色潑墨英倫風景：旅人沿鄉間小徑，越過石橋、尖塔城鎮，走向遠方城堡。" data-i18n-aria="heroArt"></div>
+          <div class="hero-content"><p class="overline"><span></span> A LITTLE BRAVER, WORD BY WORD</p><h1 id="hero-title">Every word,<br>a new <em>world.</em></h1><p class="hero-zh" data-i18n="heroSub">從一個單字開始，走出你的英雄之旅。</p><p class="hero-description" data-i18n="heroDescription">重溫走過的路，帶上新的力量。<br>下一段冒險，從今天的你出發。</p><button class="primary" id="start-adventure"><span data-i18n="start">開啟我的旅程</span> <span data-icon="arrow"></span></button><span class="hero-footnote" id="hero-footnote">第 1 關 · 每次最多 10 個新字 · 照自己的步調</span></div>
+          <div class="art-caption" data-i18n-text="caption"><span>FIELD NOTES / NO. 001</span>下一站，未知的自己</div>
+        </section>
+        <section id="adventure-panel" aria-live="polite"></section>
+        <section class="stats-strip" aria-label="冒險成果" data-i18n-aria="results">
+          <div><span class="stat-icon" data-icon="book"></span><p><strong id="stat-words">0</strong><span data-i18n="learned">已學單字</span></p><small data-i18n="bagPower">放進行囊的力量</small></div>
+          <div><span class="stat-icon" data-icon="flag"></span><p><strong id="stat-stages">0<span> / 100</span></strong><span data-i18n="footprints">旅程足跡</span></p><small data-i18n="oneStep">每一關，向前一步</small></div>
+          <div><span class="stat-icon" data-icon="spark"></span><p><strong id="stat-xp">0<span> XP</span></strong><span data-i18n="growth">累積成長</span></p><small id="stat-level">Lv. 1 初行旅人</small></div>
+          <div><span class="stat-icon" data-icon="repeat"></span><p><strong id="stat-review">0</strong><span data-i18n="due">到期複習</span></p><small data-i18n="familiar">熟悉的字，再見一次</small></div>
+        </section>
+        <section id="milestones" class="milestones" aria-label="三個累積單字里程碑" data-i18n-aria="milestones"></section>
+        <div class="journey-layout">
+          <section class="map-section" aria-labelledby="map-title"><div class="section-heading"><div><p class="overline">THE HERO’S JOURNEY</p><h2 id="map-title" data-i18n-text="mapTitle">你的冒險，正在展開<span data-i18n="mapSubtitle">一百關，累積 7,000 字</span></h2></div><span class="map-tag" data-i18n="mapTag">100 關 · 7,000 字</span></div>
+            <div class="map-controls"><span id="map-range">第 1–10 關</span><div><button class="icon-button" id="previous-map" aria-label="上一區地圖" data-i18n-aria="previousMap">←</button><select id="chapter-select" aria-label="選擇旅程區域" data-i18n-aria="chooseRegion"><option value="0">1–10 關 · 科茲窩</option><option value="1">11–20 關 · 牛津</option><option value="2">21–30 關 · 倫敦</option><option value="3">31–40 關 · 劍橋</option><option value="4">41–50 關 · 約克</option><option value="5">51–60 關 · 湖區</option><option value="6">61–70 關 · 峰區</option><option value="7">71–80 關 · 愛丁堡</option><option value="8">81–90 關 · 蘇格蘭高地</option><option value="9">91–100 關 · 歸途</option></select><button class="icon-button" id="next-map" aria-label="下一區地圖" data-i18n-aria="nextMap">→</button></div></div><div class="map-canvas"><div class="map-wash"></div><div class="map-landmark landmark-one" id="region-name">COTSWOLDS</div><div class="map-landmark landmark-two">THE UNKNOWN</div><div class="map-landmark landmark-three">THE WAY HOME</div><svg class="route" viewBox="0 0 760 410" preserveAspectRatio="none" aria-hidden="true"><path d="M 82 105 C 145 35 193 80 260 96 S 410 155 450 96 S 636 36 673 117 C 727 230 650 213 593 213 S 470 180 380 213 S 115 178 137 238 C 65 270 92 340 122 328 S 267 380 372 340 S 584 283 669 332"/></svg><div id="map-nodes"></div><div class="map-legend"><span data-i18n-text="current"><i class="legend-current"></i>當前冒險</span><span data-i18n-text="completed"><i class="legend-complete"></i>已通關</span><span data-i18n-text="unexplored"><i></i>待探索</span></div><span class="map-compass" data-icon="compass"></span></div>
+          </section>
+          <aside class="chapter-panel" id="chapter-panel" aria-live="polite"></aside>
+        </div>
+        <section class="ritual"><div class="ritual-title"><span data-icon="repeat"></span><div><p class="overline">THE SPIRAL OF GROWTH</p><h2 data-i18n="ritual">每次出發，都比上次更有力量</h2></div></div><div class="ritual-steps"><div><b>01</b><p><strong data-i18n="reviewOld">重溫舊知</strong><small data-i18n="reviewOldHint">重溫到期與上一段單字</small></p></div><span>→</span><div><b>02</b><p><strong data-i18n="exploreNew">探索新字</strong><small data-i18n="exploreNewHint">在故事裡認識新夥伴</small></p></div><span>→</span><div><b>03</b><p><strong data-i18n="takeTrial">迎接試煉</strong><small data-i18n="takeTrialHint">答錯再練，理解後前進</small></p></div></div></section>
+      </section>
+      <section id="words-view" class="view" hidden><div class="page-intro"><p class="overline">WORDS YOU CARRY</p><h1 data-i18n="words">我的單字行囊</h1><p data-i18n="wordsIntro">每一個記住的單字，都是下一段旅程的底氣。</p></div><div class="word-tools"><label class="search"><span data-icon="search"></span><input id="word-search" type="search" placeholder="搜尋英文或中文意思" data-i18n-placeholder="searchPlaceholder" aria-label="搜尋單字" data-i18n-aria="search"></label><select id="word-filter" aria-label="篩選單字" data-i18n-aria="filter"><option value="all" data-i18n="allWords">全部已學單字</option><option value="due" data-i18n="due">到期複習</option><option value="growing" data-i18n="growing">持續練習</option><option value="mastered" data-i18n="mastered">漸漸熟練</option></select><button class="primary" id="review-all"><span data-i18n="reviewWords">重溫我的單字</span> <span data-icon="repeat"></span></button></div><p id="word-summary" class="muted"></p><div id="word-grid" class="word-grid"></div></section>
+      <section id="journal-view" class="view" hidden><div class="page-intro"><p class="overline">NOTES FROM THE ROAD</p><h1 data-i18n="journal">成長手札</h1><p data-i18n="journalIntro">你走過的每一步，都在這裡留下痕跡。</p></div><div id="journal-content"></div><div class="data-actions"><button class="secondary" id="export-data"><span data-icon="download"></span><span data-i18n="export">匯出旅程備份</span></button><label class="secondary import-button"><span data-icon="upload"></span><span data-i18n="import">匯入備份</span><input id="import-data" type="file" accept="application/json,.json"></label><p data-i18n="backupHint">進度只存在此瀏覽器；換裝置前，記得把旅程帶走。</p></div></section>
+      <footer><span data-i18n="footerBrand">WORD ODYSSEY · 字旅</span><p data-i18n="footer">不必一次走得很遠，只要願意，再往前一點。</p><small data-i18n="targets">1,200 → 2,000 → 7,000 字</small></footer>
+    </main>
+  </div>
+  <dialog id="lesson-dialog" aria-labelledby="lesson-title"><div class="lesson-top"><span class="lesson-brand" data-i18n="onRoad">Word Odyssey · 旅途中</span><button id="close-lesson" class="icon-button" aria-label="離開本次練習" data-i18n-aria="leave"><span data-icon="close"></span></button></div><p class="lesson-language-note" data-i18n="languageLocked">請先完成或離開本次練習，再切換語言。</p><div class="lesson-progress" id="lesson-progress"></div><div id="lesson-body"></div></dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><h2 id="confirm-title" data-i18n="importTitle">將備份旅程帶回來？</h2><p data-i18n="importWarning">這會取代目前瀏覽器中的進度。建議先匯出現在的旅程。</p><div class="confirm-actions"><button class="secondary" id="cancel-import" data-i18n="cancel">取消</button><button class="primary" id="confirm-import" data-i18n="replace">取代並匯入</button></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

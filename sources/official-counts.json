@@ -1,0 +1,25 @@
+{
+  "ceecEntries": 6012,
+  "ceecEntriesByLevel": {
+    "1": 1002,
+    "4": 1002,
+    "6": 1002,
+    "5": 1002,
+    "3": 1002,
+    "2": 1002
+  },
+  "ceecPrimaryHeadwords": 6003,
+  "moeEntriesBySection": {
+    "moe1200": 1211,
+    "moe800": 794
+  },
+  "moeBasicPrimaryHeadwords": 1209,
+  "moeAllPrimaryHeadwords": 2003,
+  "unionPrimaryHeadwords": 6162,
+  "supplementNeededFor7000": 838,
+  "sourceSha256": {
+    "ceec-111.pdf": "27b010f8230b2e8763653ddb35783fe9e0140c143b0040f13839046aebb2a126",
+    "moe-108-english.pdf": "83dde39b16dfd3df84e6d9b2abca4cb7e822d925c8b3d1f4cb0df01527fb0abe"
+  },
+  "countingRule": "Remove parentheses and their contents, take first slash-delimited form, trim, lowercase; phrases remain one target. This is not full lemma/alias normalization."
+}

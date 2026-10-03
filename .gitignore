@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+artifacts/
+*.log
+.env*
+!.env.example
+
+data/
+sources/ecdict-full.csv*
+sources/*.pdf
+sources/*-text.txt
+sources/*-sample.png

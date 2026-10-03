@@ -1,0 +1,97 @@
+{
+  "atlases": 10,
+  "panelsPerAtlas": 10,
+  "illustratedChapters": 100,
+  "files": [
+    {
+      "file": "assets/chapters-01.png",
+      "size": 3347810,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "b6a8956fc7ac468a7c235d2cb3d1b99333b7c7e1593cd5ad443a06aab6f8b35a"
+    },
+    {
+      "file": "assets/chapters-02.png",
+      "size": 3085806,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "48632d0d5eb369b4dd51320f189ba9ff41fdea89ad341e3c9cf4666fa8916b87"
+    },
+    {
+      "file": "assets/chapters-03.png",
+      "size": 3237057,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "b1951afa34b5cae00df75b902aa64f355be0d3b12b7fe4803fd157bee06ba1bc"
+    },
+    {
+      "file": "assets/chapters-04.png",
+      "size": 3180252,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "2ddf39f2e9d4b1e160d436858fce77be9892339d4554d189a441936757533b31"
+    },
+    {
+      "file": "assets/chapters-05.png",
+      "size": 3159760,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "af65b235d6f3bcda83dd09d4fb820e5c8ff78fa58282c0af1895b7372749ddb7"
+    },
+    {
+      "file": "assets/chapters-06.png",
+      "size": 3318074,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "0e778297bc2a422ba371b51ce2ec590ddf9e0f424f84009da67c87b6086df09b"
+    },
+    {
+      "file": "assets/chapters-07.png",
+      "size": 3145147,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "b758732a7d64381fda71bdc0e86e2411aa5063c075d8e18012dd42b9e99389b3"
+    },
+    {
+      "file": "assets/chapters-08.png",
+      "size": 3083533,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "e5979525f91802b8c834fe1e1db51ae696381b8f5116d919308e383c1ca7a641"
+    },
+    {
+      "file": "assets/chapters-09.png",
+      "size": 3266007,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "f483b014982cb8fde285a19f6d8e3c8cd2e15ca0dd5d6c3eed242845da6c1913"
+    },
+    {
+      "file": "assets/chapters-10.png",
+      "size": 3394731,
+      "dimensions": [
+        1983,
+        793
+      ],
+      "sha256": "fa09218bdc3a90b4cebdca7557f23a02cca5b4dd3e254d2b7ab6a8c4b2c1021e"
+    }
+  ]
+}

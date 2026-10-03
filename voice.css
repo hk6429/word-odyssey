@@ -1,0 +1,17 @@
+.voice-toolbar{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;margin:0 0 22px;padding:10px 0;border-bottom:1px solid var(--line,#d8d4c7);font-size:12px;color:var(--muted,#625e52)}
+#page-voice-controls{margin-inline:42px}
+.voice-preferences{flex:1;min-width:180px}
+.voice-preferences summary{cursor:pointer;font-weight:600;min-height:32px;padding:8px 0}
+.voice-options{display:flex;flex-wrap:wrap;gap:12px;padding:10px 0 4px}
+.voice-options label{display:grid;gap:6px;min-width:135px}
+.voice-options select{max-width:100%;padding:8px 26px 8px 10px;border:1px solid var(--line,#d8d4c7);border-radius:5px;background:var(--paper,#faf8f1);color:var(--ink,#34382d);font:inherit}
+.voice-options p{flex-basis:100%;margin:0;line-height:1.7;max-width:660px}
+.voice-stop,.voice-read{background:transparent;border:1px solid var(--line,#d8d4c7);border-radius:5px;color:var(--ink,#34382d);font:inherit;padding:8px 12px;cursor:pointer;min-height:36px}
+.voice-stop:disabled{opacity:.45;cursor:default}
+.voice-stop:focus-visible,.voice-read:focus-visible,.voice-options select:focus-visible,.voice-preferences summary:focus-visible{outline:2px solid var(--sage,#536a50);outline-offset:3px}
+.voice-status{flex-basis:100%;line-height:1.7;overflow-wrap:anywhere}
+.voice-status:empty{display:none}
+.voice-read{font-size:12px;margin:6px 0 10px}
+.story-focus .voice-read{margin:0;border-color:transparent;background:rgba(85,107,70,.08);font-weight:600}
+#lesson-voice-controls{margin:0 34px 16px}
+@media(max-width:600px){#page-voice-controls{margin-inline:20px}#lesson-voice-controls{margin:0 20px 14px}.voice-toolbar{gap:8px}.voice-options label{min-width:120px;flex:1}}

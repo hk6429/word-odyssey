@@ -1,0 +1,17 @@
+{
+  "name": "word-odyssey",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "英倫潑墨風格的英雄之旅英文學習網站",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "google-auth-library": "^11.1.0"
+  }
+}

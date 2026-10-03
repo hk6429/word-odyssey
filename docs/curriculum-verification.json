@@ -1,0 +1,17 @@
+{
+  "realCorpus": true,
+  "milestones": {
+    "20": 1200,
+    "40": 2000,
+    "100": 7000
+  },
+  "quests": 740,
+  "stats": {
+    "learned": 7000,
+    "mastered": 0,
+    "due": 0,
+    "xp": 70000,
+    "level": 71,
+    "completed": 100
+  }
+}
