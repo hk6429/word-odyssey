@@ -1,0 +1,227 @@
+{
+  "aliases": {
+    "centre": "center",
+    "programme": "program",
+    "colour": "color",
+    "favour": "favor",
+    "favourite": "favorite",
+    "labour": "labor",
+    "behaviour": "behavior",
+    "honour": "honor",
+    "traveller": "traveler",
+    "defence": "defense",
+    "licence": "license",
+    "grey": "gray",
+    "theatre": "theater"
+  },
+  "words": [
+    {
+      "id": "me",
+      "word": "me",
+      "meaning": "我（受詞）",
+      "pos": "代名詞",
+      "definition": "The object form of I, used for the person who is speaking.",
+      "example": "Please sit next to me.",
+      "translation": "請坐在我旁邊。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "my",
+      "word": "my",
+      "meaning": "我的",
+      "pos": "限定詞",
+      "definition": "Belonging to the person who is speaking, used before a noun.",
+      "example": "This is my bag.",
+      "translation": "這是我的袋子。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "him",
+      "word": "him",
+      "meaning": "他（受詞）",
+      "pos": "代名詞",
+      "definition": "The object form of he, used for a male person already mentioned.",
+      "example": "Tom is here; please give him the book.",
+      "translation": "湯姆在這裡；請把書交給他。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "us",
+      "word": "us",
+      "meaning": "我們（受詞）",
+      "pos": "代名詞",
+      "definition": "The object form of we, used for the speaker and one or more other people.",
+      "example": "Please come with us.",
+      "translation": "請跟我們一起來。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "them",
+      "word": "them",
+      "meaning": "他們；她們；它們（受詞）",
+      "pos": "代名詞",
+      "definition": "The object form of they, used for people or things already mentioned.",
+      "example": "The children are here; please help them.",
+      "translation": "孩子們在這裡；請幫助他們。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "theirs",
+      "word": "theirs",
+      "meaning": "他們的；她們的；它們的（所有格代名詞）",
+      "pos": "代名詞",
+      "definition": "Something belonging to the people or things already mentioned.",
+      "example": "Our friends left a bag here; this bag is theirs.",
+      "translation": "朋友們把一個袋子留在這裡；這個袋子是他們的。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "sunscreen",
+      "word": "sunscreen",
+      "meaning": "防曬乳",
+      "pos": "名詞",
+      "definition": "A cream or lotion that protects your skin from the sun.",
+      "example": "Put on sunscreen before you go outside.",
+      "translation": "出門前先擦防曬乳。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "postcode",
+      "word": "postcode",
+      "meaning": "郵遞區號",
+      "pos": "名詞",
+      "definition": "A group of letters or numbers used to identify an area for mail delivery.",
+      "example": "Please write your postcode below your address.",
+      "translation": "請在地址下方填寫郵遞區號。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "smartphone",
+      "word": "smartphone",
+      "meaning": "智慧型手機",
+      "pos": "名詞",
+      "definition": "A mobile phone that can use apps and connect to the internet.",
+      "example": "I use a smartphone to check the weather.",
+      "translation": "我用智慧型手機查看天氣。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "headphones",
+      "word": "headphones",
+      "meaning": "耳罩式或頭戴式耳機",
+      "pos": "名詞",
+      "definition": "A device worn over or on both ears to listen to sound privately.",
+      "example": "Wear headphones to listen to the recording.",
+      "translation": "戴上耳機聆聽錄音。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "username",
+      "word": "username",
+      "meaning": "使用者名稱",
+      "pos": "名詞",
+      "definition": "A name used to identify a person when they sign in to a computer service.",
+      "example": "Enter your username to sign in.",
+      "translation": "輸入你的使用者名稱以登入。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "checklist",
+      "word": "checklist",
+      "meaning": "檢核表",
+      "pos": "名詞",
+      "definition": "A list of things to check or do so that nothing is missed.",
+      "example": "Use this checklist to pack your bag.",
+      "translation": "用這張檢核表整理你的行李。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    },
+    {
+      "id": "earbuds",
+      "word": "earbuds",
+      "meaning": "入耳式耳機",
+      "pos": "名詞",
+      "definition": "Small earphones that fit inside the outer part of your ears.",
+      "example": "Keep your earbuds in their case.",
+      "translation": "把入耳式耳機收在盒子裡。",
+      "exampleSource": "word-odyssey-editorial",
+      "reviewStatus": "model-reviewed",
+      "sourceTags": [
+        "supplement-editorial"
+      ],
+      "meaningSource": "editorial",
+      "definitionSource": "editorial"
+    }
+  ]
+}

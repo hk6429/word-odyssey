@@ -6,6 +6,16 @@ export const backupKey=owner=>`word-odyssey-account-backup-v1:${encodeURICompone
 const blankSnapshot=()=>({progress:createState(),adventure:freshAdventure(),locale:'zh'});
 const cleanSnapshot=value=>({progress:loadState(value?.progress,{strict:true}),adventure:validateAdventure(value?.adventure),locale:value.locale==='en'?'en':'zh'});
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+function mergeReviewHistory(left, right){
+ const rounds=new Map();
+ for(const item of [...left,...right]){
+  const previous=rounds.get(item.id);
+  const attempts=item.firstAttempts+item.retries,previousAttempts=previous?previous.firstAttempts+previous.retries:-1;
+  if(!previous||attempts>previousAttempts||attempts===previousAttempts&&
+    (Number(item.completed)>Number(previous.completed)||item.completed===previous.completed&&item.date>previous.date))rounds.set(item.id,structuredClone(item));
+ }
+ return [...rounds.values()].sort((a,b)=>a.date-b.date||a.startedAt-b.startedAt||a.id.localeCompare(b.id)).slice(-100);
+}
 
 export function mergeSnapshots(local,remote,{preferLocalProfile=false}={}){
  local=cleanSnapshot(local);
@@ -14,6 +24,7 @@ export function mergeSnapshots(local,remote,{preferLocalProfile=false}={}){
  const localAhead=Object.keys(local.progress.words).length>Object.keys(remote.progress.words).length;
  const progress=structuredClone(localAhead?local.progress:remote.progress),other=localAhead?remote.progress:local.progress;
  for(const [id,entry] of Object.entries(progress.words))if(other.words[id]?.lastReviewed>entry.lastReviewed)progress.words[id]=structuredClone(other.words[id]);
+ progress.reviewHistory=mergeReviewHistory(progress.reviewHistory,other.reviewHistory);
  // Vocabulary coverage is independent of account settings and story choices.
  const profile=preferLocalProfile?local:remote;
  return {progress,adventure:structuredClone(profile.adventure),locale:profile.locale};

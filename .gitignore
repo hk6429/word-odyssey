@@ -1,6 +1,9 @@
 node_modules/
 .DS_Store
 artifacts/
+dist/
+.wrangler/
+sources/tatoeba-*
 *.log
 .env*
 !.env.example

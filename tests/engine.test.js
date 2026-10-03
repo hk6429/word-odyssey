@@ -246,5 +246,148 @@ test('100 stages reach exactly 1200, 2000 and 7000 unique words without replay c
   assert.deepEqual(engine.getStats(state, NOW), { learned: 7000, mastered: 0, due: 0, xp: 70000, level: 71, completed: 100 });
   assert.equal(state.history.length, 740);
   assert.equal(quests, 740);
+  const legacy = structuredClone(state);
+  delete legacy.reviewHistory;
+  for (const entry of Object.values(legacy.words)) { delete entry.recallCount; delete entry.nextReviewMode; }
+  const migrated = engine.loadState(legacy, { strict: true });
+  assert.deepEqual(Object.keys(migrated.words), Object.keys(state.words));
+  assert.equal(migrated.xp, 70000);
+  assert.deepEqual(migrated.completed, state.completed);
   assert.throws(() => engine.startSession(state, 101), RangeError);
+});
+
+test('2000 due words form bounded rounds while preserving the latest quest and oldest backlog', () => {
+  const stages = fixtures([2000, 10]);
+  const engine = createEngine(stages), state = engine.createState();
+  while (!state.completed.includes(1)) finish(engine, state, engine.startSession(state, 1, NOW));
+  const learned = ids(stages[0]);
+  learned.forEach((id, i) => { state.words[id].nextDue = NOW + 600_000 + i; });
+  const time = NOW + DAY, next = engine.startSession(state, 2, time);
+  assert.equal(next.queue.length, 20);
+  assert.deepEqual(next.queue, [...learned.slice(-10), ...learned.slice(0, 10)]);
+  assert.equal(engine.getStats(state, time).due, 2000);
+  while (next.phase === 'review') engine.answer(state, next, true, time);
+  assert.equal(next.phase, 'learn');
+  assert.equal(engine.getStats(state, time).due, 1980);
+  assert.equal(Object.keys(state.words).length, 2000, 'review cannot acquire new words');
+  const more = engine.reviewSession(state, time);
+  assert.deepEqual(more.queue, learned.slice(10, 30));
+  finish(engine, state, more, time);
+  assert.equal(engine.getStats(state, time).due, 1960);
+  assert.equal(state.xp, 20000);
+});
+
+test('each word alternates recall and recognition across fixed-order rounds, including retries', () => {
+  const engine = createEngine(fixtures([4])), state = engine.createState();
+  finish(engine, state, engine.startSession(state, 1, NOW));
+  const seen = Object.fromEntries(Object.keys(state.words).map(id => [id, []]));
+  for (let round = 0; round < 3; round++) {
+    const time = Math.max(...Object.values(state.words).map(word => word.nextDue));
+    const session = engine.reviewSession(state, time);
+    while (session.phase === 'review') {
+      const id = session.queue[session.index];
+      seen[id].push(engine.questionType(state, session));
+      engine.answer(state, session, true, time);
+    }
+  }
+  for (const modes of Object.values(seen)) assert.deepEqual(modes, ['recall', 'recognition', 'recall']);
+  assert.equal(engine.getStats(state).mastered, 4);
+  const time = state.words.s1w1.nextDue, session = engine.reviewSession(state, time);
+  const mode = engine.questionType(state, session), id = session.queue[0];
+  engine.answer(state, session, false, time);
+  while (session.queue[session.index] !== id) engine.answer(state, session, true, time);
+  assert.equal(engine.questionType(state, session), mode, 'retry retains the original question type');
+});
+
+test('recognition-only and visible-copy answers cannot supply spaced recall mastery', () => {
+  const engine = createEngine(fixtures([1])), state = engine.createState();
+  finish(engine, state, engine.startSession(state, 1, NOW));
+  for (let round = 0; round < 3; round++) {
+    const time = state.words.s1w1.nextDue, session = engine.reviewSession(state, time);
+    engine.answer(state, session, true, time, { type: 'recognition' });
+  }
+  assert.equal(state.words.s1w1.reviewCount, 3);
+  assert.equal(state.words.s1w1.recallCount, 0);
+  assert.equal(engine.getStats(state).mastered, 0);
+  const time = state.words.s1w1.nextDue, session = engine.reviewSession(state, time);
+  engine.answer(state, session, true, time, { type: 'copy' });
+  assert.equal(state.words.s1w1.reviewCount, 3);
+  assert.equal(state.words.s1w1.recallCount, 0);
+  assert.equal(engine.getStats(state).mastered, 0);
+  const retry = engine.reviewSession(state, time);
+  engine.answer(state, retry, false, time, { type: 'recall' });
+  engine.answer(state, retry, true, time, { type: 'recall' });
+  assert.equal(state.words.s1w1.recallCount, 0, 'successful retry is not first-attempt recall');
+  finish(engine, state, engine.reviewSession(state, state.words.s1w1.nextDue), state.words.s1w1.nextDue);
+  assert.equal(engine.getStats(state).mastered, 0, 'recognition after a failed recall still needs a future recall');
+  const recallDue = state.words.s1w1.nextDue;
+  finish(engine, state, engine.reviewSession(state, recallDue), recallDue);
+  assert.equal(engine.getStats(state).mastered, 1);
+});
+
+test('three mistakes in the same round lower mastery once but record all three errors', () => {
+  const engine = createEngine(fixtures([1])), state = engine.createState();
+  finish(engine, state, engine.startSession(state, 1, NOW));
+  for (let round = 0; round < 3; round++) {
+    const time = state.words.s1w1.nextDue;
+    finish(engine, state, engine.reviewSession(state, time), time);
+  }
+  const before = structuredClone(state.words.s1w1), time = before.nextDue, session = engine.reviewSession(state, time);
+  for (let attempt = 0; attempt < 3; attempt++) engine.answer(state, session, false, time);
+  assert.equal(state.words.s1w1.mastery, before.mastery - 1);
+  assert.equal(state.words.s1w1.incorrect, before.incorrect + 3);
+  engine.answer(state, session, true, time);
+  assert.equal(state.words.s1w1.mastery, before.mastery - 1);
+  assert.equal(state.words.s1w1.recallCount, before.recallCount);
+  assert.equal(state.words.s1w1.reviewCount, before.reviewCount);
+});
+
+test('review activity survives interrupted rounds and strict loading, is bounded, and adds no XP', () => {
+  const engine = createEngine(fixtures([2])), state = engine.createState();
+  finish(engine, state, engine.startSession(state, 1, NOW));
+  const time = NOW + DAY, session = engine.reviewSession(state, time);
+  engine.answer(state, session, false, time);
+  assert.deepEqual(engine.loadState(JSON.stringify(state), { strict: true }), state);
+  assert.deepEqual(state.reviewHistory[0], { id: session.reviewSummary.id, startedAt: time, date: time, count: 2, firstAttempts: 1, firstCorrect: 0, retries: 0, completed: false });
+  engine.answer(state, session, true, time);
+  engine.answer(state, session, false, time);
+  engine.answer(state, session, true, time);
+  assert.deepEqual(state.reviewHistory[0], { id: session.reviewSummary.id, startedAt: time, date: time, count: 2, firstAttempts: 2, firstCorrect: 1, retries: 2, completed: true });
+  for (let round = 0; round < 105; round++) finish(engine, state, engine.reviewSession(state, time), time);
+  assert.equal(state.reviewHistory.length, 100);
+  assert.equal(state.xp, 20);
+  assert.equal(state.history.length, 1);
+  assert.deepEqual(engine.loadState(JSON.stringify(state), { strict: true }), state);
+  for (const patch of [{ id: '' }, { count: 21 }, { firstAttempts: 3 }, { firstCorrect: 3 }, { retries: -1 }, { date: 'today' }, { xp: 100 }]) {
+    const invalid = structuredClone(state);
+    Object.assign(invalid.reviewHistory[0], patch);
+    assert.throws(() => engine.loadState(invalid, { strict: true }), TypeError);
+  }
+});
+
+test('legacy backups retain acquisition credit without inventing recall evidence', () => {
+  const engine = createEngine(fixtures([10])), state = engine.createState();
+  finish(engine, state, engine.startSession(state, 1, NOW));
+  for (let round = 0; round < 3; round++) {
+    const time = state.words.s1w1.nextDue;
+    finish(engine, state, engine.reviewSession(state, time), time);
+  }
+  const legacy = structuredClone(state);
+  delete legacy.reviewHistory;
+  for (const entry of Object.values(legacy.words)) { delete entry.recallCount; delete entry.nextReviewMode; }
+  const restored = engine.loadState(legacy, { strict: true });
+  assert.deepEqual(Object.keys(restored.words), Object.keys(legacy.words));
+  assert.equal(restored.xp, legacy.xp);
+  assert.deepEqual(restored.completed, legacy.completed);
+  assert.deepEqual(restored.history, legacy.history);
+  assert.equal(engine.getStats(restored).mastered, 0);
+  assert.equal(restored.words.s1w1.recallCount, 0);
+  assert.equal(restored.words.s1w1.reviewCount, 3);
+  assert.deepEqual(restored.reviewHistory, []);
+  const time = restored.words.s1w1.nextDue;
+  finish(engine, restored, engine.reviewSession(restored, time), time);
+  assert.equal(engine.getStats(restored).mastered, 10);
+  const invalid = structuredClone(restored);
+  invalid.words.s1w1.recallCount = 999;
+  assert.throws(() => engine.loadState(invalid, { strict: true }), TypeError);
 });

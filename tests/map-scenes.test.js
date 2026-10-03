@@ -8,7 +8,7 @@ test('one distinct illustrated scene covers each ten-chapter region',()=>{
   assert.equal(new Set(MAP_SCENES.map(scene=>scene.src)).size,10);
   assert.deepEqual(MAP_SCENES.flatMap(scene=>Array.from({length:scene.last-scene.first+1},(_,i)=>scene.first+i)),Array.from({length:100},(_,i)=>i+1));
   for(const [index,scene] of MAP_SCENES.entries()){
-    assert.equal(scene.src,`assets/map-region-${String(index+1).padStart(2,'0')}.png`);
+    assert.equal(scene.src,`assets/map-region-${String(index+1).padStart(2,'0')}.webp`);
     assert.ok(scene.zh&&scene.en);
   }
 });

@@ -1,0 +1,213 @@
+{
+  "format": "WebP",
+  "quality": 88,
+  "imageCount": 34,
+  "originalBytes": 122583802,
+  "webBytes": 22314490,
+  "files": [
+    {
+      "source": "assets/chapters-01.png",
+      "file": "assets/chapters-01.webp",
+      "originalBytes": 3347810,
+      "webBytes": 594164
+    },
+    {
+      "source": "assets/chapters-02.png",
+      "file": "assets/chapters-02.webp",
+      "originalBytes": 3085806,
+      "webBytes": 508112
+    },
+    {
+      "source": "assets/chapters-03.png",
+      "file": "assets/chapters-03.webp",
+      "originalBytes": 3237057,
+      "webBytes": 573452
+    },
+    {
+      "source": "assets/chapters-04.png",
+      "file": "assets/chapters-04.webp",
+      "originalBytes": 3180252,
+      "webBytes": 547120
+    },
+    {
+      "source": "assets/chapters-05.png",
+      "file": "assets/chapters-05.webp",
+      "originalBytes": 3159760,
+      "webBytes": 528190
+    },
+    {
+      "source": "assets/chapters-06.png",
+      "file": "assets/chapters-06.webp",
+      "originalBytes": 3318074,
+      "webBytes": 580570
+    },
+    {
+      "source": "assets/chapters-07.png",
+      "file": "assets/chapters-07.webp",
+      "originalBytes": 3145147,
+      "webBytes": 539078
+    },
+    {
+      "source": "assets/chapters-08.png",
+      "file": "assets/chapters-08.webp",
+      "originalBytes": 3083533,
+      "webBytes": 493092
+    },
+    {
+      "source": "assets/chapters-09.png",
+      "file": "assets/chapters-09.webp",
+      "originalBytes": 3266007,
+      "webBytes": 563644
+    },
+    {
+      "source": "assets/chapters-10.png",
+      "file": "assets/chapters-10.webp",
+      "originalBytes": 3394731,
+      "webBytes": 617060
+    },
+    {
+      "source": "assets/characters.png",
+      "file": "assets/characters.webp",
+      "originalBytes": 3533943,
+      "webBytes": 532856
+    },
+    {
+      "source": "assets/hero-journey.png",
+      "file": "assets/hero-journey.webp",
+      "originalBytes": 3718442,
+      "webBytes": 599020
+    },
+    {
+      "source": "assets/map-region-01.png",
+      "file": "assets/map-region-01.webp",
+      "originalBytes": 3791953,
+      "webBytes": 791700
+    },
+    {
+      "source": "assets/map-region-02.png",
+      "file": "assets/map-region-02.webp",
+      "originalBytes": 3754022,
+      "webBytes": 785754
+    },
+    {
+      "source": "assets/map-region-03.png",
+      "file": "assets/map-region-03.webp",
+      "originalBytes": 3711109,
+      "webBytes": 766352
+    },
+    {
+      "source": "assets/map-region-04.png",
+      "file": "assets/map-region-04.webp",
+      "originalBytes": 3728570,
+      "webBytes": 765942
+    },
+    {
+      "source": "assets/map-region-05.png",
+      "file": "assets/map-region-05.webp",
+      "originalBytes": 3804446,
+      "webBytes": 796348
+    },
+    {
+      "source": "assets/map-region-06.png",
+      "file": "assets/map-region-06.webp",
+      "originalBytes": 3663053,
+      "webBytes": 724434
+    },
+    {
+      "source": "assets/map-region-07.png",
+      "file": "assets/map-region-07.webp",
+      "originalBytes": 3844712,
+      "webBytes": 798320
+    },
+    {
+      "source": "assets/map-region-08.png",
+      "file": "assets/map-region-08.webp",
+      "originalBytes": 3767221,
+      "webBytes": 778422
+    },
+    {
+      "source": "assets/map-region-09.png",
+      "file": "assets/map-region-09.webp",
+      "originalBytes": 3705917,
+      "webBytes": 739584
+    },
+    {
+      "source": "assets/map-region-10.png",
+      "file": "assets/map-region-10.webp",
+      "originalBytes": 3859422,
+      "webBytes": 819408
+    },
+    {
+      "source": "assets/miniquests-01.png",
+      "file": "assets/miniquests-01.webp",
+      "originalBytes": 4179204,
+      "webBytes": 758668
+    },
+    {
+      "source": "assets/miniquests-02.png",
+      "file": "assets/miniquests-02.webp",
+      "originalBytes": 3504191,
+      "webBytes": 579682
+    },
+    {
+      "source": "assets/miniquests-03.png",
+      "file": "assets/miniquests-03.webp",
+      "originalBytes": 3669416,
+      "webBytes": 638140
+    },
+    {
+      "source": "assets/miniquests-04.png",
+      "file": "assets/miniquests-04.webp",
+      "originalBytes": 4035678,
+      "webBytes": 698102
+    },
+    {
+      "source": "assets/miniquests-05.png",
+      "file": "assets/miniquests-05.webp",
+      "originalBytes": 3765786,
+      "webBytes": 645586
+    },
+    {
+      "source": "assets/miniquests-06.png",
+      "file": "assets/miniquests-06.webp",
+      "originalBytes": 3421222,
+      "webBytes": 555260
+    },
+    {
+      "source": "assets/miniquests-07.png",
+      "file": "assets/miniquests-07.webp",
+      "originalBytes": 4016237,
+      "webBytes": 701928
+    },
+    {
+      "source": "assets/miniquests-08.png",
+      "file": "assets/miniquests-08.webp",
+      "originalBytes": 3412310,
+      "webBytes": 579184
+    },
+    {
+      "source": "assets/miniquests-09.png",
+      "file": "assets/miniquests-09.webp",
+      "originalBytes": 3887707,
+      "webBytes": 659766
+    },
+    {
+      "source": "assets/miniquests-10.png",
+      "file": "assets/miniquests-10.webp",
+      "originalBytes": 4189646,
+      "webBytes": 747980
+    },
+    {
+      "source": "assets/story-scenes.png",
+      "file": "assets/story-scenes.webp",
+      "originalBytes": 3853049,
+      "webBytes": 637828
+    },
+    {
+      "source": "assets/word-scenes-01.png",
+      "file": "assets/word-scenes-01.webp",
+      "originalBytes": 3548369,
+      "webBytes": 669744
+    }
+  ]
+}

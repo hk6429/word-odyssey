@@ -1,0 +1,69 @@
+/* Watercolour field notes: chapter routes and illustrated study postcards. */
+.chapter-panel{display:block;min-width:0;padding:23px;background:#f9f6eb;border:1px solid #d6d2bc;border-radius:10px 10px 19px 7px;box-shadow:0 7px 22px #33462e0a;position:relative;isolation:isolate}
+.chapter-panel::after{content:"";position:absolute;inset:6px;border:1px solid #b7b49133;border-radius:7px 7px 14px 4px;pointer-events:none;z-index:-1}
+.chapter-panel .chapter-overline{font-size:9px;letter-spacing:.12em;margin-top:17px;color:#8c7958}
+.chapter-panel h3{margin:12px 0 5px;font-size:25px;line-height:1.35}
+.chapter-panel .chapter-english{font-size:13px;margin:0;color:#8a8f75}
+.chapter-panel .chapter-story{font-size:12px;line-height:1.8;min-height:0;margin:14px 0 16px;color:#65745e}
+.chapter-panel .chapter-meta{display:flex;flex-wrap:wrap;gap:9px 15px;font-size:10px;line-height:1.6;padding-top:12px;margin:0 0 16px;border-top:1px solid #d9dbc6}
+.chapter-panel .chapter-meta>span{display:flex;align-items:center;gap:5px}
+.chapter-panel .chapter-meta .icon{width:13px;height:13px}
+.chapter-panel>.primary{width:100%;justify-content:center;white-space:normal;line-height:1.6;margin:16px 0 0;padding:12px 13px;font-size:12px}
+.chapter-panel .chapter-hint{font-size:10px;line-height:1.7;margin:10px 0 0;text-align:center}
+.quest-chapter-banner{position:relative;margin:-13px -13px 0;padding:6px;background:#fffdf7;border:1px solid #dedbca;box-shadow:0 2px 6px #3e493410;transform:rotate(-.6deg)}
+.quest-chapter-picture{position:relative;height:156px;overflow:hidden;background-size:0 0;isolation:isolate}
+.quest-chapter-picture::before{content:"";position:absolute;inset:auto 0;top:50%;aspect-ratio:1;transform:translateY(-50%);background-image:inherit;background-position:inherit;background-size:500% 200%;background-repeat:no-repeat;z-index:-1}
+.quest-chapter-picture::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 18px 7px #fff9e738;pointer-events:none}
+.quest-banner-caption{display:block;text-align:left;padding:8px 5px 3px;font:8px/1.5 var(--sans);letter-spacing:.12em;color:#897d61}
+.quest-postmark{position:absolute;top:13px;right:14px;width:53px;height:53px;display:grid;align-content:center;text-align:center;border:1px solid #5e665e8a;border-radius:50%;font:7px/1.5 var(--sans);letter-spacing:.1em;color:#4e6458;background:#f4f0d994;transform:rotate(13deg);outline:1px solid #5e665e63;outline-offset:-5px;text-shadow:0 1px #fff8}
+.quest-postmark>span{font-size:10px;line-height:1.1}
+.microquest-journal{position:relative;padding:16px 13px 13px;background:radial-gradient(ellipse at 11% 75%,#c4d0b331,transparent 45%),radial-gradient(ellipse at 92% 25%,#d7c08822,transparent 45%),#f1f0e2;border:1px solid #d6d8c0;border-radius:5px 13px 6px 11px}
+.microquest-heading{display:flex;flex-direction:column;gap:5px;text-align:center}
+.microquest-heading>span{font:italic 15px/1.5 var(--serif);color:#536e4d}
+.microquest-heading>strong{font-size:10px;letter-spacing:.025em;color:#7b815f;font-weight:500}
+.microquest-trail{display:flex;gap:11px;list-style:none;margin:12px -5px 0;padding:6px 5px 12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#b5b89b #e9e9d9;max-width:calc(100% + 10px)}
+.microquest-trail:focus-visible{outline:2px solid #a68a4b;outline-offset:3px}
+.microquest-node{position:relative;display:flex;flex:0 0 108px;flex-direction:column;align-items:center;min-width:0;min-height:136px;padding:5px 5px 9px;background:#fffcf3;border:1px solid #d4d0ba;border-radius:3px 6px 4px 5px;box-shadow:0 3px 5px #4c583811;isolation:isolate;scroll-snap-align:center}
+.microquest-node:not(:last-child)::after{content:"";position:absolute;right:-12px;top:85px;width:11px;border-top:2px dotted #a4ae89;z-index:-1}
+.microquest-picture{width:100%;aspect-ratio:3/2;background-size:300% 300%;background-repeat:no-repeat;background-color:#d9dfc5;border-radius:1px;box-shadow:inset 0 0 9px #fff8e626}
+.microquest-node.is-current{border-color:#879a6b;background:#fcfbed;box-shadow:0 3px 10px #5469361c}
+.microquest-node.is-locked .microquest-picture{opacity:.82}
+.microquest-word-count{font-size:9px;line-height:1.5;color:#9c957c;margin-top:3px}
+.microquest-scroll-hint{margin:4px 0 11px;text-align:right;font-size:8px;letter-spacing:.03em;color:#93977e}
+.microquest-marker{width:33px;height:33px;margin-top:-14px;position:relative;display:grid;place-items:center;border:1px solid #b8bea7;border-radius:50%;color:#8d947e;background:#e9eadd;box-shadow:0 2px 0 #d5d8c4}
+.microquest-marker b{font:17px/1 var(--serif);position:relative;z-index:1}
+.microquest-node-label{font-size:10px;margin-top:6px;color:#8b917b;line-height:1.4;text-align:center}
+.microquest-node.is-complete .microquest-marker{background:#ddc080;border-color:#ad8b4e;box-shadow:inset 0 0 0 3px #efdcab,0 2px 1px #b69a5e55;color:#715827}
+.microquest-seal{position:absolute;inset:-5px;color:#b99753;font-size:48px;line-height:1;opacity:.35;transform:rotate(12deg)}
+.microquest-node.is-complete .microquest-node-label{color:#8b713e}
+.microquest-node.is-current .microquest-marker{background:#3c614b;border:2px solid #fff9dc;outline:1px solid #748966;color:#fff8d9;box-shadow:0 0 0 5px #dcc98640,0 3px 7px #365c3526}
+.microquest-node.is-current .microquest-node-label{color:#3f6246;font-weight:700}
+.microquest-lantern{position:absolute;width:18px;height:23px;top:-19px;right:-8px;transform:rotate(10deg);filter:drop-shadow(0 0 4px #f7d367)}
+.microquest-lantern svg{width:100%;height:100%;fill:#efd385;stroke:#7c6337;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.microquest-lantern .lantern-glow{fill:#fff6c0;stroke:#d09c39}
+.microquest-next{display:flex;align-items:center;gap:8px;border-top:1px solid #d5d8c0;padding-top:10px;color:#526844}
+.microquest-next>span{font-size:23px;color:#a5884d}.microquest-next p{margin:0;font-size:11px;font-weight:600;line-height:1.7}
+.microquest-rest{font-size:10px;line-height:1.8;color:#7e856d;margin:6px 0 0}
+.flashcard.illustrated-flashcard{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:22px;align-items:center;padding:18px 19px;background:radial-gradient(ellipse at 0 100%,#dce4cb77,transparent 60%),#f7f4e9;border-color:#d8d2bc;border-radius:4px 13px 7px 10px;box-shadow:0 4px 12px #394f2d0a;text-align:left}
+.word-scene-card{align-self:start;min-width:0;position:relative;margin:7px 0 0;padding:6px 6px 0;background:#fffdf7;box-shadow:0 3px 9px #454b3720;transform:rotate(-2deg);border:1px solid #ddd8c6}
+.word-scene-card::before{content:"";position:absolute;z-index:1;top:-8px;left:35%;width:31%;height:16px;background:#d6c99b77;transform:rotate(2deg);border-left:2px dotted #fff4;border-right:2px dotted #fff4}
+.word-scene-picture{width:100%;aspect-ratio:1;background-size:500% 200%;background-repeat:no-repeat;background-color:#e9e5d4}
+.word-scene-card:not(.is-chapter-scene) .word-scene-picture{background-image:url('./assets/word-scenes-01.webp')}
+.word-scene-0{background-position:0% 0%}.word-scene-1{background-position:25% 0%}.word-scene-2{background-position:50% 0%}.word-scene-3{background-position:75% 0%}.word-scene-4{background-position:100% 0%}.word-scene-5{background-position:0% 100%}.word-scene-6{background-position:25% 100%}.word-scene-7{background-position:50% 100%}.word-scene-8{background-position:75% 100%}.word-scene-9{background-position:100% 100%}
+.word-scene-card figcaption{padding:7px 2px;font:8px/1.5 var(--sans);letter-spacing:.08em;color:#8b8267;text-align:center}.word-scene-card figcaption span{color:#a58c4d}
+.flashcard-word-copy{min-width:0}.flashcard-word-copy>.icon-button{float:right;margin:-2px -4px 0 5px}.illustrated-flashcard h3{margin:7px 0 5px;font-size:38px;line-height:1.16}.illustrated-flashcard .part-of-speech{font-size:11px;margin-bottom:9px}.illustrated-flashcard .meaning{font-size:18px;line-height:1.5;margin-bottom:13px}.illustrated-flashcard .example{font-size:17px;line-height:1.6;padding-top:13px;margin-top:10px}.illustrated-flashcard .example-zh{font-size:11px;margin-top:6px}
+.quest-reward-postcard{margin:0 0 25px;padding:14px;border:1px solid #d7d1ba;background:#f8f4e8;border-radius:5px 14px 6px 9px;box-shadow:0 4px 17px #4f5c3220;text-align:left;transform:rotate(-.4deg)}
+.quest-reward-postcard .quest-chapter-banner{margin:0;padding:5px;transform:rotate(.5deg)}.quest-reward-postcard .quest-chapter-picture{height:132px}.quest-reward-postcard .quest-banner-caption{font-size:7px}
+.quest-reward-note{display:flex;gap:13px;align-items:center;padding:15px 4px 3px}.quest-reward-seal{display:grid;place-items:center;flex:0 0 42px;height:42px;font-size:30px;border:1px solid #b09250;outline:1px dashed #b09250;outline-offset:4px;border-radius:50%;background:#e6d5a3;color:#987739;transform:rotate(-12deg)}
+.quest-reward-eyebrow{display:block;font-size:8px;letter-spacing:.14em;color:#9b885f;margin-bottom:5px}.quest-reward-note strong{font:16px/1.6 var(--serif);color:#3d5a40}.quest-reward-note p{font-size:11px;margin:3px 0 0;color:#7b836b;line-height:1.6}
+@media(min-width:641px) and (max-width:1280px){.chapter-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 25px}.chapter-panel>.quest-chapter-banner{grid-column:1;grid-row:1/4;margin:0;align-self:start}.chapter-panel>.chapter-overline{grid-column:2;grid-row:1;margin:0}.chapter-panel>h3{grid-column:2;grid-row:2;margin-top:10px}.chapter-panel>.chapter-english{grid-column:2;grid-row:3}.chapter-panel>.chapter-story{grid-column:1;grid-row:4;margin-bottom:0}.chapter-panel>.chapter-meta{grid-column:1;grid-row:5;margin:15px 0 0;align-content:start}.chapter-panel>.microquest-journal{grid-column:2;grid-row:4/8;margin-top:15px}.chapter-panel>.primary{grid-column:1;grid-row:6;align-self:end}.chapter-panel>.chapter-hint{grid-column:1;grid-row:7}.quest-chapter-picture{height:150px}}
+@media(max-width:640px){.chapter-panel{display:block;padding:21px;max-width:100%}.chapter-panel h3,html[lang="en"] .chapter-panel h3{font-size:24px}.chapter-panel .chapter-story,html[lang="en"] .chapter-panel .chapter-story{font-size:12px}.chapter-panel .chapter-overline{font-size:9px}.quest-chapter-picture{height:155px}.microquest-trail{margin-top:12px}.microquest-node{flex-basis:109px;min-height:136px}.chapter-panel>.primary{font-size:12px;padding:12px}.chapter-panel .chapter-hint{font-size:10px}.flashcard.illustrated-flashcard{grid-template-columns:1fr;gap:11px;padding:16px;margin:15px 0}.word-scene-card{width:min(46%,145px);justify-self:center;margin-top:4px;transform:rotate(-2deg)}.word-scene-card figcaption{font-size:7px;padding:5px 1px}.flashcard-word-copy{text-align:center}.flashcard-word-copy>.icon-button{float:right;position:relative;margin:-2px -3px 0 4px}.illustrated-flashcard h3{font-size:34px;margin:3px 0}.illustrated-flashcard .meaning{font-size:18px;margin-bottom:9px}.illustrated-flashcard .example{font-size:16px;padding-top:10px;margin-top:9px}.illustrated-flashcard .part-of-speech{margin-bottom:5px}.illustrated-flashcard .example-zh{font-size:11px}.quest-reward-postcard{padding:10px;margin-bottom:20px}.quest-reward-postcard .quest-chapter-picture{height:112px}.quest-reward-note{gap:13px;padding:14px 6px 3px}.quest-reward-seal{flex-basis:32px;height:32px;font-size:24px}.quest-reward-note strong{font-size:14px}.quest-reward-note p{font-size:10px}.quest-postmark{width:46px;height:46px;font-size:6px}}
+
+.microquest-node{flex-basis:128px}.microquest-scene-title{font-family:var(--serif);font-size:12px;line-height:1.4;text-align:center;font-weight:600;margin:5px 0 2px;color:#365642}.microquest-node-label{font-size:10px}
+.microquest-arrival{position:relative;max-width:520px;margin:24px auto;padding:7px;background:#fffdf7;border:1px solid #d4cdb8;box-shadow:0 6px 18px #3f543219;transform:rotate(-.5deg)}
+.microquest-arrival-picture{width:100%;aspect-ratio:3/2;background-size:300% 300%;background-repeat:no-repeat;background-color:#e3e6d3}
+.microquest-arrival figcaption{display:grid;grid-template-columns:1fr auto;gap:6px;text-align:left;padding:12px 10px 8px}.microquest-arrival figcaption>span{font-size:10px;letter-spacing:.12em;color:#8d7954;grid-column:1/-1}.microquest-arrival strong{font:20px/1.3 var(--serif);color:#365741}.microquest-arrival small{font-size:11px;align-self:center;color:#7b836f}
+.chapter-reading-fold{margin:20px 0;text-align:left;border:1px solid #d8ddca;border-radius:8px;background:#f8f8ef;padding:13px 17px}.chapter-reading-fold>summary{cursor:pointer;font:14px/1.7 var(--serif);color:#476346}.chapter-reading-fold .story-reading{margin-top:14px}
+@media(max-width:600px){.microquest-arrival figcaption{grid-template-columns:1fr}.microquest-arrival strong{font-size:19px}.microquest-arrival small{font-size:11px}}
+/* A small inset keeps hand-painted atlas seams out of the visible postcard. */
+.microquest-picture,.microquest-arrival-picture{position:relative;overflow:hidden;isolation:isolate;background-size:0 0}
+.microquest-picture::before,.microquest-arrival-picture::before{content:"";position:absolute;inset:-3.5%;background-image:inherit;background-position:inherit;background-size:300% 300%;background-repeat:no-repeat;z-index:-1}

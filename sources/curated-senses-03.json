@@ -1,0 +1,1650 @@
+[
+  {
+    "id": "cite",
+    "definition": "To mention or quote a source to support what you say or write.",
+    "meaning": "引用",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rival",
+    "definition": "A person or group competing with another for the same goal.",
+    "meaning": "競爭對手",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "innovation",
+    "definition": "The development or introduction of new ideas, methods, or products.",
+    "meaning": "創新",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed",
+    "example": "The company is famous for its technological innovation.",
+    "translation": "這家公司以科技創新聞名。"
+  },
+  {
+    "id": "stimulus",
+    "definition": "Something that encourages activity, growth, or change.",
+    "meaning": "促進因素",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sole",
+    "definition": "Being the only one.",
+    "meaning": "唯一的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sheer",
+    "definition": "Used to emphasize that something is entirely of a particular kind.",
+    "meaning": "純粹的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shortage",
+    "definition": "A situation in which there is less of something than is needed.",
+    "meaning": "短缺",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "motive",
+    "definition": "A reason for doing something.",
+    "meaning": "動機",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "undermine",
+    "definition": "To gradually make something weaker or less effective.",
+    "meaning": "削弱",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "theft",
+    "definition": "The act of taking someone else's property without permission.",
+    "meaning": "竊盜",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ridiculous",
+    "definition": "Extremely silly or unreasonable.",
+    "meaning": "荒謬的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bureau",
+    "definition": "A government department or office responsible for a particular type of work.",
+    "meaning": "局；行政機關",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "opt",
+    "definition": "To choose one course of action from the available possibilities.",
+    "meaning": "選擇",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "delegation",
+    "definition": "A group chosen to represent others at a meeting or visit.",
+    "meaning": "代表團",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "striking",
+    "definition": "Very noticeable or impressive.",
+    "meaning": "顯著的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "prejudice",
+    "definition": "An unfair opinion about people formed without enough knowledge or experience.",
+    "meaning": "偏見",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sponsor",
+    "definition": "To support an event or activity by providing money or other resources.",
+    "meaning": "贊助",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "vague",
+    "definition": "Not clearly expressed or explained.",
+    "meaning": "含糊的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "regardless",
+    "definition": "Without being affected or stopped by a particular situation.",
+    "meaning": "不顧；不受影響",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lump",
+    "definition": "A swelling or raised area in or under the skin.",
+    "meaning": "腫塊",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "petition",
+    "definition": "A written request signed by many people and addressed to someone with authority.",
+    "meaning": "請願書",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cluster",
+    "definition": "A group of similar things close together.",
+    "meaning": "一群；一簇",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "depict",
+    "definition": "To show or represent something in a picture or description.",
+    "meaning": "描繪",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "meantime",
+    "definition": "The period between one event and another.",
+    "meaning": "這段期間",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "outlet",
+    "definition": "An activity or means of expressing feelings or releasing energy.",
+    "meaning": "抒發管道",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rear",
+    "definition": "The back part of something.",
+    "meaning": "後部",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "immense",
+    "definition": "Extremely large in size or amount.",
+    "meaning": "極大的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "supervise",
+    "definition": "To watch over people or activities to make sure things are done properly and safely.",
+    "meaning": "監督；看管",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "merge",
+    "definition": "To join together to form a single organization or whole.",
+    "meaning": "合併",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "prescribe",
+    "definition": "To officially tell a patient which medicine or treatment to use.",
+    "meaning": "開藥",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "donation",
+    "definition": "Money or goods given to support a person, organization, or cause.",
+    "meaning": "捐款",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "realm",
+    "definition": "A particular area of knowledge, activity, or experience.",
+    "meaning": "領域",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "surplus",
+    "definition": "More than is needed or can be used.",
+    "meaning": "多餘的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "compliance",
+    "definition": "The act of following a rule, law, or request.",
+    "meaning": "遵守",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "activist",
+    "definition": "A person who actively works to bring about social or political change.",
+    "meaning": "社會運動人士",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "inherent",
+    "definition": "Existing as a natural or basic part of something.",
+    "meaning": "與生俱來的；固有的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "likewise",
+    "definition": "In the same way.",
+    "meaning": "同樣地",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "prior",
+    "definition": "Existing or happening before something else.",
+    "meaning": "事先的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "legacy",
+    "definition": "A lasting contribution or influence passed on to later generations.",
+    "meaning": "留給後世的影響",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "viewpoint",
+    "definition": "A way of thinking about or judging something.",
+    "meaning": "觀點",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shiver",
+    "definition": "To shake slightly and uncontrollably, especially from cold or fear.",
+    "meaning": "顫抖",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "repay",
+    "definition": "To pay back money that was borrowed.",
+    "meaning": "償還",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "whatsoever",
+    "definition": "At all, used to emphasize a negative statement.",
+    "meaning": "絲毫；完全",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "obscure",
+    "definition": "Not clear or easy to understand.",
+    "meaning": "難以理解的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "commentary",
+    "definition": "A spoken description of an event as it happens.",
+    "meaning": "實況解說",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "foster",
+    "definition": "To encourage the development of a feeling, ability, or quality.",
+    "meaning": "培養",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "notify",
+    "definition": "To formally tell someone about something.",
+    "meaning": "通知",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "prohibit",
+    "definition": "To officially forbid an action.",
+    "meaning": "禁止",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "indigenous",
+    "definition": "Occurring naturally in a particular region rather than being introduced from elsewhere.",
+    "meaning": "原生的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "vicious",
+    "definition": "Violent, aggressive, or likely to hurt others.",
+    "meaning": "兇惡的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "supposedly",
+    "definition": "According to what people say or believe, though it may not be true.",
+    "meaning": "據說",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "eternal",
+    "definition": "Lasting forever or seeming to have no end.",
+    "meaning": "永恆的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "counsel",
+    "definition": "Advice about what someone should do.",
+    "meaning": "忠告；建議",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "transit",
+    "definition": "A system of buses, trains, or other vehicles used to carry passengers.",
+    "meaning": "公共運輸",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "moan",
+    "definition": "A low, long sound expressing pain or distress.",
+    "meaning": "呻吟聲",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "foul",
+    "definition": "An action that breaks the rules of a sport.",
+    "meaning": "犯規",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "risky",
+    "definition": "Involving a possibility of harm, loss, or failure.",
+    "meaning": "有風險的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "spacious",
+    "definition": "Having plenty of room.",
+    "meaning": "寬敞的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "olive",
+    "definition": "A small green or black fruit eaten as food or pressed to produce oil.",
+    "meaning": "橄欖",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "attorney",
+    "definition": "A person qualified to give legal advice and represent others in legal matters.",
+    "meaning": "律師",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "orchard",
+    "definition": "An area of land planted with fruit trees.",
+    "meaning": "果園",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hockey",
+    "definition": "A team sport played on ice in which players use sticks to hit a puck into the opposing team's goal.",
+    "meaning": "冰上曲棍球",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "comprehend",
+    "definition": "To understand something fully.",
+    "meaning": "理解",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "souvenir",
+    "definition": "An object kept as a reminder of a place, event, or experience.",
+    "meaning": "紀念品",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "triple",
+    "definition": "To become or make something three times as large or as much.",
+    "meaning": "增為三倍",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed",
+    "example": "The company's profit tripled in one year.",
+    "translation": "這家公司的利潤在一年內增為三倍。"
+  },
+  {
+    "id": "exterior",
+    "definition": "The outside surface or part of something.",
+    "meaning": "外部",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "squat",
+    "definition": "To bend your knees and lower your body close to the ground.",
+    "meaning": "蹲下",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "chore",
+    "definition": "A routine task, especially one done around the home.",
+    "meaning": "家事",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lest",
+    "definition": "For fear that something unwanted might happen.",
+    "meaning": "以免",
+    "pos": "連接詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "belongings",
+    "definition": "The things that a person owns.",
+    "meaning": "個人物品",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sensor",
+    "definition": "A device that detects changes such as movement, heat, or light.",
+    "meaning": "感應器",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "stink",
+    "definition": "To have or produce a strong, unpleasant smell.",
+    "meaning": "發臭",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed",
+    "example": "The fish began to stink in the hot sun.",
+    "translation": "那條魚在烈日下開始發臭。"
+  },
+  {
+    "id": "wither",
+    "definition": "To become dry and weak, especially through a lack of water.",
+    "meaning": "枯萎",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nominee",
+    "definition": "A person officially proposed for a position or award.",
+    "meaning": "被提名人",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "torment",
+    "definition": "To cause someone severe physical or mental suffering.",
+    "meaning": "折磨",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "whine",
+    "definition": "To make a long, high sound expressing distress or a desire for something.",
+    "meaning": "哀鳴",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "envious",
+    "definition": "Wanting something that another person has and feeling unhappy about lacking it.",
+    "meaning": "嫉妒的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "spicy",
+    "definition": "Having a strong, hot taste from spices.",
+    "meaning": "辛辣的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "specialty",
+    "definition": "A dish that a restaurant is especially known for or good at making.",
+    "meaning": "招牌菜",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "astonish",
+    "definition": "To surprise someone greatly.",
+    "meaning": "使大為驚訝",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lawmaker",
+    "definition": "A member of a legislative body who helps make laws.",
+    "meaning": "立法者；議員",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "expenditure",
+    "definition": "The amount of money spent on something.",
+    "meaning": "支出",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lad",
+    "definition": "A boy or young man.",
+    "meaning": "男孩；小伙子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "petrol",
+    "definition": "A liquid fuel used in many car engines.",
+    "meaning": "汽油",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "statute",
+    "definition": "A written law passed by a legislative body.",
+    "meaning": "成文法規",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "successive",
+    "definition": "Following one after another without a break.",
+    "meaning": "接連的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "extract",
+    "definition": "To remove something, especially by pulling it out.",
+    "meaning": "拔出",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "invariably",
+    "definition": "Always, without exception.",
+    "meaning": "總是",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "notable",
+    "definition": "Important or significant enough to deserve attention.",
+    "meaning": "顯著的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "workforce",
+    "definition": "All the people working for a company or organization.",
+    "meaning": "全體員工",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "geographical",
+    "definition": "Relating to places and the physical features of the earth.",
+    "meaning": "地理的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "brochure",
+    "definition": "A small booklet giving information about a product, service, or place.",
+    "meaning": "簡介手冊",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "textile",
+    "definition": "Relating to cloth or the production of cloth.",
+    "meaning": "紡織的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lengthy",
+    "definition": "Lasting a long time, often longer than desired.",
+    "meaning": "冗長的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed",
+    "example": "The lengthy meeting left everyone tired.",
+    "translation": "那場冗長的會議讓大家都很疲倦。"
+  },
+  {
+    "id": "outlook",
+    "definition": "A person's general attitude toward life or a situation.",
+    "meaning": "看法；人生態度",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "attain",
+    "definition": "To reach a goal or desired level through effort.",
+    "meaning": "達成",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "precision",
+    "definition": "The quality of being exact and accurate.",
+    "meaning": "精確度",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "corpse",
+    "definition": "The dead body of a person.",
+    "meaning": "屍體",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "disastrous",
+    "definition": "Causing great harm, damage, or failure.",
+    "meaning": "災難性的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "majesty",
+    "definition": "Impressive beauty, size, or power that inspires admiration.",
+    "meaning": "雄偉",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "underneath",
+    "definition": "Directly below or under something.",
+    "meaning": "在……下方",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "outset",
+    "definition": "The beginning of an activity or period.",
+    "meaning": "開始",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "evoke",
+    "definition": "To bring a feeling, memory, or image into the mind.",
+    "meaning": "喚起",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "courtyard",
+    "definition": "An open area surrounded partly or completely by walls or buildings.",
+    "meaning": "庭院",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "notorious",
+    "definition": "Well known for something bad.",
+    "meaning": "惡名昭彰的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hospitality",
+    "definition": "Friendly and generous treatment of guests or visitors.",
+    "meaning": "殷勤款待",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "detain",
+    "definition": "To keep someone in official custody, often for questioning.",
+    "meaning": "拘留",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "solitary",
+    "definition": "Spent or done alone, without other people.",
+    "meaning": "獨居的；孤獨的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "airway",
+    "definition": "A passage through which air moves into and out of the lungs.",
+    "meaning": "呼吸道",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "utter",
+    "definition": "Complete or total, used for emphasis.",
+    "meaning": "完全的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "provisional",
+    "definition": "Arranged for the present but able to be changed later.",
+    "meaning": "暫時的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "warranty",
+    "definition": "A promise to repair or replace a faulty product within a stated period.",
+    "meaning": "保固",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "outing",
+    "definition": "A short trip made for pleasure.",
+    "meaning": "郊遊",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "imminent",
+    "definition": "Expected to happen very soon.",
+    "meaning": "即將發生的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "goodwill",
+    "definition": "Friendly feelings and a willingness to help or cooperate.",
+    "meaning": "善意",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "revolt",
+    "definition": "To rise up against a ruler or authority.",
+    "meaning": "起而反抗",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "upright",
+    "definition": "In a straight, vertical position.",
+    "meaning": "挺直地",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "suitcase",
+    "definition": "A case used to carry clothes and other belongings when traveling.",
+    "meaning": "行李箱",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "analytical",
+    "definition": "Involving careful examination of something to understand its parts and how they relate.",
+    "meaning": "分析的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "beforehand",
+    "definition": "Before a particular event or action.",
+    "meaning": "事先",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lethal",
+    "definition": "Able to cause death.",
+    "meaning": "致命的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wholesale",
+    "definition": "Relating to the sale of goods in large quantities, usually to businesses that resell them.",
+    "meaning": "批發的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ponder",
+    "definition": "To think carefully about something for some time.",
+    "meaning": "仔細思考",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "renowned",
+    "definition": "Widely known and admired.",
+    "meaning": "享有盛名的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "expire",
+    "definition": "To reach the end of the period during which something is valid.",
+    "meaning": "到期",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "weary",
+    "definition": "Very tired after effort or activity.",
+    "meaning": "疲憊的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "posture",
+    "definition": "The position in which someone holds their body while sitting or standing.",
+    "meaning": "姿勢",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rivalry",
+    "definition": "Competition between people or groups seeking the same goal or advantage.",
+    "meaning": "競爭",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "disbelief",
+    "definition": "A feeling that something cannot be true or real.",
+    "meaning": "難以置信",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "infer",
+    "definition": "To reach a conclusion from evidence rather than direct statements.",
+    "meaning": "推斷",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cumulative",
+    "definition": "Increasing as more is added over time.",
+    "meaning": "累積的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "archaeology",
+    "definition": "The study of past human life through objects, buildings, and other remains.",
+    "meaning": "考古學",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "unification",
+    "definition": "The process of joining separate parts or groups into a single whole.",
+    "meaning": "統一",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "outrageous",
+    "definition": "Far beyond what is reasonable or acceptable.",
+    "meaning": "高得離譜的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tentative",
+    "definition": "Not yet final and open to change.",
+    "meaning": "暫定的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ruthless",
+    "definition": "Showing no concern or pity for others.",
+    "meaning": "冷酷無情的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "savage",
+    "definition": "Fierce, violent, or threatening.",
+    "meaning": "兇猛的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ornament",
+    "definition": "An object used to make something look more attractive.",
+    "meaning": "裝飾品",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "turmoil",
+    "definition": "A state of great confusion, disorder, or unrest.",
+    "meaning": "動盪",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "reminiscent",
+    "definition": "Bringing something from the past to mind.",
+    "meaning": "令人想起的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dismay",
+    "definition": "A feeling of shock and disappointment caused by something unexpected.",
+    "meaning": "沮喪；驚愕",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "setback",
+    "definition": "A problem or event that delays progress or reduces the chance of success.",
+    "meaning": "挫折",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dusk",
+    "definition": "The time in the evening when daylight is fading.",
+    "meaning": "黃昏",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "simultaneous",
+    "definition": "Happening at the same time.",
+    "meaning": "同時發生的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "intimacy",
+    "definition": "A close personal connection marked by trust and familiarity.",
+    "meaning": "親密",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "paperback",
+    "definition": "A book with a flexible paper cover.",
+    "meaning": "平裝書",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "deduct",
+    "definition": "To take an amount away from a total.",
+    "meaning": "扣除",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "despise",
+    "definition": "To strongly dislike someone and consider them unworthy of respect.",
+    "meaning": "鄙視",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "underway",
+    "definition": "Already started and still in progress.",
+    "meaning": "進行中的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ratify",
+    "definition": "To formally approve an agreement or treaty so that it becomes official.",
+    "meaning": "正式批准",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lessen",
+    "definition": "To make or become smaller in amount or intensity.",
+    "meaning": "減輕",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tedious",
+    "definition": "Boring because it takes a long time or involves much repetition.",
+    "meaning": "乏味的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "imposing",
+    "definition": "Impressive because of great size or appearance.",
+    "meaning": "壯觀的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "peril",
+    "definition": "Serious danger or a situation involving possible harm.",
+    "meaning": "危險",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "aspire",
+    "definition": "To strongly hope and aim to achieve something.",
+    "meaning": "立志",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "glamour",
+    "definition": "An exciting or fascinating quality that makes something attractive.",
+    "meaning": "迷人魅力",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "disgrace",
+    "definition": "A loss of respect caused by unacceptable behavior.",
+    "meaning": "恥辱",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nurture",
+    "definition": "To help an ability or quality develop through care and encouragement.",
+    "meaning": "培育",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "spiral",
+    "definition": "A curve that winds around a central point or axis.",
+    "meaning": "螺旋",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shortcoming",
+    "definition": "A weakness or fault in a person or thing.",
+    "meaning": "缺點",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "reckless",
+    "definition": "Acting without considering possible danger or consequences.",
+    "meaning": "魯莽的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "roam",
+    "definition": "To move freely around an area without a fixed route.",
+    "meaning": "漫遊",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "solemn",
+    "definition": "Serious and respectful in mood or character.",
+    "meaning": "莊嚴的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "persistence",
+    "definition": "Continued effort despite difficulty or delay.",
+    "meaning": "堅持",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "jolly",
+    "definition": "Cheerful and full of good humor.",
+    "meaning": "快活的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "instinctive",
+    "definition": "Happening naturally without conscious thought or learning.",
+    "meaning": "本能的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "unanimous",
+    "definition": "Agreed upon by every person involved.",
+    "meaning": "一致同意的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "intellect",
+    "definition": "The ability to think, reason, and understand complex ideas.",
+    "meaning": "才智",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "draught",
+    "definition": "A current of air flowing through an indoor space.",
+    "meaning": "穿堂風",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "inquire",
+    "definition": "To ask for information.",
+    "meaning": "詢問",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sportsman",
+    "definition": "A man who takes part in sports.",
+    "meaning": "運動員",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sly",
+    "definition": "Clever at deceiving others or hiding intentions.",
+    "meaning": "狡猾的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "abide",
+    "definition": "To tolerate someone or something unpleasant.",
+    "meaning": "忍受",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "perish",
+    "definition": "To die, especially because of harsh conditions.",
+    "meaning": "死亡；枯死",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "relentless",
+    "definition": "Continuing without stopping or becoming less intense.",
+    "meaning": "持續不止的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "elevate",
+    "definition": "To improve something or raise it to a higher level.",
+    "meaning": "提升",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "overhear",
+    "definition": "To hear something that was not intended for you to hear.",
+    "meaning": "無意間聽到",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "awesome",
+    "definition": "Extremely impressive or inspiring wonder.",
+    "meaning": "令人驚嘆的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "limp",
+    "definition": "To walk unevenly because one leg or foot is injured or weak.",
+    "meaning": "跛行",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "waterproof",
+    "definition": "Preventing water from passing through.",
+    "meaning": "防水的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "stroll",
+    "definition": "A slow, relaxed walk for pleasure.",
+    "meaning": "散步",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "flake",
+    "definition": "A small, thin piece of something, such as snow.",
+    "meaning": "薄片",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "orient",
+    "definition": "To help someone understand and become familiar with a new situation or place.",
+    "meaning": "使熟悉環境",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "uprising",
+    "definition": "An organized act of resistance against a ruler or government.",
+    "meaning": "起義",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "compute",
+    "definition": "To work out an amount or result using mathematical operations.",
+    "meaning": "計算",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fragrance",
+    "definition": "A pleasant, often sweet smell.",
+    "meaning": "香氣",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shriek",
+    "definition": "A loud, high sound made because of fear, pain, or excitement.",
+    "meaning": "尖叫聲",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "innumerable",
+    "definition": "Too many to count.",
+    "meaning": "無數的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "miraculous",
+    "definition": "So remarkable and unexpected that it seems impossible to explain normally.",
+    "meaning": "奇蹟般的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "maiden",
+    "definition": "Being the first of its kind for a person or thing.",
+    "meaning": "首次的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lofty",
+    "definition": "Aiming for high ideals or great achievements.",
+    "meaning": "崇高的；遠大的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "scorn",
+    "definition": "A strong feeling that someone is unworthy of respect.",
+    "meaning": "輕蔑",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "serving",
+    "definition": "An amount of food intended for one person at one time.",
+    "meaning": "一份食物",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "marvel",
+    "definition": "To feel great wonder or admiration.",
+    "meaning": "驚嘆",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "deplete",
+    "definition": "To greatly reduce the amount of something available.",
+    "meaning": "大量消耗",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "vocation",
+    "definition": "Work that a person feels strongly called or suited to do.",
+    "meaning": "天職",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "outlaw",
+    "definition": "To make an activity illegal.",
+    "meaning": "以法律禁止",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "playwright",
+    "definition": "A person who writes plays for the theater.",
+    "meaning": "劇作家",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nude",
+    "definition": "Not wearing any clothes.",
+    "meaning": "裸體的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "slay",
+    "definition": "To kill a person or creature, especially in a violent fight.",
+    "meaning": "殺死",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wharf",
+    "definition": "A structure beside water where boats stop to load or unload people and goods.",
+    "meaning": "碼頭",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "headphone",
+    "definition": "A device worn over or in an ear to listen to sound privately, usually as part of a pair.",
+    "meaning": "耳機",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tiresome",
+    "definition": "Causing annoyance or boredom.",
+    "meaning": "令人厭煩的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "priceless",
+    "definition": "So valuable that its worth cannot be measured in money.",
+    "meaning": "無價的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "accustom",
+    "definition": "To make someone familiar or comfortable with something through experience.",
+    "meaning": "使習慣",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "radiant",
+    "definition": "Showing great happiness and looking bright and beautiful.",
+    "meaning": "容光煥發的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "miscellaneous",
+    "definition": "Consisting of various different kinds of things.",
+    "meaning": "各式各樣的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fowl",
+    "definition": "Birds such as chickens and ducks, especially those kept for meat or eggs.",
+    "meaning": "家禽",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "meditate",
+    "definition": "To sit quietly and focus the mind to develop calmness or awareness.",
+    "meaning": "冥想",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "boulevard",
+    "definition": "A wide city street, often lined with trees.",
+    "meaning": "林蔭大道",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "chairperson",
+    "definition": "The person who leads a meeting or committee.",
+    "meaning": "主席",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "seagull",
+    "definition": "A seabird with long wings, usually white and gray feathers, and a loud call.",
+    "meaning": "海鷗",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hoarse",
+    "definition": "Sounding rough and weak, especially because the throat is sore or strained.",
+    "meaning": "沙啞的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "forsake",
+    "definition": "To leave someone and stop giving them support.",
+    "meaning": "拋棄",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "obstinate",
+    "definition": "Unwilling to change an opinion or action despite others' efforts.",
+    "meaning": "頑固的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "stutter",
+    "definition": "To speak with involuntary pauses and repeated sounds.",
+    "meaning": "口吃",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "quake",
+    "definition": "To shake or tremble strongly.",
+    "meaning": "震動",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "freeway",
+    "definition": "A major road designed for fast traffic, with controlled entrances and exits and no intersections at road level.",
+    "meaning": "高速公路",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "expiration",
+    "definition": "The end of a stated period of validity or recommended use.",
+    "meaning": "到期",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed",
+    "example": "Always check the expiration date on food packages.",
+    "translation": "每次都要檢查食品包裝上的有效期限。"
+  },
+  {
+    "id": "shortsighted",
+    "definition": "Failing to consider future needs or consequences.",
+    "meaning": "短視的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "breakup",
+    "definition": "The ending of a romantic relationship.",
+    "meaning": "分手",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sneaker",
+    "definition": "A light, comfortable shoe with a rubber sole, used for sports or casual wear.",
+    "meaning": "運動鞋",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "beautify",
+    "definition": "To make something more attractive.",
+    "meaning": "美化",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lonesome",
+    "definition": "Unhappy because of being alone or lacking company.",
+    "meaning": "寂寞的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "flunk",
+    "definition": "To fail a test or course.",
+    "meaning": "考試不及格",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "skeptical",
+    "definition": "Doubtful about whether something is true or likely to succeed.",
+    "meaning": "懷疑的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "odor",
+    "definition": "A smell, especially a noticeable or unpleasant one.",
+    "meaning": "氣味",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "endeavor",
+    "definition": "To make a serious effort to do something.",
+    "meaning": "努力",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "telecommunications",
+    "definition": "The transmission of information over long distances by electronic means.",
+    "meaning": "電信",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cosmetics",
+    "definition": "Products applied to the face or body to improve or change appearance.",
+    "meaning": "化妝品",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "splendor",
+    "definition": "Magnificent beauty or an impressive appearance.",
+    "meaning": "壯麗",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "examinee",
+    "definition": "A person taking an examination.",
+    "meaning": "應試者",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "destined",
+    "definition": "Believed to be certain to reach a particular future outcome.",
+    "meaning": "註定的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cassette",
+    "definition": "A small plastic case containing magnetic tape used to record and play sound.",
+    "meaning": "錄音帶",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  }
+]

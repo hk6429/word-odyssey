@@ -6,12 +6,15 @@
   "description": "英倫潑墨風格的英雄之旅英文學習網站",
   "scripts": {
     "start": "node server.mjs",
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.js",
+    "build": "node scripts/build-site.mjs",
+    "test:worker": "node --test tests/worker.test.js"
   },
   "engines": {
     "node": ">=22.13"
   },
   "dependencies": {
-    "google-auth-library": "^11.1.0"
+    "google-auth-library": "^11.1.0",
+    "jose": "6.2.12"
   }
 }

@@ -1,0 +1,1647 @@
+[
+  {
+    "id": "do",
+    "definition": "to perform an activity",
+    "meaning": "做",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "all",
+    "definition": "the complete number or amount of something",
+    "meaning": "所有的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "one",
+    "definition": "the number after zero and before two",
+    "meaning": "一",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "up",
+    "definition": "toward a higher position",
+    "meaning": "向上",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "some",
+    "definition": "an amount or number that is not stated exactly",
+    "meaning": "一些",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "two",
+    "definition": "the number after one and before three",
+    "meaning": "二",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "out",
+    "definition": "away from the inside of a building",
+    "meaning": "到外面",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "about",
+    "definition": "on the subject of",
+    "meaning": "關於",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "also",
+    "definition": "in addition to what has already been mentioned",
+    "meaning": "也",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "any",
+    "definition": "an unspecified number or amount, used in questions to ask whether something exists",
+    "meaning": "一些",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "well",
+    "definition": "in a skillful or satisfactory way",
+    "meaning": "很好地",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "after",
+    "definition": "later than a particular time or event",
+    "meaning": "在……之後",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "between",
+    "definition": "in the space separating two things",
+    "meaning": "在……之間",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "down",
+    "definition": "from a higher place toward a lower place along something",
+    "meaning": "沿著……向下",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "three",
+    "definition": "the number after two and before four",
+    "meaning": "三",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "through",
+    "definition": "from one end or side of something to the other, passing inside it",
+    "meaning": "穿過",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "over",
+    "definition": "across the space above something",
+    "meaning": "越過……上方",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "still",
+    "definition": "continuing at the time being discussed",
+    "meaning": "仍然",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "even",
+    "definition": "used to emphasize something surprising or unexpected",
+    "meaning": "甚至連……都",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "too",
+    "definition": "in addition to someone or something already mentioned",
+    "meaning": "也",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "last",
+    "definition": "immediately before the present period of time",
+    "meaning": "上一個的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "another",
+    "definition": "one more of the same kind",
+    "meaning": "再一個",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "high",
+    "definition": "extending a long distance above the ground",
+    "meaning": "高的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "under",
+    "definition": "in a position below something",
+    "meaning": "在……下面",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "something",
+    "definition": "a thing or matter that is not named or described exactly",
+    "meaning": "某件事",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "each",
+    "definition": "every individual member of a group considered separately",
+    "meaning": "每一個的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "while",
+    "definition": "during the time that another action happens",
+    "meaning": "當……的時候",
+    "pos": "連接詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "off",
+    "definition": "into a state in which a light or machine is not operating",
+    "meaning": "關掉",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "really",
+    "definition": "used to emphasize a strong feeling or opinion",
+    "meaning": "真的很",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "four",
+    "definition": "the number after three and before five",
+    "meaning": "四",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "before",
+    "definition": "earlier than a particular time or event",
+    "meaning": "在……之前",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "next",
+    "definition": "coming immediately after the present time or period",
+    "meaning": "下一個的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "five",
+    "definition": "the number after four and before six",
+    "meaning": "五",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "every",
+    "definition": "all members of a group, with no exceptions",
+    "meaning": "每一個的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "young",
+    "definition": "having lived for only a short time",
+    "meaning": "年幼的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "both",
+    "definition": "the two people or things together",
+    "meaning": "兩者都",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "second",
+    "definition": "coming immediately after the first in a sequence",
+    "meaning": "第二",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "right",
+    "definition": "correct and without mistakes",
+    "meaning": "正確的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "perhaps",
+    "definition": "possibly, but not certainly",
+    "meaning": "也許",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nothing",
+    "definition": "not a single thing",
+    "meaning": "什麼也沒有",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "study",
+    "definition": "to spend time learning about a subject",
+    "meaning": "研讀",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "almost",
+    "definition": "very nearly, but not completely or quite yet",
+    "meaning": "幾乎",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "far",
+    "definition": "at a great distance",
+    "meaning": "遠的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "six",
+    "definition": "the number after five and before seven",
+    "meaning": "六",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "anything",
+    "definition": "any thing or matter at all",
+    "meaning": "任何事",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fall",
+    "definition": "to move downward toward the ground",
+    "meaning": "落下",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "million",
+    "definition": "the number equal to one thousand times one thousand",
+    "meaning": "百萬",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "order",
+    "definition": "to ask for food or drink to be prepared and served",
+    "meaning": "點餐",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "act",
+    "definition": "to perform a character's part in a play or film",
+    "meaning": "演出",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "though",
+    "definition": "despite the fact that",
+    "meaning": "雖然",
+    "pos": "連接詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "enough",
+    "definition": "as much or as many as needed",
+    "meaning": "足夠的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "clear",
+    "definition": "free of clouds",
+    "meaning": "晴朗的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "around",
+    "definition": "on different sides of something, surrounding it",
+    "meaning": "圍繞著",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hundred",
+    "definition": "the number equal to ten times ten",
+    "meaning": "百",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "black",
+    "definition": "having the darkest color, like a night without light",
+    "meaning": "黑色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "across",
+    "definition": "from one side of a surface or area to the other",
+    "meaning": "橫越",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "third",
+    "definition": "coming immediately after the second in a sequence",
+    "meaning": "第三",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ten",
+    "definition": "the number after nine and before eleven",
+    "meaning": "十",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "white",
+    "definition": "having the lightest color, like fresh snow",
+    "meaning": "白色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "behind",
+    "definition": "at the back of something",
+    "meaning": "在……後面",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "free",
+    "definition": "costing no money",
+    "meaning": "免費的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "care",
+    "definition": "attention given to someone's safety, health, and needs",
+    "meaning": "照顧",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "break",
+    "definition": "to damage something so that it cracks or separates into pieces",
+    "meaning": "打破",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "usually",
+    "definition": "on most occasions",
+    "meaning": "通常",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "someone",
+    "definition": "a person whose identity is not stated",
+    "meaning": "某個人",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "everything",
+    "definition": "all the things involved in a situation",
+    "meaning": "一切",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "seven",
+    "definition": "the number after six and before eight",
+    "meaning": "七",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "eight",
+    "definition": "the number after seven and before nine",
+    "meaning": "八",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "twenty",
+    "definition": "the number equal to two times ten",
+    "meaning": "二十",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "thousand",
+    "definition": "the number equal to ten times one hundred",
+    "meaning": "千",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rise",
+    "definition": "to appear above the horizon",
+    "meaning": "升起",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "anyone",
+    "definition": "any person at all",
+    "meaning": "任何人",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "love",
+    "definition": "to feel deep affection for someone",
+    "meaning": "愛",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "knowledge",
+    "definition": "information and understanding gained through learning or experience",
+    "meaning": "知識",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "near",
+    "definition": "at a short distance from",
+    "meaning": "在……附近",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "round",
+    "definition": "shaped like a circle",
+    "meaning": "圓形的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "above",
+    "definition": "in a higher position than something",
+    "meaning": "在……上方",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nine",
+    "definition": "the number after eight and before ten",
+    "meaning": "九",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "everyone",
+    "definition": "every person in a group",
+    "meaning": "每個人",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "please",
+    "definition": "used to make a request polite",
+    "meaning": "請",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "along",
+    "definition": "following the length or course of something",
+    "meaning": "沿著",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "total",
+    "definition": "the complete amount after everything has been added together",
+    "meaning": "總額",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "outside",
+    "definition": "in a place that is not inside a building",
+    "meaning": "在外面",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sorry",
+    "definition": "feeling regret about something wrong or upsetting that you have done",
+    "meaning": "感到抱歉的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "attack",
+    "definition": "to try to hurt or damage someone or something using force",
+    "meaning": "攻擊",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "medium",
+    "definition": "between small and large in size",
+    "meaning": "中等大小的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "maybe",
+    "definition": "possibly, but not certainly",
+    "meaning": "也許",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "green",
+    "definition": "having the color of fresh grass or leaves",
+    "meaning": "綠色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "thirty",
+    "definition": "the number equal to three times ten",
+    "meaning": "三十",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fifty",
+    "definition": "the number equal to five times ten",
+    "meaning": "五十",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "blue",
+    "definition": "having the color of a clear daytime sky",
+    "meaning": "藍色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "below",
+    "definition": "in a position lower than something",
+    "meaning": "在……下面",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "exercise",
+    "definition": "to do physical activities to stay healthy or become fit",
+    "meaning": "運動",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "inside",
+    "definition": "within the walls or boundaries of something",
+    "meaning": "在……裡面",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "clothes",
+    "definition": "things worn to cover the body",
+    "meaning": "衣服",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "forty",
+    "definition": "the number equal to four times ten",
+    "meaning": "四十",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "touch",
+    "definition": "to put a hand or another body part against something",
+    "meaning": "觸碰",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "twelve",
+    "definition": "the number after eleven and before thirteen",
+    "meaning": "十二",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "famous",
+    "definition": "known by many people",
+    "meaning": "有名的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nobody",
+    "definition": "not a single person",
+    "meaning": "沒有人",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "beside",
+    "definition": "at the side of someone or something",
+    "meaning": "在……旁邊",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sixty",
+    "definition": "the number equal to six times ten",
+    "meaning": "六十",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fifteen",
+    "definition": "the number after fourteen and before sixteen",
+    "meaning": "十五",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "clean",
+    "definition": "to remove dirt or mess from something",
+    "meaning": "清潔",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wonderful",
+    "definition": "extremely enjoyable or pleasing",
+    "meaning": "美好的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nineteen",
+    "definition": "the number after eighteen and before twenty",
+    "meaning": "十九",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "terrible",
+    "definition": "very bad or unpleasant",
+    "meaning": "糟糕的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "eighty",
+    "definition": "the number equal to eight times ten",
+    "meaning": "八十",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ninety",
+    "definition": "the number equal to nine times ten",
+    "meaning": "九十",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "brown",
+    "definition": "having the color of chocolate or dark wood",
+    "meaning": "棕色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "taste",
+    "definition": "to have a particular flavor when eaten or drunk",
+    "meaning": "嚐起來",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "camp",
+    "definition": "to stay outdoors overnight, usually in a tent",
+    "meaning": "露營",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "except",
+    "definition": "not including a particular person or thing",
+    "meaning": "除了……以外",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "autumn",
+    "definition": "the season between summer and winter",
+    "meaning": "秋天",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "seventy",
+    "definition": "the number equal to seven times ten",
+    "meaning": "七十",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "eleven",
+    "definition": "the number after ten and before twelve",
+    "meaning": "十一",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hello",
+    "definition": "used to greet someone",
+    "meaning": "哈囉",
+    "pos": "感嘆詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dozen",
+    "definition": "a group of twelve",
+    "meaning": "一打",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "kiss",
+    "definition": "an act of touching someone with the lips to show affection",
+    "meaning": "親吻",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cool",
+    "definition": "pleasantly cold rather than warm",
+    "meaning": "涼爽的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pack",
+    "definition": "to put things into a bag or container for travel",
+    "meaning": "收拾行李",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mad",
+    "definition": "feeling angry",
+    "meaning": "生氣的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "eighteen",
+    "definition": "the number after seventeen and before nineteen",
+    "meaning": "十八",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pink",
+    "definition": "having a pale red color",
+    "meaning": "粉紅色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "smoke",
+    "definition": "to breathe in and breathe out fumes from burning tobacco",
+    "meaning": "抽菸",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fourteen",
+    "definition": "the number after thirteen and before fifteen",
+    "meaning": "十四",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sixteen",
+    "definition": "the number after fifteen and before seventeen",
+    "meaning": "十六",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "blind",
+    "definition": "unable to see",
+    "meaning": "失明的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bite",
+    "definition": "to cut or press into something with the teeth",
+    "meaning": "咬",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "thirteen",
+    "definition": "the number after twelve and before fourteen",
+    "meaning": "十三",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "taxi",
+    "definition": "a car with a driver that passengers pay to ride in",
+    "meaning": "計程車",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "photo",
+    "definition": "a picture made using a camera",
+    "meaning": "照片",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "brush",
+    "definition": "to clean something by moving a tool with stiff hairs across it",
+    "meaning": "刷",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "seventeen",
+    "definition": "the number after sixteen and before eighteen",
+    "meaning": "十七",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "teenager",
+    "definition": "a person aged thirteen to nineteen",
+    "meaning": "青少年",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hey",
+    "definition": "used to get someone's attention",
+    "meaning": "嘿",
+    "pos": "感嘆詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "handsome",
+    "definition": "attractive in appearance, especially describing a man",
+    "meaning": "英俊的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "zero",
+    "definition": "the number representing no quantity",
+    "meaning": "零",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "seldom",
+    "definition": "not often",
+    "meaning": "很少",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "grandmother",
+    "definition": "the mother of a person's father or mother",
+    "meaning": "祖母或外祖母",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bow",
+    "definition": "to bend the upper body forward as a sign of respect",
+    "meaning": "鞠躬",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "slim",
+    "definition": "having a thin body in an attractive way",
+    "meaning": "苗條的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "jeans",
+    "definition": "pants made of strong cotton cloth, usually blue denim",
+    "meaning": "牛仔褲",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "scared",
+    "definition": "feeling afraid",
+    "meaning": "害怕的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "purple",
+    "definition": "having a color made by mixing red and blue",
+    "meaning": "紫色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "delicious",
+    "definition": "very pleasant to eat or drink",
+    "meaning": "美味的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "gray",
+    "definition": "having a color between black and white",
+    "meaning": "灰色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sunny",
+    "definition": "having plenty of sunlight",
+    "meaning": "陽光充足的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "comic",
+    "definition": "using a series of drawings and words to tell a story",
+    "meaning": "漫畫的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "zoo",
+    "definition": "a place where animals are kept for people to see",
+    "meaning": "動物園",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hi",
+    "definition": "used as a friendly, informal greeting",
+    "meaning": "嗨",
+    "pos": "感嘆詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sore",
+    "definition": "painful or uncomfortable, especially after physical effort",
+    "meaning": "痠痛的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shorts",
+    "definition": "pants with legs that end above or near the knees",
+    "meaning": "短褲",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "robot",
+    "definition": "a machine programmed to perform tasks automatically",
+    "meaning": "機器人",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "snack",
+    "definition": "a small amount of food eaten between meals",
+    "meaning": "點心",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pants",
+    "definition": "clothing covering the lower body, with a separate part for each leg",
+    "meaning": "褲子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "gym",
+    "definition": "a building or room used for indoor exercise and sports",
+    "meaning": "體育館",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mop",
+    "definition": "to wash a floor using a tool with an absorbent head and a long handle",
+    "meaning": "拖地",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rainy",
+    "definition": "having rain",
+    "meaning": "下雨的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "snowy",
+    "definition": "having falling snow",
+    "meaning": "下雪的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "classmate",
+    "definition": "a person in the same class at school",
+    "meaning": "同班同學",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bookstore",
+    "definition": "a shop that sells books",
+    "meaning": "書店",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "yummy",
+    "definition": "very pleasant to eat, used informally",
+    "meaning": "好吃的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "math",
+    "definition": "the study of numbers, quantities, shapes, and patterns",
+    "meaning": "數學",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cellphone",
+    "definition": "a portable telephone that connects wirelessly to a mobile network",
+    "meaning": "手機",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "restroom",
+    "definition": "a room with toilets, especially in a public place",
+    "meaning": "洗手間",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "chopsticks",
+    "definition": "a pair of thin sticks used together to pick up food",
+    "meaning": "筷子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fries",
+    "definition": "thin pieces of potato cooked in hot oil",
+    "meaning": "薯條",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "glasses",
+    "definition": "a pair of lenses in a frame worn to help someone see",
+    "meaning": "眼鏡",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hard-working",
+    "definition": "putting much time and effort into work or study",
+    "meaning": "勤奮的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "post office",
+    "definition": "a place where people send letters and packages and buy stamps",
+    "meaning": "郵局",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "socks",
+    "definition": "pieces of clothing worn on the feet inside shoes",
+    "meaning": "襪子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sports",
+    "definition": "physical activities with rules, often involving competition",
+    "meaning": "運動",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "t-shirt",
+    "definition": "a simple shirt with short sleeves and no collar",
+    "meaning": "T恤",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "such",
+    "definition": "used to emphasize the high degree of a quality",
+    "meaning": "如此的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "general",
+    "definition": "usually or in most situations",
+    "meaning": "一般而言（用於 in general）",
+    "pos": "副詞片語",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "control",
+    "definition": "to manage a feeling or behavior so it does not become excessive",
+    "meaning": "控制",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "major",
+    "definition": "very important or serious",
+    "meaning": "重大的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "support",
+    "definition": "to encourage someone and help them achieve something",
+    "meaning": "支持",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "manager",
+    "definition": "a person responsible for running a business or supervising its workers",
+    "meaning": "經理",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "human",
+    "definition": "a person, as distinct from other kinds of animals",
+    "meaning": "人類",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "especially",
+    "definition": "used to single out something as particularly important or relevant",
+    "meaning": "尤其是",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "discuss",
+    "definition": "to talk about a subject and exchange ideas",
+    "meaning": "討論",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "charge",
+    "definition": "to put electrical energy into a battery or device",
+    "meaning": "充電",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "design",
+    "definition": "to plan how something will look or be made",
+    "meaning": "設計",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "forward",
+    "definition": "with pleasure at the thought of a future event",
+    "meaning": "期待地（用於 look forward to）",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "concern",
+    "definition": "a feeling of interest in someone's well-being",
+    "meaning": "關心",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nearly",
+    "definition": "almost reaching a particular amount or time",
+    "meaning": "將近",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "improve",
+    "definition": "to become better",
+    "meaning": "進步",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "beyond",
+    "definition": "on the farther side of something",
+    "meaning": "在……的另一邊",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "direct",
+    "definition": "going to a destination without requiring a change of planes",
+    "meaning": "直達的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "review",
+    "definition": "to study previously learned material again",
+    "meaning": "複習",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "none",
+    "definition": "not a single person or thing in a group",
+    "meaning": "沒有一個",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "vote",
+    "definition": "to formally express a choice in an election or decision",
+    "meaning": "投票",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "employ",
+    "definition": "to pay someone to work for you",
+    "meaning": "僱用",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "regular",
+    "definition": "happening repeatedly at consistent times or intervals",
+    "meaning": "規律的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "strike",
+    "definition": "a refusal to work by employees demanding better conditions or pay",
+    "meaning": "罷工",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "plus",
+    "definition": "with the following number added",
+    "meaning": "加",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ordinary",
+    "definition": "normal and not unusual or special",
+    "meaning": "平常的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "select",
+    "definition": "to choose from a group of possibilities",
+    "meaning": "挑選",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "double",
+    "definition": "to become twice as large or as much",
+    "meaning": "增加為兩倍",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tiny",
+    "definition": "extremely small",
+    "meaning": "極小的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "metal",
+    "definition": "a material such as iron or copper that usually conducts heat and electricity well",
+    "meaning": "金屬",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "search",
+    "definition": "to look carefully through something to find what is needed",
+    "meaning": "搜尋",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "neither",
+    "definition": "not one and not the other of two people or things",
+    "meaning": "兩者都不",
+    "pos": "代名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "empty",
+    "definition": "to remove the contents of a container",
+    "meaning": "倒空",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "focus",
+    "definition": "to direct attention toward a particular task or subject",
+    "meaning": "專注",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "command",
+    "definition": "an instruction given by someone with authority",
+    "meaning": "命令",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lock",
+    "definition": "to secure a door so it cannot be opened without a key or code",
+    "meaning": "鎖上",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "print",
+    "definition": "to produce words or pictures on paper using a machine",
+    "meaning": "列印",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rush",
+    "definition": "to act or move very quickly because of limited time",
+    "meaning": "匆忙行事",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "silly",
+    "definition": "showing little thought or good judgment",
+    "meaning": "傻的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "till",
+    "definition": "up to the time when something happens",
+    "meaning": "直到",
+    "pos": "連接詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "trace",
+    "definition": "to find where something came from by following evidence",
+    "meaning": "追查來源",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "trousers",
+    "definition": "clothing covering the body from the waist to the ankles, with separate parts for each leg",
+    "meaning": "長褲",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "vendor",
+    "definition": "a person who sells goods, often from a stall",
+    "meaning": "攤販",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "advertisement",
+    "definition": "a message intended to persuade people to buy a product or service",
+    "meaning": "廣告",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "emphasize",
+    "definition": "to give special attention to something because it is important",
+    "meaning": "強調",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "besides",
+    "definition": "in addition to",
+    "meaning": "除了……之外還有",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "horrible",
+    "definition": "very unpleasant or bad",
+    "meaning": "糟透的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pardon",
+    "definition": "used politely to ask someone to repeat what they said",
+    "meaning": "請再說一次",
+    "pos": "感嘆詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "exam",
+    "definition": "a formal test of knowledge or skill",
+    "meaning": "考試",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "omit",
+    "definition": "to leave something out",
+    "meaning": "略去",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "goodness",
+    "definition": "used to express surprise or alarm",
+    "meaning": "天哪",
+    "pos": "感嘆詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cruel",
+    "definition": "causing pain or suffering without caring about others",
+    "meaning": "殘忍的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "minus",
+    "definition": "with the following number subtracted",
+    "meaning": "減",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mechanic",
+    "definition": "a person whose job is to repair vehicles or machines",
+    "meaning": "修理技師",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "quit",
+    "definition": "to leave a job permanently",
+    "meaning": "辭職",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rude",
+    "definition": "not polite or respectful",
+    "meaning": "無禮的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "freezing",
+    "definition": "extremely cold",
+    "meaning": "極冷的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bark",
+    "definition": "to make the short, loud sounds that dogs make",
+    "meaning": "吠叫",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "beginner",
+    "definition": "a person who has just started learning a skill or activity",
+    "meaning": "初學者",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sour",
+    "definition": "having a sharp, acidic taste like a lemon",
+    "meaning": "酸的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "woods",
+    "definition": "an area of land covered with trees",
+    "meaning": "樹林",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "flu",
+    "definition": "a contagious viral illness that often causes fever, aches, and coughing",
+    "meaning": "流感",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-03",
+  "total": 7000,
+  "uniqueIds": 7000,
+  "matchingVocabDuelSourceTargets": 6151,
+  "activeExampleSources": {
+    "word-odyssey-seed": 72,
+    "vocab-duel-editorial": 6028,
+    "word-odyssey-editorial": 900
+  },
+  "authoredSupplementalSourceEntries": 850,
+  "senseRepairSourceEntries": 703,
+  "contextualSenseAlignmentSourceEntries": 5167,
+  "mergedSpellingVariants": 13,
+  "newLearningTargets": 13,
+  "difficultyBands": {
+    "1": 300,
+    "2": 1023,
+    "3": 947,
+    "4": 668,
+    "5": 1829,
+    "6": 2233
+  },
+  "exampleCount": 7000,
+  "reviewStatusCounts": {
+    "model-reviewed": 6798,
+    "source-sample-reviewed": 202
+  },
+  "source": {
+    "project": "hk6429/vocab-duel",
+    "file": "data/words.json",
+    "sha256": "9c14f86f0684ecd9ec2c645b0c02a309086b59f4ede479897cdcdc549452b4f4",
+    "note": "User-owned project; self-authored meanings and examples, sample-reviewed, reused without modifying source."
+  },
+  "sha256": "56de3f6010a9234bfbaf9bc515eff65123513dc683644c06e6d3852092df125a",
+  "note": "Source-entry counts precede spelling normalization; active final counts are reported separately. Contextual sense alignments and additions were model-reviewed, not independently teacher-reviewed. This is not evidence of learning efficacy."
+}

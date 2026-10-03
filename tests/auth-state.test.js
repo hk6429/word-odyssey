@@ -187,3 +187,34 @@ test('app rejects invalid adventure before changing progress, locale, or story',
  await assert.rejects(()=>context.applySnapshot({progress:createState(),adventure:{role:'cartographer'},locale:'zh'}));
  assert.equal(context.state,original);assert.equal(context.applyingCloud,false);assert.equal(mutations,0);assert.equal(context.session.active,true);
 });
+
+test('same-account merge keeps local and remote review rounds and the latest snapshot of a round', () => {
+ const base=earnedState();
+ const round=(id,date,patch={})=>({id,startedAt:date,date,count:10,firstAttempts:10,firstCorrect:8,retries:2,completed:true,...patch});
+ const local=snapshot('scout','zh',structuredClone(base)),remote=snapshot('cartographer','en',structuredClone(base));
+ local.progress.reviewHistory=[round('local-round-1',1000),round('shared-round-1',2000,{firstAttempts:2,firstCorrect:1,retries:0,completed:false})];
+ remote.progress.reviewHistory=[round('remote-round-1',1500),round('shared-round-1',2000,{date:2100})];
+ const before=structuredClone([local,remote]),merged=mergeSnapshots(local,remote);
+ assert.deepEqual(merged.progress.reviewHistory.map(item=>item.id),['local-round-1','remote-round-1','shared-round-1']);
+ assert.equal(merged.progress.reviewHistory.at(-1).firstAttempts,10);
+ assert.equal(merged.progress.reviewHistory.at(-1).completed,true);
+ assert.deepEqual(mergeSnapshots(remote,local).progress.reviewHistory,merged.progress.reviewHistory);
+ assert.deepEqual([local,remote],before,'merging must not mutate source backups');
+ assert.equal(merged.progress.xp,base.xp);
+ assert.deepEqual(merged.adventure,remote.adventure);
+});
+
+test('merged review history retains distinct IDs with identical timestamps and caps at 100 rounds', () => {
+ const base=earnedState(),local=snapshot(null,'zh',structuredClone(base)),remote=snapshot(null,'zh',structuredClone(base));
+ const round=index=>({id:`review-round-${String(index).padStart(3,'0')}`,startedAt:1000+index,date:1000+index,count:10,firstAttempts:10,firstCorrect:10,retries:0,completed:true});
+ local.progress.reviewHistory=Array.from({length:80},(_,i)=>round(i));
+ remote.progress.reviewHistory=Array.from({length:80},(_,i)=>round(i+60));
+ const merged=mergeSnapshots(local,remote);
+ assert.equal(merged.progress.reviewHistory.length,100);
+ assert.equal(new Set(merged.progress.reviewHistory.map(item=>item.id)).size,100);
+ assert.equal(merged.progress.reviewHistory[0].id,'review-round-040');
+ assert.equal(merged.progress.reviewHistory.at(-1).id,'review-round-139');
+ local.progress.reviewHistory=[round(1)];
+ remote.progress.reviewHistory=[{...round(1),id:'separate-round-1'}];
+ assert.equal(mergeSnapshots(local,remote).progress.reviewHistory.length,2);
+});

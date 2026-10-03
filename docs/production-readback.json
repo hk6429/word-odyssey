@@ -1,0 +1,106 @@
+{
+  "url": "https://word-odyssey.hk6429.workers.dev",
+  "version": "bc094c09-f187-4ac8-bb20-60f3cd3c2a4d",
+  "checkedAt": "2026-10-03T10:24:45.284Z",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html",
+      "bytes": 12238,
+      "sha256": "665c72ade7a4d0038e07a282438ca58f4e3246bfeaa04d2b40ed16a9eb30ea67",
+      "matchesLocal": true
+    },
+    {
+      "path": "/app.js",
+      "status": 200,
+      "type": "text/javascript",
+      "bytes": 34198,
+      "sha256": "cdabd9cbbd2d27f0bbdebff71e8b83ed65bb7d9b189ab20d7dcebbc742f71d23",
+      "matchesLocal": true
+    },
+    {
+      "path": "/vocabulary.js",
+      "status": 200,
+      "type": "text/javascript",
+      "bytes": 3828445,
+      "sha256": "56de3f6010a9234bfbaf9bc515eff65123513dc683644c06e6d3852092df125a",
+      "matchesLocal": true
+    },
+    {
+      "path": "/quest-visuals.js",
+      "status": 200,
+      "type": "text/javascript",
+      "bytes": 8630,
+      "sha256": "7cab3d33881e82efdb8b12d7170332b2013107f350e932c92f22963f54540281",
+      "matchesLocal": true
+    },
+    {
+      "path": "/assets/miniquests-01.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 758668,
+      "sha256": "276428f514b1930eabed19c3f4fb8830a53762a5773188f834741fffd85b0b33",
+      "matchesLocal": true
+    },
+    {
+      "path": "/assets/miniquests-10.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 747980,
+      "sha256": "ff273eca5a5d7f72e1fbbf526480724226b9668266e5df5834f3e0164a1a4617",
+      "matchesLocal": true
+    },
+    {
+      "path": "/api/config",
+      "status": 200,
+      "type": "application/json",
+      "bytes": 138,
+      "storage": "durable-sqlite",
+      "googleConfigured": true
+    },
+    {
+      "path": "/api/session",
+      "status": 200,
+      "type": "application/json",
+      "bytes": 13
+    },
+    {
+      "path": "/.env",
+      "status": 404,
+      "type": "text/plain;charset=UTF-8",
+      "bytes": 9
+    },
+    {
+      "path": "/sources/vocab-duel-examples.json",
+      "status": 404,
+      "type": "text/plain;charset=UTF-8",
+      "bytes": 9
+    },
+    {
+      "path": "/worker.mjs",
+      "status": 404,
+      "type": "text/plain;charset=UTF-8",
+      "bytes": 9
+    }
+  ],
+  "googleLogin": {
+    "realGoogleSignIn": true,
+    "originSaved": true,
+    "aiAgentClient": false
+  },
+  "existingProgressMigration": {
+    "endpoint": "/api/session",
+    "status": 200,
+    "authenticated": true,
+    "revision": 2,
+    "wordCount": 10,
+    "xp": 100
+  },
+  "validation": {
+    "affectedModuleChecks": 64,
+    "failures": 0,
+    "visualFocusedChecks": 9,
+    "privateSourcePathsPublic": false
+  }
+}

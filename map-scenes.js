@@ -14,7 +14,7 @@ export const MAP_SCENES = [
   ...scene,
   first:index*10+1,
   last:index*10+10,
-  src:`assets/map-region-${String(index+1).padStart(2,'0')}.png`
+  src:`assets/map-region-${String(index+1).padStart(2,'0')}.webp`
 }));
 
 export const MAP_POINTS = Object.freeze([

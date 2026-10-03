@@ -1,0 +1,4521 @@
+[
+  {
+    "id": "have",
+    "definition": "to own or possess something",
+    "meaning": "擁有",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "from",
+    "definition": "used to show where someone comes from",
+    "meaning": "來自",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "say",
+    "definition": "to express something using spoken words",
+    "meaning": "說",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "if",
+    "definition": "used to introduce a condition for something",
+    "meaning": "如果",
+    "pos": "連接詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "get",
+    "definition": "to receive something that someone sends or gives",
+    "meaning": "收到",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "make",
+    "definition": "to create something by putting parts together",
+    "meaning": "製作",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "go",
+    "definition": "to travel or move to a place",
+    "meaning": "去",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "see",
+    "definition": "to notice something with your eyes",
+    "meaning": "看見",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "so",
+    "definition": "to a very great degree",
+    "meaning": "非常",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "know",
+    "definition": "to have information about something in your mind",
+    "meaning": "知道",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "time",
+    "definition": "the hour and minute shown by a clock",
+    "meaning": "時間",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "take",
+    "definition": "to travel somewhere using a vehicle",
+    "meaning": "搭乘",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "year",
+    "definition": "a period of twelve months",
+    "meaning": "年",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "into",
+    "definition": "toward the inside of something",
+    "meaning": "進入",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "then",
+    "definition": "after the event just mentioned",
+    "meaning": "然後",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "think",
+    "definition": "to believe that something is true",
+    "meaning": "認為",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "come",
+    "definition": "to move toward someone or a place",
+    "meaning": "來",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "now",
+    "definition": "at the present moment in time",
+    "meaning": "現在",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "other",
+    "definition": "used to refer to the remaining people or things",
+    "meaning": "其他的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "only",
+    "definition": "no more than the amount mentioned",
+    "meaning": "只有",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "give",
+    "definition": "to let someone have something",
+    "meaning": "給予",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "just",
+    "definition": "very recently before the present moment",
+    "meaning": "剛剛",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "good",
+    "definition": "having qualities that people like or approve of",
+    "meaning": "好的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "more",
+    "definition": "an additional amount of something",
+    "meaning": "更多的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "people",
+    "definition": "human beings considered as a group",
+    "meaning": "人們",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "first",
+    "definition": "coming before all others in order",
+    "meaning": "第一的",
+    "pos": "數詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "very",
+    "definition": "to a high degree or level",
+    "meaning": "非常",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "new",
+    "definition": "recently made or received rather than old",
+    "meaning": "新的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "look",
+    "definition": "to direct your eyes toward something",
+    "meaning": "看",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "way",
+    "definition": "a route that leads to a place",
+    "meaning": "路線",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "use",
+    "definition": "to do something with a tool or object",
+    "meaning": "使用",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "like",
+    "definition": "to enjoy something or find it pleasant",
+    "meaning": "喜歡",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "than",
+    "definition": "used to introduce the second item in a comparison",
+    "meaning": "比",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "man",
+    "definition": "an adult person who is male",
+    "meaning": "男人",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "want",
+    "definition": "to wish to have something",
+    "meaning": "想要",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "day",
+    "definition": "a period of twenty-four hours",
+    "meaning": "一天",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "many",
+    "definition": "a large number of people or things",
+    "meaning": "許多的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "because",
+    "definition": "for the reason that follows",
+    "meaning": "因為",
+    "pos": "連接詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "back",
+    "definition": "to a place where someone was before",
+    "meaning": "回到原處",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "thing",
+    "definition": "an object whose name is not stated",
+    "meaning": "東西",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tell",
+    "definition": "to give someone information using words",
+    "meaning": "告訴",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "child",
+    "definition": "a young person who is not yet an adult",
+    "meaning": "小孩",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "put",
+    "definition": "to place something in a particular position",
+    "meaning": "放置",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "own",
+    "definition": "belonging to the person mentioned",
+    "meaning": "自己的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mean",
+    "definition": "to express or represent a particular idea",
+    "meaning": "意指",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "become",
+    "definition": "to change into a particular state or role",
+    "meaning": "成為",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "work",
+    "definition": "to do a job to earn money",
+    "meaning": "工作",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "old",
+    "definition": "having lived for many years",
+    "meaning": "年老的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "leave",
+    "definition": "to go away from a place",
+    "meaning": "離開",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "life",
+    "definition": "the experiences and activities of living",
+    "meaning": "生活",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "great",
+    "definition": "very good and worthy of praise",
+    "meaning": "很棒的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "woman",
+    "definition": "an adult person who is female",
+    "meaning": "女人",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "need",
+    "definition": "to require something because it is necessary",
+    "meaning": "需要",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "feel",
+    "definition": "to experience an emotion or physical condition",
+    "meaning": "感到",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "same",
+    "definition": "being one identical person or thing",
+    "meaning": "相同的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "case",
+    "definition": "a container used to protect something",
+    "meaning": "保護盒",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "part",
+    "definition": "one piece or section of a whole",
+    "meaning": "部分",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ask",
+    "definition": "to say a question to get information",
+    "meaning": "詢問",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "group",
+    "definition": "a set of people gathered to do something",
+    "meaning": "小組",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "number",
+    "definition": "a series of digits used to identify something",
+    "meaning": "號碼",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "however",
+    "definition": "used to introduce a contrasting statement",
+    "meaning": "然而",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "world",
+    "definition": "the earth and all its countries",
+    "meaning": "世界",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "show",
+    "definition": "to let someone see something",
+    "meaning": "給人看",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "house",
+    "definition": "a building where people live",
+    "meaning": "房屋",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "area",
+    "definition": "a particular part of a town or place",
+    "meaning": "地區",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "most",
+    "definition": "the largest part of a group",
+    "meaning": "大多數的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "problem",
+    "definition": "a difficulty that needs to be dealt with",
+    "meaning": "問題",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "again",
+    "definition": "one more time after an earlier time",
+    "meaning": "再一次",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "never",
+    "definition": "not at any time at all",
+    "meaning": "從不",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "try",
+    "definition": "to make an effort to do something",
+    "meaning": "嘗試",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "service",
+    "definition": "the help and attention given to customers",
+    "meaning": "服務",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "place",
+    "definition": "a particular spot or location",
+    "meaning": "地方",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hand",
+    "definition": "the body part with fingers at the arm's end",
+    "meaning": "手",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "much",
+    "definition": "a large amount of something",
+    "meaning": "很多的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "party",
+    "definition": "a gathering where people celebrate and enjoy themselves",
+    "meaning": "派對",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "small",
+    "definition": "not large in size or amount",
+    "meaning": "小的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "keep",
+    "definition": "to continue being in a particular state",
+    "meaning": "保持",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "country",
+    "definition": "an area of land with its own government",
+    "meaning": "國家",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "point",
+    "definition": "to show something by aiming a finger at it",
+    "meaning": "指向",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "different",
+    "definition": "not the same as another",
+    "meaning": "不同的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hold",
+    "definition": "to keep something in your hand",
+    "meaning": "握住",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "week",
+    "definition": "a period of seven days",
+    "meaning": "星期",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "large",
+    "definition": "big in size or amount",
+    "meaning": "大的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "member",
+    "definition": "a person who belongs to a group",
+    "meaning": "成員",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "always",
+    "definition": "on every occasion without exception",
+    "meaning": "總是",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "end",
+    "definition": "to finish or stop happening",
+    "meaning": "結束",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "without",
+    "definition": "not having or not including something",
+    "meaning": "沒有",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "few",
+    "definition": "a small number of people or things",
+    "meaning": "少數的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "during",
+    "definition": "at a time within a particular period",
+    "meaning": "在…期間",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "begin",
+    "definition": "to start doing something or happening",
+    "meaning": "開始",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bring",
+    "definition": "to carry something toward a person or place",
+    "meaning": "帶來",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "word",
+    "definition": "a unit of language with a meaning",
+    "meaning": "單字",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fact",
+    "definition": "something that is known to be true",
+    "meaning": "事實",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "quite",
+    "definition": "to a fairly high degree",
+    "meaning": "相當",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "head",
+    "definition": "the body part containing the brain and face",
+    "meaning": "頭",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "write",
+    "definition": "to form words on paper or a screen",
+    "meaning": "寫",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "side",
+    "definition": "one of the areas beside something",
+    "meaning": "側邊",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "month",
+    "definition": "one of the twelve parts of a year",
+    "meaning": "月份",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "business",
+    "definition": "a company or activity that earns money",
+    "meaning": "事業",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "night",
+    "definition": "the dark period between evening and morning",
+    "meaning": "夜晚",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "long",
+    "definition": "measuring a great distance from end to end",
+    "meaning": "長的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "important",
+    "definition": "having great value or needing attention",
+    "meaning": "重要的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "eye",
+    "definition": "one of the body parts used for seeing",
+    "meaning": "眼睛",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "move",
+    "definition": "to change the position of something",
+    "meaning": "移動",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "power",
+    "definition": "electricity supplied to homes and buildings",
+    "meaning": "電力",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pay",
+    "definition": "to give money for something you buy",
+    "meaning": "付款",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "often",
+    "definition": "many times on different occasions",
+    "meaning": "經常",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "interest",
+    "definition": "a feeling of wanting to learn about something",
+    "meaning": "興趣",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "national",
+    "definition": "relating to a whole country",
+    "meaning": "全國的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "money",
+    "definition": "coins and notes used to buy things",
+    "meaning": "錢",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "water",
+    "definition": "the clear liquid people drink to stay alive",
+    "meaning": "水",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "away",
+    "definition": "to a different place farther from here",
+    "meaning": "離開",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hear",
+    "definition": "to notice a sound with your ears",
+    "meaning": "聽見",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "room",
+    "definition": "an enclosed space inside a building",
+    "meaning": "房間",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "level",
+    "definition": "a particular degree of ability or skill",
+    "meaning": "程度",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "early",
+    "definition": "near the start of the day",
+    "meaning": "一大早",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "car",
+    "definition": "a road vehicle with four wheels for carrying people",
+    "meaning": "汽車",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "already",
+    "definition": "before now or before a stated time",
+    "meaning": "已經",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "possible",
+    "definition": "able to happen or be done",
+    "meaning": "可能的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "allow",
+    "definition": "to give someone permission to do something",
+    "meaning": "允許",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "meet",
+    "definition": "to see and become acquainted with someone",
+    "meaning": "認識",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "big",
+    "definition": "large in size compared with similar things",
+    "meaning": "大的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "yet",
+    "definition": "up to the present time",
+    "meaning": "還",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "whether",
+    "definition": "used to introduce a choice between possibilities",
+    "meaning": "是否",
+    "pos": "連接詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "live",
+    "definition": "to have your home in a place",
+    "meaning": "居住",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "idea",
+    "definition": "a thought or suggestion about what to do",
+    "meaning": "主意",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "name",
+    "definition": "a word used to identify a person",
+    "meaning": "名字",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "job",
+    "definition": "work that someone does to earn money",
+    "meaning": "工作",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "body",
+    "definition": "the whole physical structure of a person",
+    "meaning": "身體",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "happen",
+    "definition": "to take place as an event",
+    "meaning": "發生",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "report",
+    "definition": "a written account giving information about a subject",
+    "meaning": "報告",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "line",
+    "definition": "a row of people waiting for something",
+    "meaning": "隊伍",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "later",
+    "definition": "at a time after now",
+    "meaning": "稍後",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "face",
+    "definition": "the front of the head with eyes and mouth",
+    "meaning": "臉",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "carry",
+    "definition": "to take something from one place to another",
+    "meaning": "攜帶",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "together",
+    "definition": "with another person or other people",
+    "meaning": "一起",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "appear",
+    "definition": "to become visible or present",
+    "meaning": "出現",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "little",
+    "definition": "small in size compared with similar things",
+    "meaning": "小的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "able",
+    "definition": "having the skill needed to do something",
+    "meaning": "有能力的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "late",
+    "definition": "arriving after the expected or required time",
+    "meaning": "遲到的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hour",
+    "definition": "a period of sixty minutes",
+    "meaning": "小時",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "door",
+    "definition": "a movable part that opens an entrance",
+    "meaning": "門",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sit",
+    "definition": "to rest your body on a chair or seat",
+    "meaning": "坐",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "office",
+    "definition": "a room or building where people do business work",
+    "meaning": "辦公室",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "since",
+    "definition": "from a particular time in the past onward",
+    "meaning": "自從",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mother",
+    "definition": "a female parent of a child",
+    "meaning": "母親",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "person",
+    "definition": "an individual human being of any age",
+    "meaning": "人",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "full",
+    "definition": "having eaten enough and wanting no more food",
+    "meaning": "吃飽的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "reason",
+    "definition": "the cause or explanation for something",
+    "meaning": "原因",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "expect",
+    "definition": "to believe that something will probably happen",
+    "meaning": "預期",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "low",
+    "definition": "not reaching far above the ground",
+    "meaning": "低的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "public",
+    "definition": "open to or shared by everyone",
+    "meaning": "公共的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "let",
+    "definition": "to allow someone to do something",
+    "meaning": "讓",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "police",
+    "definition": "the people whose job is to enforce laws",
+    "meaning": "警察",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lose",
+    "definition": "to be unable to find something you had",
+    "meaning": "弄丟",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "city",
+    "definition": "a large town with many buildings and people",
+    "meaning": "城市",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "probably",
+    "definition": "very likely to happen or be true",
+    "meaning": "很可能",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "action",
+    "definition": "exciting physical activity shown in a film",
+    "meaning": "動作場面",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cost",
+    "definition": "to have a particular price",
+    "meaning": "要價",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "remember",
+    "definition": "to keep something in mind and not forget it",
+    "meaning": "記得",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "course",
+    "definition": "a series of lessons about a subject",
+    "meaning": "課程",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bad",
+    "definition": "unpleasant or not good in quality",
+    "meaning": "不好的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "today",
+    "definition": "the day that is happening now",
+    "meaning": "今天",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "speak",
+    "definition": "to use a language to communicate aloud",
+    "meaning": "說",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "actually",
+    "definition": "used to introduce what is really true",
+    "meaning": "其實",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ever",
+    "definition": "at any time before now",
+    "meaning": "曾經",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "type",
+    "definition": "a group of things with similar features",
+    "meaning": "種類",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "subject",
+    "definition": "an area of knowledge studied at school",
+    "meaning": "科目",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "moment",
+    "definition": "a very short period of time",
+    "meaning": "片刻",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "girl",
+    "definition": "a young person who is female",
+    "meaning": "女孩",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "age",
+    "definition": "the number of years someone has lived",
+    "meaning": "年齡",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "father",
+    "definition": "a male parent of a child",
+    "meaning": "父親",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "send",
+    "definition": "to arrange for something to reach someone",
+    "meaning": "寄送",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "matter",
+    "definition": "a problem that is causing trouble",
+    "meaning": "問題",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "health",
+    "definition": "the condition of a person's body and mind",
+    "meaning": "健康",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "decide",
+    "definition": "to choose something after thinking about it",
+    "meaning": "決定",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "main",
+    "definition": "most important among others of the same kind",
+    "meaning": "主要的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "less",
+    "definition": "a smaller amount than before",
+    "meaning": "較少的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "street",
+    "definition": "a road in a town with buildings beside it",
+    "meaning": "街道",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "until",
+    "definition": "up to a particular time",
+    "meaning": "直到",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mind",
+    "definition": "to feel annoyed or troubled by something",
+    "meaning": "介意",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sure",
+    "definition": "certain that something is true",
+    "meaning": "確定的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "class",
+    "definition": "a group of students taught together",
+    "meaning": "班級",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "win",
+    "definition": "to be successful in a competition",
+    "meaning": "贏得",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "several",
+    "definition": "more than two but not very many",
+    "meaning": "幾個的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "understand",
+    "definition": "to know the meaning of something",
+    "meaning": "了解",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "church",
+    "definition": "a building where Christians gather to worship",
+    "meaning": "教堂",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "paper",
+    "definition": "a thin material used for writing or printing",
+    "meaning": "紙",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "agree",
+    "definition": "to have the same opinion as someone",
+    "meaning": "同意",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "reach",
+    "definition": "to arrive at a particular place",
+    "meaning": "到達",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bank",
+    "definition": "a business that keeps and lends money",
+    "meaning": "銀行",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "table",
+    "definition": "a piece of furniture with a flat top and legs",
+    "meaning": "桌子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "death",
+    "definition": "the end of a person's life",
+    "meaning": "死亡",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "build",
+    "definition": "to make a structure by joining materials together",
+    "meaning": "建造",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "spend",
+    "definition": "to use a period of time doing something",
+    "meaning": "花費時間",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "real",
+    "definition": "existing as the actual thing rather than an imitation",
+    "meaning": "真的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "experience",
+    "definition": "an event that someone has lived through",
+    "meaning": "經歷",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "student",
+    "definition": "a person who studies at a school",
+    "meaning": "學生",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "town",
+    "definition": "a place with homes and shops smaller than a city",
+    "meaning": "城鎮",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "language",
+    "definition": "a system of words used for communication",
+    "meaning": "語言",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "either",
+    "definition": "also, used after a negative statement",
+    "meaning": "也",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "special",
+    "definition": "different from usual in a meaningful way",
+    "meaning": "特別的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "difficult",
+    "definition": "not easy to do or understand",
+    "meaning": "困難的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "plan",
+    "definition": "an idea about what you intend to do",
+    "meaning": "計畫",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "die",
+    "definition": "to stop being alive or living",
+    "meaning": "死亡",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "morning",
+    "definition": "the early part of the day before noon",
+    "meaning": "早上",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ground",
+    "definition": "the surface of the earth beneath your feet",
+    "meaning": "地面",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "meeting",
+    "definition": "an event where people gather to discuss something",
+    "meaning": "會議",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "foot",
+    "definition": "the body part at the end of a leg",
+    "meaning": "腳",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sell",
+    "definition": "to give something to someone in exchange for money",
+    "meaning": "販賣",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "boy",
+    "definition": "a young person who is male",
+    "meaning": "男孩",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "game",
+    "definition": "an activity with rules played for fun",
+    "meaning": "遊戲",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "food",
+    "definition": "things that people or animals eat",
+    "meaning": "食物",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "half",
+    "definition": "one of two equal parts of something",
+    "meaning": "一半",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "else",
+    "definition": "in addition to what has been mentioned",
+    "meaning": "其他",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "land",
+    "definition": "to come down from the air onto the ground",
+    "meaning": "降落",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "art",
+    "definition": "the making of pictures and other creative visual works",
+    "meaning": "美術",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sometimes",
+    "definition": "on some occasions but not always",
+    "meaning": "有時候",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lie",
+    "definition": "to say something you know is not true",
+    "meaning": "說謊",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "voice",
+    "definition": "the sound a person makes when speaking or singing",
+    "meaning": "嗓音",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "arm",
+    "definition": "the body part between the shoulder and hand",
+    "meaning": "手臂",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "god",
+    "definition": "the supreme being worshipped as creator of the universe",
+    "meaning": "上帝",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "club",
+    "definition": "a group of people who share an interest",
+    "meaning": "社團",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "parent",
+    "definition": "a person's mother or father",
+    "meaning": "家長",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "history",
+    "definition": "the study or record of past events",
+    "meaning": "歷史",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "short",
+    "definition": "not tall compared with other people",
+    "meaning": "矮的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "whose",
+    "definition": "used to ask who something belongs to",
+    "meaning": "誰的",
+    "pos": "限定詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "easy",
+    "definition": "not difficult to do or understand",
+    "meaning": "容易的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ago",
+    "definition": "before now by a stated amount of time",
+    "meaning": "以前",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "raise",
+    "definition": "to move something to a higher position",
+    "meaning": "舉起",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "example",
+    "definition": "something used to show or explain an idea",
+    "meaning": "例子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "yesterday",
+    "definition": "on the day before today",
+    "meaning": "昨天",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "window",
+    "definition": "an opening with glass that lets in light",
+    "meaning": "窗戶",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "explain",
+    "definition": "to make something clear or easier to understand",
+    "meaning": "解釋",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "grow",
+    "definition": "to become bigger as time passes",
+    "meaning": "生長",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "air",
+    "definition": "the mixture of gases that we breathe",
+    "meaning": "空氣",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wife",
+    "definition": "a woman who is married to someone",
+    "meaning": "妻子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sir",
+    "definition": "a polite way to address a man",
+    "meaning": "先生",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rule",
+    "definition": "an instruction stating what is allowed",
+    "meaning": "規則",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "worker",
+    "definition": "a person who does a particular job",
+    "meaning": "工作者",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pound",
+    "definition": "a unit of weight equal to sixteen ounces",
+    "meaning": "磅",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "true",
+    "definition": "based on facts rather than invented",
+    "meaning": "真實的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "once",
+    "definition": "one time and no more",
+    "meaning": "一次",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nature",
+    "definition": "the world of plants, animals, and natural places",
+    "meaning": "大自然",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "common",
+    "definition": "found often or in many places",
+    "meaning": "常見的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "officer",
+    "definition": "a member of a police force",
+    "meaning": "警員",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hospital",
+    "definition": "a place where sick or injured people receive medical care",
+    "meaning": "醫院",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bed",
+    "definition": "a piece of furniture used for sleeping",
+    "meaning": "床",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "date",
+    "definition": "the day and month of the calendar",
+    "meaning": "日期",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hard",
+    "definition": "difficult to do or understand",
+    "meaning": "困難的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wall",
+    "definition": "a vertical structure enclosing or dividing a space",
+    "meaning": "牆壁",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "join",
+    "definition": "to become a member of a group",
+    "meaning": "加入",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "computer",
+    "definition": "an electronic device that stores and processes information",
+    "meaning": "電腦",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wish",
+    "definition": "to express hope for someone's happiness or success",
+    "meaning": "祝福",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "deal",
+    "definition": "an agreement made between people",
+    "meaning": "約定",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "poor",
+    "definition": "having very little money or few possessions",
+    "meaning": "貧窮的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "son",
+    "definition": "a person's male child of any age",
+    "meaning": "兒子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wide",
+    "definition": "measuring a large distance from side to side",
+    "meaning": "寬的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "leader",
+    "definition": "a person who guides or directs a group",
+    "meaning": "領導者",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "king",
+    "definition": "a male ruler of a country",
+    "meaning": "國王",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "secretary",
+    "definition": "a person who handles office tasks for someone",
+    "meaning": "祕書",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "soon",
+    "definition": "after a short period of time",
+    "meaning": "很快",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fail",
+    "definition": "to not succeed in doing something",
+    "meaning": "失敗",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "chance",
+    "definition": "an opportunity to do something",
+    "meaning": "機會",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "foreign",
+    "definition": "belonging to a country other than your own",
+    "meaning": "外國的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "simple",
+    "definition": "easy to understand or deal with",
+    "meaning": "簡單的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "picture",
+    "definition": "an image made by drawing or painting",
+    "meaning": "圖畫",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "test",
+    "definition": "a set of questions used to measure knowledge",
+    "meaning": "考試",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "kill",
+    "definition": "to cause a living thing to die",
+    "meaning": "殺死",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "close",
+    "definition": "to move something so an opening is shut",
+    "meaning": "關上",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "evening",
+    "definition": "the later part of the day before night",
+    "meaning": "傍晚",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "animal",
+    "definition": "a living creature that moves and eats",
+    "meaning": "動物",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "heart",
+    "definition": "the organ that pumps blood through the body",
+    "meaning": "心臟",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "page",
+    "definition": "one side of a sheet in a book",
+    "meaning": "頁",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "doctor",
+    "definition": "a person trained to treat illness and injury",
+    "meaning": "醫生",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "music",
+    "definition": "sounds arranged for people to listen to and enjoy",
+    "meaning": "音樂",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hair",
+    "definition": "the fine strands growing on a person's head",
+    "meaning": "頭髮",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wrong",
+    "definition": "not correct or not true",
+    "meaning": "錯誤的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wear",
+    "definition": "to have clothing or an accessory on your body",
+    "meaning": "穿戴",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "piece",
+    "definition": "a portion cut or separated from a whole",
+    "meaning": "一塊",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "present",
+    "definition": "something given to someone as a gift",
+    "meaning": "禮物",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tree",
+    "definition": "a tall plant with a wooden trunk and branches",
+    "meaning": "樹木",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "enjoy",
+    "definition": "to take pleasure in doing something",
+    "meaning": "喜愛",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "plant",
+    "definition": "a living thing that grows roots and leaves",
+    "meaning": "植物",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "news",
+    "definition": "information about something that has happened",
+    "meaning": "消息",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fire",
+    "definition": "the heat and flames produced when something burns",
+    "meaning": "火",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "size",
+    "definition": "the measurement that tells how large clothing is",
+    "meaning": "尺寸",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "eat",
+    "definition": "to put food in your mouth and swallow it",
+    "meaning": "吃",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "enter",
+    "definition": "to go into a place",
+    "meaning": "進入",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "space",
+    "definition": "the area beyond the earth's atmosphere",
+    "meaning": "太空",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "list",
+    "definition": "a set of items written one below another",
+    "meaning": "清單",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sea",
+    "definition": "a large area of salt water",
+    "meaning": "海洋",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "choice",
+    "definition": "a decision about which option to take",
+    "meaning": "選擇",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hotel",
+    "definition": "a building where travelers pay to stay",
+    "meaning": "旅館",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "player",
+    "definition": "a person who takes part in a sport",
+    "meaning": "球員",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cup",
+    "definition": "a small container used for drinking",
+    "meaning": "杯子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nice",
+    "definition": "kind and pleasant toward others",
+    "meaning": "友善的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "machine",
+    "definition": "a device with parts that work together to do a task",
+    "meaning": "機器",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "modern",
+    "definition": "using the ideas and technology of the present",
+    "meaning": "現代化的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "thank",
+    "definition": "to express gratitude to someone",
+    "meaning": "感謝",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "finally",
+    "definition": "after waiting or trying for a long time",
+    "meaning": "終於",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mile",
+    "definition": "a unit of distance of about 1.6 kilometers",
+    "meaning": "英里",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "top",
+    "definition": "the highest part of something",
+    "meaning": "頂端",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "happy",
+    "definition": "feeling pleased or full of joy",
+    "meaning": "快樂的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sound",
+    "definition": "to seem a certain way from what is heard",
+    "meaning": "聽起來",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "east",
+    "definition": "the direction where the sun rises",
+    "meaning": "東方",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "west",
+    "definition": "the direction where the sun sets",
+    "meaning": "西方",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "floor",
+    "definition": "the flat surface at the bottom of a room",
+    "meaning": "地板",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "science",
+    "definition": "the study of the natural world through observation and experiments",
+    "meaning": "科學",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "red",
+    "definition": "having the color of blood",
+    "meaning": "紅色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "note",
+    "definition": "a short written message for someone",
+    "meaning": "便條",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "horse",
+    "definition": "a large animal with hooves that people ride",
+    "meaning": "馬",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "serious",
+    "definition": "causing major problems or harmful results",
+    "meaning": "嚴重的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "forget",
+    "definition": "to fail to remember something",
+    "meaning": "忘記",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dog",
+    "definition": "a common pet that barks and has four legs",
+    "meaning": "狗",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "husband",
+    "definition": "a man who is married to someone",
+    "meaning": "丈夫",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "brother",
+    "definition": "a male person who shares a parent with you",
+    "meaning": "兄弟",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "season",
+    "definition": "one of the year's four periods with different weather",
+    "meaning": "季節",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "glass",
+    "definition": "a drinking container made of a hard transparent material",
+    "meaning": "玻璃杯",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "save",
+    "definition": "to prevent someone from dying or being harmed",
+    "meaning": "拯救",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "listen",
+    "definition": "to pay attention to sounds or speech",
+    "meaning": "聆聽",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "leg",
+    "definition": "one of the body parts used for standing and walking",
+    "meaning": "腿",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "park",
+    "definition": "a public area with grass and trees for recreation",
+    "meaning": "公園",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "treat",
+    "definition": "to behave toward someone in a particular way",
+    "meaning": "對待",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "summer",
+    "definition": "the warmest season of the year",
+    "meaning": "夏天",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "baby",
+    "definition": "a very young child or infant",
+    "meaning": "嬰兒",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "daughter",
+    "definition": "a person's female child of any age",
+    "meaning": "女兒",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sun",
+    "definition": "the star that gives the earth light and heat",
+    "meaning": "太陽",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "box",
+    "definition": "a container with a flat base and sides",
+    "meaning": "箱子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dead",
+    "definition": "no longer alive or living",
+    "meaning": "死去的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "prepare",
+    "definition": "to get food ready to eat",
+    "meaning": "準備",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fill",
+    "definition": "to put something into a container until it is full",
+    "meaning": "裝滿",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "oil",
+    "definition": "a liquid fat used in cooking",
+    "meaning": "食用油",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "seat",
+    "definition": "a place designed for someone to sit",
+    "meaning": "座位",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "successful",
+    "definition": "having achieved desired results in work or life",
+    "meaning": "成功的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fight",
+    "definition": "to try to hurt someone with physical force",
+    "meaning": "打架",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "push",
+    "definition": "to press against something to move it",
+    "meaning": "推",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sign",
+    "definition": "a board showing information or instructions",
+    "meaning": "標示牌",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "popular",
+    "definition": "liked by many people in a group",
+    "meaning": "受歡迎的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "heavy",
+    "definition": "weighing a lot and difficult to lift",
+    "meaning": "重的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "holiday",
+    "definition": "a special day of celebration",
+    "meaning": "節日",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "item",
+    "definition": "one separate entry on a list",
+    "meaning": "項目",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fish",
+    "definition": "an animal that lives in water and has gills",
+    "meaning": "魚",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "library",
+    "definition": "a place where people read or borrow books",
+    "meaning": "圖書館",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "television",
+    "definition": "a system that broadcasts programs with pictures and sound",
+    "meaning": "電視",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "island",
+    "definition": "an area of land surrounded by water",
+    "meaning": "島嶼",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "useful",
+    "definition": "helping you do or achieve something",
+    "meaning": "有用的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "star",
+    "definition": "a distant ball of hot gas that shines in space",
+    "meaning": "星星",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "trouble",
+    "definition": "a difficult situation that causes problems",
+    "meaning": "麻煩",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mouth",
+    "definition": "the opening in the face used for eating and speaking",
+    "meaning": "嘴巴",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "laugh",
+    "definition": "to make sounds that show you find something funny",
+    "meaning": "笑",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "deep",
+    "definition": "extending a long way below the surface",
+    "meaning": "深的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "earth",
+    "definition": "the planet on which we live",
+    "meaning": "地球",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "chair",
+    "definition": "a seat for one person with a back",
+    "meaning": "椅子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "interesting",
+    "definition": "making you want to pay attention or learn more",
+    "meaning": "有趣的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "card",
+    "definition": "a piece of stiff paper carrying a greeting",
+    "meaning": "卡片",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "left",
+    "definition": "the side opposite to the right",
+    "meaning": "左邊",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sister",
+    "definition": "a female person who shares a parent with you",
+    "meaning": "姊妹",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "define",
+    "definition": "to state the exact meaning of a word",
+    "meaning": "下定義",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hot",
+    "definition": "having a high temperature that feels uncomfortable",
+    "meaning": "熱的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bear",
+    "definition": "a large furry animal with strong legs and claws",
+    "meaning": "熊",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hang",
+    "definition": "to attach something so it is supported from above",
+    "meaning": "懸掛",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rock",
+    "definition": "a large piece of hard natural stone",
+    "meaning": "岩石",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bird",
+    "definition": "an animal with feathers, wings, and a beak",
+    "meaning": "鳥",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tomorrow",
+    "definition": "on the day after today",
+    "meaning": "明天",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shake",
+    "definition": "to move something quickly back and forth",
+    "meaning": "搖動",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "quarter",
+    "definition": "a period of fifteen minutes",
+    "meaning": "一刻鐘",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "radio",
+    "definition": "a device that receives broadcasts of sound",
+    "meaning": "收音機",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "corner",
+    "definition": "a place where two streets meet",
+    "meaning": "街角",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "race",
+    "definition": "a competition to see who finishes a distance first",
+    "meaning": "賽跑",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "finger",
+    "definition": "one of the long movable parts of a hand",
+    "meaning": "手指",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "past",
+    "definition": "beyond a place while moving along",
+    "meaning": "經過",
+    "pos": "介系詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "afternoon",
+    "definition": "the part of the day between noon and evening",
+    "meaning": "下午",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "kitchen",
+    "definition": "a room where people prepare and cook food",
+    "meaning": "廚房",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "interested",
+    "definition": "wanting to learn more about something",
+    "meaning": "感興趣的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tea",
+    "definition": "a drink made by putting dried leaves in hot water",
+    "meaning": "茶",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "christmas",
+    "definition": "a Christian holiday celebrating the birth of Jesus",
+    "meaning": "聖誕節",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sale",
+    "definition": "an occasion when goods are offered at reduced prices",
+    "meaning": "特賣",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "band",
+    "definition": "a group of musicians who perform together",
+    "meaning": "樂團",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shoulder",
+    "definition": "the body part where an arm joins the upper body",
+    "meaning": "肩膀",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "beautiful",
+    "definition": "very pleasing to look at",
+    "meaning": "美麗的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "newspaper",
+    "definition": "a printed publication containing news and other information",
+    "meaning": "報紙",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "farm",
+    "definition": "land and buildings used to raise animals or grow crops",
+    "meaning": "農場",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sentence",
+    "definition": "a group of words expressing a complete thought",
+    "meaning": "句子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "file",
+    "definition": "a collection of information stored on a computer",
+    "meaning": "檔案",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "copy",
+    "definition": "to write the same words as an original",
+    "meaning": "抄寫",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wind",
+    "definition": "air moving across the earth's surface",
+    "meaning": "風",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "front",
+    "definition": "the area before the main facing side of something",
+    "meaning": "前方",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shape",
+    "definition": "the outer form or outline of something",
+    "meaning": "形狀",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "gas",
+    "definition": "a liquid fuel used to power cars",
+    "meaning": "汽油",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "born",
+    "definition": "to come into the world as a baby",
+    "meaning": "出生",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "museum",
+    "definition": "a building displaying objects of history, art, or science",
+    "meaning": "博物館",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pair",
+    "definition": "two matching things used together",
+    "meaning": "一雙",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "collect",
+    "definition": "to gather and keep things of a particular kind",
+    "meaning": "收集",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "queen",
+    "definition": "a female ruler of a country",
+    "meaning": "女王",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "driver",
+    "definition": "a person who controls a moving vehicle",
+    "meaning": "駕駛",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rich",
+    "definition": "having a lot of money and possessions",
+    "meaning": "富有的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mark",
+    "definition": "a visible symbol made to show something",
+    "meaning": "記號",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "flower",
+    "definition": "the colorful part of a plant that produces seeds",
+    "meaning": "花",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "video",
+    "definition": "a recording of moving pictures and sound",
+    "meaning": "影片",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "drink",
+    "definition": "to take liquid into your mouth and swallow it",
+    "meaning": "喝",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bag",
+    "definition": "a flexible container used for carrying things",
+    "meaning": "袋子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sight",
+    "definition": "something interesting or beautiful that can be seen",
+    "meaning": "景象",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "winter",
+    "definition": "the coldest season of the year",
+    "meaning": "冬天",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ring",
+    "definition": "a small circular piece of jewelry worn on a finger",
+    "meaning": "戒指",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "writer",
+    "definition": "a person who creates books or other written works",
+    "meaning": "作家",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "weekend",
+    "definition": "Saturday and Sunday considered together",
+    "meaning": "週末",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "telephone",
+    "definition": "a device used to speak to someone far away",
+    "meaning": "電話",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "farmer",
+    "definition": "a person who grows crops or raises farm animals",
+    "meaning": "農夫",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "package",
+    "definition": "an object wrapped for sending or delivery",
+    "meaning": "包裹",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "warm",
+    "definition": "slightly hot in a pleasant way",
+    "meaning": "溫暖的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "visitor",
+    "definition": "a person who goes to see a place",
+    "meaning": "訪客",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ship",
+    "definition": "a large boat used for traveling across water",
+    "meaning": "船舶",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "somewhere",
+    "definition": "in a place that is not specified",
+    "meaning": "某處",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "middle",
+    "definition": "the central part of a place or thing",
+    "meaning": "中間",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fresh",
+    "definition": "recently picked and still good to eat",
+    "meaning": "新鮮的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "yard",
+    "definition": "an outdoor area next to a house",
+    "meaning": "院子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tonight",
+    "definition": "during the evening or night of today",
+    "meaning": "今晚",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cheap",
+    "definition": "costing only a small amount of money",
+    "meaning": "便宜的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "strange",
+    "definition": "unusual and difficult to explain",
+    "meaning": "奇怪的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "repeat",
+    "definition": "to say the same thing again",
+    "meaning": "重複",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bus",
+    "definition": "a large road vehicle that carries many passengers",
+    "meaning": "公車",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "coffee",
+    "definition": "a drink made from roasted and ground beans",
+    "meaning": "咖啡",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "song",
+    "definition": "a piece of music with words to sing",
+    "meaning": "歌曲",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "row",
+    "definition": "a straight line of people or seats",
+    "meaning": "排",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sleep",
+    "definition": "to rest with your eyes closed and mind unaware",
+    "meaning": "睡覺",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "feed",
+    "definition": "to give food to a person or animal",
+    "meaning": "餵食",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "meal",
+    "definition": "an occasion when you eat food",
+    "meaning": "餐",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "excellent",
+    "definition": "extremely good in quality or ability",
+    "meaning": "優秀的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "interview",
+    "definition": "a meeting to assess someone for a job",
+    "meaning": "面試",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dinner",
+    "definition": "the main meal eaten in the evening",
+    "meaning": "晚餐",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "traffic",
+    "definition": "the vehicles moving along a road",
+    "meaning": "車流",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "quick",
+    "definition": "moving at a high speed",
+    "meaning": "快速的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "quiet",
+    "definition": "making little or no sound",
+    "meaning": "安靜的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lip",
+    "definition": "one of the two soft edges of the mouth",
+    "meaning": "嘴唇",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "belong",
+    "definition": "to be owned by someone",
+    "meaning": "屬於",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hide",
+    "definition": "to stay where others cannot see you",
+    "meaning": "躲藏",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "plate",
+    "definition": "a flat dish used to serve food",
+    "meaning": "盤子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lovely",
+    "definition": "very pleasant and enjoyable to experience",
+    "meaning": "美好的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "twice",
+    "definition": "on two occasions in total",
+    "meaning": "兩次",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "invite",
+    "definition": "to ask someone to come to an event",
+    "meaning": "邀請",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "spring",
+    "definition": "the season between winter and summer",
+    "meaning": "春天",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ahead",
+    "definition": "in front of your present position",
+    "meaning": "在前方",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "factory",
+    "definition": "a building where goods are made in large quantities",
+    "meaning": "工廠",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sing",
+    "definition": "to make musical sounds with your voice",
+    "meaning": "唱歌",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dream",
+    "definition": "a series of imagined events during sleep",
+    "meaning": "夢",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bright",
+    "definition": "giving out a lot of light",
+    "meaning": "明亮的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "egg",
+    "definition": "an oval object laid by a hen and eaten as food",
+    "meaning": "蛋",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bottom",
+    "definition": "the lowest part of something",
+    "meaning": "底部",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tape",
+    "definition": "a narrow sticky strip used to fasten things",
+    "meaning": "膠帶",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "afraid",
+    "definition": "feeling fear about someone or something",
+    "meaning": "害怕的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "neck",
+    "definition": "the body part connecting the head to the body",
+    "meaning": "脖子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bedroom",
+    "definition": "a room used mainly for sleeping",
+    "meaning": "臥室",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "kid",
+    "definition": "a child or young person",
+    "meaning": "小孩",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "expensive",
+    "definition": "costing a large amount of money",
+    "meaning": "昂貴的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "correct",
+    "definition": "right and free from mistakes",
+    "meaning": "正確的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "store",
+    "definition": "a place where goods are sold",
+    "meaning": "商店",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bottle",
+    "definition": "a container with a narrow opening for holding liquids",
+    "meaning": "瓶子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wave",
+    "definition": "a raised moving ridge on the surface of water",
+    "meaning": "海浪",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shout",
+    "definition": "to speak or cry out very loudly",
+    "meaning": "大叫",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "error",
+    "definition": "something that is wrong or incorrect",
+    "meaning": "錯誤",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "straight",
+    "definition": "forward without turning to either side",
+    "meaning": "直直地",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ear",
+    "definition": "one of the body parts used for hearing",
+    "meaning": "耳朵",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dangerous",
+    "definition": "likely to cause harm or injury",
+    "meaning": "危險的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "weather",
+    "definition": "the conditions outdoors, such as temperature and rain",
+    "meaning": "天氣",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pleasure",
+    "definition": "a feeling of happiness or satisfaction",
+    "meaning": "愉悅",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lunch",
+    "definition": "a meal eaten around the middle of the day",
+    "meaning": "午餐",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "block",
+    "definition": "the distance along a street between two intersections",
+    "meaning": "街區",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "welcome",
+    "definition": "to greet someone warmly when they arrive",
+    "meaning": "歡迎",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed",
+    "example": "We welcome new students to our school.",
+    "translation": "我們歡迎新同學來到學校。"
+  },
+  {
+    "id": "screen",
+    "definition": "the flat surface displaying pictures on an electronic device",
+    "meaning": "螢幕",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nurse",
+    "definition": "a person trained to care for sick people",
+    "meaning": "護理師",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "program",
+    "definition": "a show broadcast on television",
+    "meaning": "節目",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "slow",
+    "definition": "moving at a low speed",
+    "meaning": "慢的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "trip",
+    "definition": "a journey to a place and back",
+    "meaning": "旅行",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dry",
+    "definition": "not wet or covered with water",
+    "meaning": "乾燥的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "noise",
+    "definition": "unwanted or unpleasant loud sound",
+    "meaning": "噪音",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "thin",
+    "definition": "having little distance between opposite surfaces",
+    "meaning": "薄的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dress",
+    "definition": "a one-piece garment with a top and skirt",
+    "meaning": "洋裝",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sky",
+    "definition": "the space above the earth that we see outdoors",
+    "meaning": "天空",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pool",
+    "definition": "a large artificial area of water for swimming",
+    "meaning": "游泳池",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "heat",
+    "definition": "the warmth produced by something hot",
+    "meaning": "熱度",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "gate",
+    "definition": "a movable barrier across an outdoor entrance",
+    "meaning": "大門",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cat",
+    "definition": "a small pet with whiskers, claws, and soft fur",
+    "meaning": "貓",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "soldier",
+    "definition": "a person who serves in an army",
+    "meaning": "士兵",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tool",
+    "definition": "an object used to make or repair things",
+    "meaning": "工具",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "married",
+    "definition": "having a husband or wife",
+    "meaning": "已婚的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tooth",
+    "definition": "one of the hard white parts used for biting",
+    "meaning": "牙齒",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mistake",
+    "definition": "something done or answered incorrectly",
+    "meaning": "錯誤",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "busy",
+    "definition": "having things to do and little free time",
+    "meaning": "忙碌的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tall",
+    "definition": "having a great height from bottom to top",
+    "meaning": "高的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pretty",
+    "definition": "attractive and pleasant to look at",
+    "meaning": "漂亮的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pocket",
+    "definition": "a small pouch sewn into clothing",
+    "meaning": "口袋",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ride",
+    "definition": "to travel on and control a bicycle",
+    "meaning": "騎",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "square",
+    "definition": "a shape with four equal sides and four right angles",
+    "meaning": "正方形",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "thick",
+    "definition": "having a large distance between opposite surfaces",
+    "meaning": "厚的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "surprise",
+    "definition": "something pleasant that happens unexpectedly",
+    "meaning": "驚喜",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fruit",
+    "definition": "the edible part of a plant that contains seeds",
+    "meaning": "水果",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "restaurant",
+    "definition": "a place where people pay to eat meals",
+    "meaning": "餐廳",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "blow",
+    "definition": "to move through the air as wind",
+    "meaning": "吹",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "count",
+    "definition": "to say numbers in their correct order",
+    "meaning": "數數",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed",
+    "example": "The boy can count from one to a hundred.",
+    "translation": "那個男孩能從一數到一百。"
+  },
+  {
+    "id": "circle",
+    "definition": "a round shape with no corners",
+    "meaning": "圓形",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fast",
+    "definition": "at a high speed or rate",
+    "meaning": "快速地",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hate",
+    "definition": "to dislike something very strongly",
+    "meaning": "討厭",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "desk",
+    "definition": "a table used for studying or working",
+    "meaning": "書桌",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "milk",
+    "definition": "a white liquid from cows that people drink",
+    "meaning": "牛奶",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shoe",
+    "definition": "a covering worn on the foot",
+    "meaning": "鞋子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "nose",
+    "definition": "the part of the face used for smelling",
+    "meaning": "鼻子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "engineer",
+    "definition": "a person who designs machines or structures",
+    "meaning": "工程師",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "beach",
+    "definition": "an area of sand beside the sea",
+    "meaning": "海灘",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fan",
+    "definition": "a machine with turning blades that moves air",
+    "meaning": "電風扇",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "height",
+    "definition": "the distance from the bottom to the top",
+    "meaning": "高度",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "gift",
+    "definition": "something given to someone without payment",
+    "meaning": "禮物",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "surprised",
+    "definition": "feeling wonder because something was unexpected",
+    "meaning": "驚訝的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hurt",
+    "definition": "to cause pain or injury to a body part",
+    "meaning": "弄傷",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "funny",
+    "definition": "making people laugh or smile",
+    "meaning": "好笑的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fix",
+    "definition": "to repair something that is broken",
+    "meaning": "修理",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lawyer",
+    "definition": "a person trained to advise and represent people in legal matters",
+    "meaning": "律師",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "knee",
+    "definition": "the joint in the middle of a leg",
+    "meaning": "膝蓋",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "weak",
+    "definition": "having little physical strength or energy",
+    "meaning": "虛弱的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "root",
+    "definition": "the part of a plant that absorbs water underground",
+    "meaning": "根",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "grass",
+    "definition": "a low green plant with narrow leaves",
+    "meaning": "草",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "least",
+    "definition": "not less than the amount mentioned",
+    "meaning": "至少",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sharp",
+    "definition": "having an edge that cuts easily",
+    "meaning": "鋒利的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "paint",
+    "definition": "to create a picture using colors and a brush",
+    "meaning": "畫",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sick",
+    "definition": "having an illness and feeling unwell",
+    "meaning": "生病的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "topic",
+    "definition": "the subject being discussed or studied",
+    "meaning": "主題",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "angry",
+    "definition": "feeling strong displeasure toward someone",
+    "meaning": "生氣的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tie",
+    "definition": "a long narrow piece of clothing worn around the neck",
+    "meaning": "領帶",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "prize",
+    "definition": "an award given for winning a competition",
+    "meaning": "獎項",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lucky",
+    "definition": "having good things happen by chance",
+    "meaning": "幸運的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "inch",
+    "definition": "a unit of length equal to 2.54 centimeters",
+    "meaning": "英吋",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ice",
+    "definition": "water frozen into a solid",
+    "meaning": "冰",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dear",
+    "definition": "used as a friendly greeting before someone's name",
+    "meaning": "親愛的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "string",
+    "definition": "a thin cord used for tying things",
+    "meaning": "細繩",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "yellow",
+    "definition": "having the color of a ripe banana",
+    "meaning": "黃色的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wake",
+    "definition": "to stop sleeping and become aware",
+    "meaning": "醒來",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rose",
+    "definition": "a flower with layers of petals and a thorny stem",
+    "meaning": "玫瑰",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "glad",
+    "definition": "feeling pleased about something that happens",
+    "meaning": "高興的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "comfortable",
+    "definition": "making your body feel relaxed and at ease",
+    "meaning": "舒適的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "healthy",
+    "definition": "having good physical health and no illness",
+    "meaning": "健康的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "hat",
+    "definition": "a covering worn on the head",
+    "meaning": "帽子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tired",
+    "definition": "needing rest because of lost energy",
+    "meaning": "疲累的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "guess",
+    "definition": "to give an answer without knowing it is correct",
+    "meaning": "猜測",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "stairs",
+    "definition": "a set of steps between floors",
+    "meaning": "樓梯",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "boss",
+    "definition": "a person who directs other people at work",
+    "meaning": "老闆",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "habit",
+    "definition": "something you do regularly and often automatically",
+    "meaning": "習慣",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "friendly",
+    "definition": "kind and pleasant toward other people",
+    "meaning": "友善的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "abroad",
+    "definition": "in a country other than your own",
+    "meaning": "在國外",
+    "pos": "副詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "camera",
+    "definition": "a device used for taking photographs",
+    "meaning": "相機",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "relative",
+    "definition": "a person connected to you by family",
+    "meaning": "親戚",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "meat",
+    "definition": "the flesh of animals used as food",
+    "meaning": "肉",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bread",
+    "definition": "a baked food made mainly from flour and water",
+    "meaning": "麵包",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sugar",
+    "definition": "a sweet substance added to food and drinks",
+    "meaning": "糖",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "uncle",
+    "definition": "a brother of your parent or the husband of your aunt",
+    "meaning": "叔叔",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cake",
+    "definition": "a sweet baked food often served on birthdays",
+    "meaning": "蛋糕",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cloud",
+    "definition": "a mass of tiny water drops floating in the sky",
+    "meaning": "雲",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cook",
+    "definition": "to prepare food by heating it",
+    "meaning": "烹煮",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dollar",
+    "definition": "a unit of US money equal to one hundred cents",
+    "meaning": "美元",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wet",
+    "definition": "covered with or soaked in water",
+    "meaning": "濕的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dance",
+    "definition": "to move your body to music",
+    "meaning": "跳舞",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "angle",
+    "definition": "a particular way of thinking about something",
+    "meaning": "觀點",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sad",
+    "definition": "feeling unhappy about something that happens",
+    "meaning": "傷心的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sweet",
+    "definition": "having a taste like sugar",
+    "meaning": "甜的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "actor",
+    "definition": "a person who performs characters in plays or films",
+    "meaning": "演員",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "festival",
+    "definition": "a special occasion celebrated by a community",
+    "meaning": "節慶",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "jacket",
+    "definition": "a short coat worn over other clothes",
+    "meaning": "外套",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shirt",
+    "definition": "a piece of clothing covering the upper body",
+    "meaning": "襯衫",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "kick",
+    "definition": "to hit something with your foot",
+    "meaning": "踢",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "guy",
+    "definition": "an informal word for a man",
+    "meaning": "傢伙",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pipe",
+    "definition": "a tube that carries water from place to place",
+    "meaning": "水管",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "celebrate",
+    "definition": "to do something enjoyable to mark a special occasion",
+    "meaning": "慶祝",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "apple",
+    "definition": "a round fruit with crisp flesh and thin skin",
+    "meaning": "蘋果",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "throat",
+    "definition": "the passage inside the neck used for swallowing",
+    "meaning": "喉嚨",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "knife",
+    "definition": "a tool with a sharp blade for cutting",
+    "meaning": "刀子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "medicine",
+    "definition": "a substance taken to treat an illness",
+    "meaning": "藥物",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "swing",
+    "definition": "a hanging seat that moves back and forth",
+    "meaning": "鞦韆",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mail",
+    "definition": "to send something through the postal service",
+    "meaning": "郵寄",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "birthday",
+    "definition": "the yearly date on which someone was born",
+    "meaning": "生日",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fun",
+    "definition": "enjoyment from doing something pleasant",
+    "meaning": "樂趣",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "guitar",
+    "definition": "a musical instrument with strings played by hand",
+    "meaning": "吉他",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "joke",
+    "definition": "a short story told to make people laugh",
+    "meaning": "笑話",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "salt",
+    "definition": "a white substance used to add flavor to food",
+    "meaning": "鹽",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "exciting",
+    "definition": "making people feel eager and full of energy",
+    "meaning": "令人興奮的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "airport",
+    "definition": "a place where airplanes take off and land",
+    "meaning": "機場",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "clock",
+    "definition": "a device that shows the time",
+    "meaning": "時鐘",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bath",
+    "definition": "washing your body in a tub of water",
+    "meaning": "泡澡",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "stupid",
+    "definition": "showing a lack of good judgment",
+    "meaning": "愚蠢的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "aunt",
+    "definition": "a sister of your parent or the wife of your uncle",
+    "meaning": "阿姨",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "proud",
+    "definition": "feeling pleased about someone's achievements or qualities",
+    "meaning": "感到驕傲的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "helpful",
+    "definition": "useful in making something easier",
+    "meaning": "有幫助的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "seed",
+    "definition": "a small part of a plant that can grow into another",
+    "meaning": "種子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tail",
+    "definition": "the long part at the back of an animal's body",
+    "meaning": "尾巴",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tip",
+    "definition": "extra money given to someone for service",
+    "meaning": "小費",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "borrow",
+    "definition": "to take something temporarily and return it later",
+    "meaning": "借入",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "moon",
+    "definition": "the round natural object that moves around the earth",
+    "meaning": "月亮",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "smell",
+    "definition": "to notice an odor using your nose",
+    "meaning": "聞到",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "stomach",
+    "definition": "the front part of your body below the chest",
+    "meaning": "肚子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "snow",
+    "definition": "soft white frozen water that falls from clouds",
+    "meaning": "雪",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "honest",
+    "definition": "truthful and not trying to deceive others",
+    "meaning": "誠實的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sheep",
+    "definition": "a farm animal raised for its wool",
+    "meaning": "綿羊",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "slide",
+    "definition": "a smooth slope children go down for fun",
+    "meaning": "溜滑梯",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bowl",
+    "definition": "a deep round container used for food",
+    "meaning": "碗",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dish",
+    "definition": "food prepared in a particular way",
+    "meaning": "菜餚",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cheese",
+    "definition": "a food made from the solid parts of milk",
+    "meaning": "起司",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lend",
+    "definition": "to let someone use something temporarily and return it",
+    "meaning": "借出",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pot",
+    "definition": "a deep container used for cooking",
+    "meaning": "鍋子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dig",
+    "definition": "to make a hole by removing earth",
+    "meaning": "挖掘",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "vegetable",
+    "definition": "a plant or plant part eaten as food",
+    "meaning": "蔬菜",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bathroom",
+    "definition": "a room where people wash their bodies",
+    "meaning": "浴室",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "grade",
+    "definition": "a level of study in school",
+    "meaning": "年級",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bell",
+    "definition": "a metal object that rings when struck",
+    "meaning": "鐘",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "classroom",
+    "definition": "a room where students are taught",
+    "meaning": "教室",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "mouse",
+    "definition": "a small rodent with a pointed nose and long tail",
+    "meaning": "小老鼠",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "tennis",
+    "definition": "a sport of hitting a ball over a net with rackets",
+    "meaning": "網球",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fat",
+    "definition": "having a lot of body fat",
+    "meaning": "胖的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "movie",
+    "definition": "a story shown through moving pictures on a screen",
+    "meaning": "電影",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "belt",
+    "definition": "a strip worn around the waist to hold clothing",
+    "meaning": "皮帶",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dirty",
+    "definition": "covered with something unclean or messy",
+    "meaning": "髒的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "sail",
+    "definition": "to travel on water in a wind-powered boat",
+    "meaning": "駕帆船航行",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "joy",
+    "definition": "a strong feeling of happiness",
+    "meaning": "喜悅",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bench",
+    "definition": "a long seat for several people",
+    "meaning": "長椅",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cow",
+    "definition": "a large female farm animal that produces milk",
+    "meaning": "母牛",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cap",
+    "definition": "a soft hat with a curved part above the eyes",
+    "meaning": "鴨舌帽",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "clerk",
+    "definition": "a person who helps customers in a store",
+    "meaning": "店員",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "button",
+    "definition": "a small part you press to operate a machine",
+    "meaning": "按鈕",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "cousin",
+    "definition": "a child of your aunt or uncle",
+    "meaning": "堂表親",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pig",
+    "definition": "a farm animal with short legs and a flat snout",
+    "meaning": "豬",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pen",
+    "definition": "a tool that writes using ink",
+    "meaning": "筆",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "chicken",
+    "definition": "the meat of a common farm bird",
+    "meaning": "雞肉",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rabbit",
+    "definition": "a small furry animal with long ears",
+    "meaning": "兔子",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "swim",
+    "definition": "to move through water using your body",
+    "meaning": "游泳",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pray",
+    "definition": "to speak to God or a religious being",
+    "meaning": "禱告",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "wise",
+    "definition": "having good judgment from knowledge and experience",
+    "meaning": "有智慧的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "planet",
+    "definition": "a large round object that travels around a star",
+    "meaning": "行星",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rat",
+    "definition": "a rodent larger than a mouse with a long tail",
+    "meaning": "大老鼠",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "chocolate",
+    "definition": "a sweet food made from cocoa",
+    "meaning": "巧克力",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "trick",
+    "definition": "a performance that creates a seemingly impossible result",
+    "meaning": "魔術把戲",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "excuse",
+    "definition": "to forgive a small mistake or interruption",
+    "meaning": "原諒",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "loud",
+    "definition": "making a very strong sound",
+    "meaning": "大聲的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "stranger",
+    "definition": "a person you do not know",
+    "meaning": "陌生人",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "pop",
+    "definition": "made to appeal to a wide audience",
+    "meaning": "流行的",
+    "pos": "形容詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "shine",
+    "definition": "to give out a strong light",
+    "meaning": "照耀",
+    "pos": "動詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "dictionary",
+    "definition": "a book that explains words and their meanings",
+    "meaning": "字典",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "rope",
+    "definition": "a thick cord used for jumping games",
+    "meaning": "跳繩",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lamp",
+    "definition": "a device that provides light in a room",
+    "meaning": "燈",
+    "pos": "名詞",
+    "reviewStatus": "model-reviewed"
+  }
+]

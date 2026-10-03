@@ -1,0 +1,142 @@
+[
+  {
+    "id": "well",
+    "meaning": "很好地",
+    "pos": "副詞",
+    "definition": "In a good or successful way.",
+    "example": "She sings very well.",
+    "translation": "她唱歌唱得很好。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "right",
+    "meaning": "正確的",
+    "pos": "形容詞",
+    "definition": "Correct; without a mistake.",
+    "example": "Your answer is right.",
+    "translation": "你的答案是正確的。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fall",
+    "meaning": "落下",
+    "pos": "動詞",
+    "definition": "To move down towards the ground.",
+    "example": "Leaves fall from the trees.",
+    "translation": "葉子從樹上落下。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "charge",
+    "meaning": "充電",
+    "pos": "動詞",
+    "definition": "To put electrical energy into a battery or device.",
+    "example": "I need to charge my phone before we leave.",
+    "translation": "出發前，我需要幫手機充電。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "persist",
+    "meaning": "堅持",
+    "pos": "動詞",
+    "definition": "To keep trying despite difficulty or opposition.",
+    "example": "She will persist until she reaches her goal.",
+    "translation": "她會堅持下去，直到達成目標。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "confer",
+    "meaning": "授予",
+    "pos": "動詞",
+    "definition": "To officially give someone an honour, title, or right.",
+    "example": "The university will confer an honorary degree on the writer.",
+    "translation": "這所大學將授予那位作家榮譽學位。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "post office",
+    "meaning": "郵局",
+    "pos": "名詞",
+    "definition": "A place where you can send letters and parcels.",
+    "example": "I mailed the letter at the post office.",
+    "translation": "我在郵局寄了那封信。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "ours",
+    "meaning": "我們的（東西）",
+    "pos": "代名詞",
+    "definition": "Belonging to us; used without a following noun.",
+    "example": "That blue tent beside the river is ours.",
+    "translation": "河邊那頂藍色帳篷是我們的。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "bow",
+    "meaning": "鞠躬",
+    "pos": "動詞",
+    "definition": "To bend your head or upper body to greet or thank someone.",
+    "example": "The students bow to their teacher.",
+    "translation": "學生們向老師鞠躬。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "stepchild",
+    "meaning": "繼子女",
+    "pos": "名詞",
+    "definition": "A child of your partner from an earlier relationship.",
+    "example": "Alex helps his stepchild prepare a school project.",
+    "translation": "艾力克斯幫繼子女準備學校專題。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "fine",
+    "meaning": "健康的；狀況好的",
+    "pos": "形容詞",
+    "definition": "Healthy or feeling well.",
+    "example": "I feel fine after a good night's sleep.",
+    "translation": "好好睡了一晚後，我覺得精神很好。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "lead",
+    "meaning": "帶領",
+    "pos": "動詞",
+    "definition": "To guide someone or show the way.",
+    "example": "She will lead the team across the bridge.",
+    "translation": "她會帶領團隊過橋。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "minute",
+    "meaning": "分鐘",
+    "pos": "名詞",
+    "definition": "A unit of time equal to sixty seconds.",
+    "example": "Please wait one minute while I find the map.",
+    "translation": "請等一分鐘，讓我找一下地圖。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  },
+  {
+    "id": "read",
+    "meaning": "閱讀",
+    "pos": "動詞",
+    "definition": "To look at written words and understand them.",
+    "example": "I read a book every night.",
+    "translation": "我每天晚上都會讀書。",
+    "exampleSource": "word-odyssey-editorial",
+    "reviewStatus": "model-reviewed"
+  }
+]

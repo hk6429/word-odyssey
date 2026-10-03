@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="story.css">
   <link rel="stylesheet" href="voice.css">
+  <link rel="stylesheet" href="learning.css">
+  <link rel="stylesheet" href="quest-visuals.css">
   <script type="module" src="app.js"></script>
 </head>
 <body>
@@ -49,7 +51,7 @@
               <div class="map-placebar"><div><small id="region-number">旅程區域 01 / 10</small><strong id="region-name">科茲窩</strong></div><span class="map-compass" data-icon="compass"></span></div>
               <div class="map-viewport" id="map-viewport" tabindex="0" aria-label="科茲窩旅程地圖，可左右滑動探索" aria-describedby="map-pan-hint">
                 <div class="map-canvas" aria-busy="true">
-                  <img class="map-scene" id="map-scene" src="assets/hero-journey.png" alt="英倫鄉野旅程預覽" width="1600" height="800" decoding="async" draggable="false">
+                  <img class="map-scene" id="map-scene" src="assets/hero-journey.webp" alt="英倫鄉野旅程預覽" width="1600" height="800" decoding="async" draggable="false">
                   <svg class="route" viewBox="0 0 1000 500" preserveAspectRatio="none" aria-hidden="true"><path class="route-shadow" d="M110 100 C185 45 265 75 340 90 S505 140 590 90 S815 60 870 120 C955 180 890 245 780 240 S600 190 500 240 S235 210 180 270 C75 275 95 410 160 380 S355 450 490 400 S735 345 860 390"/><path class="route-guide" d="M110 100 C185 45 265 75 340 90 S505 140 590 90 S815 60 870 120 C955 180 890 245 780 240 S600 190 500 240 S235 210 180 270 C75 275 95 410 160 380 S355 450 490 400 S735 345 860 390"/></svg>
                   <div id="map-nodes"></div>
                   <span class="map-scene-status" id="map-scene-status" role="status">正在展開地景⋯</span>

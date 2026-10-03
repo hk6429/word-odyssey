@@ -1,6 +1,11 @@
 import { freshAdventure, validateAdventure } from './adventure-state.js';
 export { validateAdventure } from './adventure-state.js';
 import { speakWord, speakText, voiceLabel } from './voice.js';
+import { stages } from './data.js';
+import { curatedMissions } from './curated-missions.js';
+import { chapterContinuations } from './story-content.js';
+import { storyBranches, roleObservations } from './story-contract.js';
+export { storyBranches, roleObservations } from './story-contract.js';
 /** Authored story beats, assembled into a ten-arc journey. Story choices never award vocabulary credit. */
 const pair = (en, zh) => ({ en, zh });
 const line = value => { const [en, zh] = value.split('|'); return pair(en.trim(), zh.trim()); };
@@ -58,9 +63,9 @@ const early = [
  'North with the Letters|帶著信往北走|“Take this pencil,” Nell says at the station. “There is still room for corrections.” Our train begins to move. On the oldest letter, a word slowly appears beneath York. It says: Remember.|「帶著這支鉛筆，」奈兒在車站說。「還有修改的空間。」我們的火車開始移動。在最老的那封信上，約克下方慢慢浮現一個字：記得。',
 ].map(row=>{const [en,zh,text,translation]=row.split('|');return {title:pair(en,zh),text,translation};});
 
-// Later chapters combine an arc setting, an individual narrative beat, and a rotating reflection.
+// Later chapters use individual events and authored continuations, without a shared padding pool.
 const longArcs = [
- {intro:line('In York, we carry the old letter through streets built from warm stone. Mira checks the map while Iona watches the gathering clouds.|在約克，我們帶著那封舊信，走過暖色石材鋪成的街道。米拉查看地圖，艾歐娜留意聚攏的雲。'),focus:['letter','map','stone'],beats:[
+ {beats:[
  'The Archive Window|檔案室的窗|An archivist lets us examine a ledger that lists the town’s households. Several names have been carefully erased, although their houses still appear in a drawing beside the list.|一位檔案管理員讓我們查看記錄住戶的名冊。幾個名字被仔細擦除，但名單旁的圖畫仍留著他們的房屋。',
  'The Baker’s Memory|麵包師的記憶|The baker remembers a family who lived beside the wall. They moved after a flood, he explains, but they never stopped calling this town their home.|麵包師記得一戶住在城牆邊的人家。他解釋，他們在洪水後搬走，卻始終把這座城當作自己的家。',
  'A Name Beneath a Name|名字底下的名字|Mira holds a thin sheet against the window. Under a recent entry, we discover the faint outline of another name. The earlier writing belongs to Elspeth, the missing keeper.|米拉把薄紙舉向窗戶。在一筆較新的紀錄下，我們發現另一個名字的淡淡輪廓。那是失蹤的守書人艾絲佩絲的舊筆跡。',
@@ -72,7 +77,7 @@ const longArcs = [
  'The Names Return|名字回來了|Residents gather to check the revised page. One woman corrects a spelling; another asks us to remove her address. We respect both requests before making a copy for the archive.|居民聚在一起檢查修訂後的書頁。有人更正拼字，也有人要求刪去自己的地址。我們尊重兩項要求，再替檔案室製作副本。',
  'An Address by the Lake|湖邊的地址|Inside the ledger’s cover, we find a receipt for a boat repair in the Lake District. Elspeth paid for it shortly after leaving York, and the date is surprisingly recent.|名冊封面內藏著湖區的一張修船收據。艾絲佩絲離開約克不久後付了錢，日期近得令人吃驚。',
  ]},
- {intro:line('The lake lies silver beneath a changing sky. We arrive with the repair receipt, hoping to learn why Elspeth needed a boat and where she went.|多變的天空下，湖水閃著銀光。我們帶著修船收據抵達，希望知道艾絲佩絲為何需要船，以及她去了哪裡。'),focus:['lake','boat','sky'],beats:[
+ {beats:[
  'The Silent Jetty|安靜的碼頭|A ferry operator studies our receipt and points towards a silent jetty. Service stopped months ago, she explains, yet someone has been leaving fresh flowers beside its empty ticket window.|渡船員研究收據後，指向一處安靜的碼頭。她說航線幾個月前便停了，售票窗旁卻一直有人放上新鮮的花。',
  'A Crossing on Paper|紙上的渡口|Our atlas still labels the ferry as a reliable crossing. A traveller has walked a long distance because of that promise, only to discover that no boat will come.|地圖集仍把渡船標為可靠的交通路線。一位旅人信了這項承諾，走了很遠的路，才發現根本不會有船來。',
  'The Repair Shed|修船棚|The repairer recognises Elspeth’s name. She had restored a small rowing boat for an elderly neighbour, he says, rather than preparing a dramatic escape across the water.|修船師傅認得艾絲佩絲的名字。他說她替年長鄰居修復一艘小划船，並不是為了橫渡湖面、展開戲劇性的逃亡。',
@@ -84,7 +89,7 @@ const longArcs = [
  'The Other Shore|另一邊的岸|Across the water, a path leads to a closed schoolhouse. Its noticeboard carries messages from travellers, including one from Elspeth asking about an old observatory in the Peak District.|湖對面的小路通向關閉的校舍。布告欄上留著旅人的訊息，其中有艾絲佩絲詢問峰區舊天文臺的留言。',
  'A Star in Daylight|白日裡的星星|As we update the ferry information, a tiny star appears over the distant hills on our atlas. It remains visible even when Mira closes the book, shining through the cover.|更新渡船資料時，地圖集的遠山上浮現小星星。即使米拉闔上書，它仍透過封面發光，清楚可見。',
  ]},
- {intro:line('Our path climbs into the Peak District, where an old observatory stands above the villages. We follow the star while carrying the stories gathered beside the lake.|我們沿路爬上峰區，一座舊天文臺立在村莊上方。我們循著星星前進，也帶著在湖邊收集的故事。'),focus:['path','star','villages'],beats:[
+ {beats:[
  'The Closed Observatory|關閉的天文臺|At the entrance, we discover that the building has been closed because its roof is unsafe. A handwritten sign directs visitors to a temporary workshop in the village below.|入口處的公告說屋頂不安全，建築因此關閉。一張手寫告示引導訪客前往山下村莊的臨時工作室。',
  'A Different Kind of Guide|另一種嚮導|The astronomer welcomes us into a room full of lenses and notebooks. She knew Elspeth, but says the keeper was interested in people’s night journeys rather than distant planets.|天文學家在放滿鏡片與筆記的房間迎接我們。她認識艾絲佩絲，卻說守書人關心的是人們夜裡的行程，而非遙遠行星。',
  'Clouded Instruments|被雲遮住的儀器|A damaged lens makes a lamp seem to divide into two separate lights. Iona realises that several reports of mysterious signals may have come from this ordinary optical problem.|受損鏡片讓一盞燈看起來分成兩道光。艾歐娜察覺，幾起神祕信號的報告，可能都來自這個普通的光學問題。',
@@ -96,7 +101,7 @@ const longArcs = [
  'A Reliable Light|可靠的光|After correcting the time, every group receives the message and repeats it back. The star on our map grows steady, as though it values a checked connection more than a brilliant flash.|更正時間後，每組都收到訊息並回覆確認。地圖上的星星變得穩定，彷彿比起耀眼閃光，它更珍惜確認過的聯繫。',
  'The Edinburgh Envelope|愛丁堡的信封|Before we leave, the astronomer gives us an envelope addressed to an Edinburgh bookbinder. On the back, Elspeth has written that the atlas cannot be repaired by one person alone.|離開前，天文學家交給我們一封寄給愛丁堡裝訂師的信。背面是艾絲佩絲的字：地圖集無法只靠一個人修好。',
  ]},
- {intro:line('In Edinburgh, the castle rises above narrow streets and crowded bookshops. The envelope leads us to a quiet workshop, where someone has been expecting our arrival.|在愛丁堡，城堡高踞窄巷與熱鬧書店之上。信封引領我們到一間安靜的工作室，有人一直等著我們到來。'),focus:['castle','envelope','workshop'],beats:[
+ {beats:[
  'The Bookbinder’s Table|裝訂師的桌子|The bookbinder examines our atlas without opening it. Its damaged spine reveals years of hurried changes, she says, and several pages have been attached with the wrong kind of thread.|裝訂師還沒打開地圖集就先查看。她說，受損書脊顯示多年來匆促修改的痕跡，有些頁面還用了不合適的線縫接。',
  'An Unexpected Guest|意外的訪客|A woman in a grey coat enters carrying a tray of tea. One silver button is missing. We finally recognise Elspeth, who looks more tired than frightening as she sets down the cups.|穿灰外套的女子端茶進來，衣服上少了一顆銀色鈕扣。我們終於認出艾絲佩絲。她放下杯子時，看起來疲憊多於可怕。',
  'Before the Accusation|指責之前|Iona places the recovered button on the table instead of demanding an explanation. Elspeth thanks her, then asks us which parts of the story we witnessed and which parts we only heard.|艾歐娜把找回的鈕扣放上桌，沒有立即要求解釋。艾絲佩絲道謝後，問我們哪些事親眼見過，哪些只是聽說。',
@@ -108,7 +113,7 @@ const longArcs = [
  'A Map with Many Hands|許多雙手的地圖|Visitors help review the revised pages, leaving their names only when they choose. For the first time, the atlas credits more than its official editors; the blank spaces begin to look less permanent.|訪客協助審閱修訂頁面，只有自願者留下名字。地圖集首次列出正式編輯以外的貢獻者，那些空白似乎不再永遠不變。',
  'News from the North|北方消息|A message arrives warning that a storm may interrupt the Highland connection. We arrange accommodation and a local guide before travelling, while the unsettled page lifts softly as if caught by distant wind.|消息警告，暴風雨可能中斷高地聯繫。我們先安排住宿與當地嚮導才動身；那張不安定的書頁輕輕揚起，像被遠方風吹動。',
  ]},
- {intro:line('We reach the Highlands before the storm, following the advice of a local guide. Beyond the village, the mountains are beautiful, but our immediate task is communication.|依照當地嚮導的建議，我們在風暴前抵達高地。村外山景很美，但我們眼前的任務是維持聯絡。'),focus:['storm','village','guide'],beats:[
+ {beats:[
  'The Last Clear Morning|最後的晴朗早晨|The village coordinator shows us the existing emergency plan. Our proposed light signals can support it, she explains, but must never replace the established communication methods or trained local teams.|村莊聯絡人給我們看現行緊急應變計畫。她說我們提出的燈光信號可以輔助，卻不能取代既有聯絡方式或受訓團隊。',
  'Checking the Route|確認路線|We inspect the equipment from a safe indoor location while experienced residents check the nearby route. One damaged connection is identified early, giving the repair team time to arrange a replacement.|我們在安全室內檢查設備，熟悉地形的居民則確認附近路線。有人提早發現一處受損連接，讓維修隊有時間安排替換。',
  'A Message from Home|家鄉的訊息|Mira receives a letter from the old man in our first village. The fox still visits his garden, he writes, and Ada has sent a drawing of the new road to her home.|米拉收到第一座村莊老人寄來的信。他說狐狸仍會來花園，愛達也寄了一幅通往自己家門的新道路圖畫。',
@@ -120,7 +125,7 @@ const longArcs = [
  'After the Storm|風暴過後|When the coordinator announces that conditions are safe, residents inspect the area and report what needs repair. We help update the community’s own copy of the map using their verified information.|聯絡人宣布狀況安全後，居民巡視並回報維修需求。我們使用他們確認過的資料，協助更新社區自己的地圖副本。',
  'The Final Blank Space|最後一處空白|The Highland page settles firmly into the atlas at last. Then another blank space appears on its final sheet: the village where our journey began, waiting for us to look again.|高地那一頁終於牢牢留在地圖集裡。接著，最後一頁出現另一處空白：我們出發的村莊，正等著我們重新看一遍。',
  ]},
- {intro:line('On the journey home, the atlas feels heavier with stories rather than paper. We return to the village carrying a map that is useful, unfinished, and no longer ours alone.|歸途上，地圖集因故事而非紙張顯得更沉。我們帶回一張有用、未完成，也不再只屬於我們的地圖。'),focus:['village','map','home'],beats:[
+ {beats:[
  'A Familiar Road|熟悉的路|The old lane looks smaller than I remember, yet it contains details I never noticed before. Beside the postbox, a narrow step makes the entrance difficult for a neighbour using a walking aid.|舊巷比記憶裡小，卻有以前從未注意的細節。郵筒旁一級窄階，使使用助行器的鄰居難以進門。',
  'The Person We Overlooked|曾忽略的人|We ask the neighbour how she usually collects her letters. Her answer reveals a weekly arrangement kept running by three friends, a quiet network missing from every version of our map.|我們問鄰居平常怎麼收信。她的答案讓我們看見三位朋友每週維持的安排，那張安靜的互助網從未出現在任何地圖版本。',
  'Returning the Letter|歸還那封信|The old man recognises the red envelope from our first morning. He explains that Elspeth left it as an invitation for anyone willing to notice a story outside their usual route.|老人認出第一天早晨的紅色信封。他說那是艾絲佩絲留下的邀請，送給願意留意慣常路線以外故事的人。',
@@ -133,42 +138,40 @@ const longArcs = [
  'A Door Left Open|留一扇開著的門|On the final page, I write an invitation to add a story with care, evidence, and permission. Then someone knocks at the blue door. This time, we open it together and begin by listening.|最後一頁，我邀請人們帶著細心、證據與許可增添故事。此時，藍色門外響起敲門聲。這一次，我們一起開門，從傾聽開始。',
  ]},
 ];
-const reflections = [
- 'I write down what we have learned, leaving space for a correction. Mira reminds me that the next person may notice something we missed.|我記下所學，也留下更正空間。米拉提醒，下一個人也許會發現我們漏看的事。',
- 'For a moment, I want the answer to be simple. Iona waits beside me until I am ready to ask a more careful question.|有一瞬間，我希望答案能很簡單。艾歐娜在旁邊等著，直到我準備好問出更仔細的問題。',
- 'We compare this new detail with the notes already in our bag. A connection begins to emerge, but we decide to check it before drawing conclusions.|我們將新細節和袋裡的筆記比對。關聯慢慢浮現，但我們決定先確認，再下結論。',
- 'The work takes longer than we expected. Even so, a small discovery feels worth recording, especially when it changes the way we understand another person.|工作比預期更久。即便如此，小發現也值得記下，尤其當它改變我們理解別人的方式。',
- 'I look again at the page that brought us here. Its meaning has shifted, although the words remain the same, and I wonder what we will notice next.|我重新看著帶我們來這裡的書頁。字句沒變，意義卻不同了；我想知道接著還會注意到什麼。',
-].map(line);
-const suspense = [
- 'Before we leave, Mira notices a detail that none of us can yet explain.|離開前，米拉注意到一個誰也還無法解釋的細節。',
- 'Somewhere beyond this place, another part of the story is waiting to be heard.|在這地方以外，故事的另一部分正等著被聽見。',
- 'We turn the page carefully, unsure whose voice will meet us on the other side.|我們小心翻頁，不確定另一邊會遇見誰的聲音。',
-].map(line);
-
 function validStage(stageId) { if (!Number.isInteger(stageId) || stageId<1 || stageId>100) throw new RangeError('Stage must be an integer from 1 to 100'); return stageId; }
-export function getReading(stageId) {
+const escapePattern = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const wordPattern = word => new RegExp(`\\b${escapePattern(word)}\\b`, 'i');
+const countWords = text => (text.match(/[A-Za-z]+(?:[’'][a-z]+)?/g)||[]).length;
+function getChapter(stageId) {
  validStage(stageId);
- const index=stageId-1, arcIndex=Math.floor(index/10), arc=longArcs[arcIndex-4];
+ const index=stageId-1,arcIndex=Math.floor(index/10);
  let entry;
  if(stageId<=40) entry={...early[index]};
  else {
-  const [en,zh,text,translation]=arc.beats[index%10].split('|');
-  const reflection=reflections[index%reflections.length],hook=suspense[index%suspense.length];
-  entry={title:pair(en,zh),quizSource:text,text:[arc.intro.en,text,reflection.en,stageId===100?'The journey has given us a beginning, and there is room for another voice.':hook.en].join(' '),translation:[arc.intro.zh,translation,reflection.zh,stageId===100?'旅程給了我們一個開始，還留著容納另一個聲音的位置。':hook.zh].join('')};
+  const [en,zh,text,translation]=longArcs[arcIndex-4].beats[index%10].split('|');
+  const next=chapterContinuations[stageId];
+  entry={title:pair(en,zh),text:`${text} ${next.en}`,translation:`${translation}${next.zh}`};
  }
- const words=entry.text.match(/[A-Za-z]+(?:[’'][a-z]+)?/g)||[];
- const source=entry.quizSource||entry.text;
- const common=new Set(['their','there','these','those','which','while','where','after','before','about','because','although','rather','would','could','should','every','someone','something','elspeth','rowan','iona','mira','begins','begin','several','along','towards','finally','though','instead']);
- const candidates=stageId>40?[...new Set((source.match(/[A-Za-z]+/g)||[]).map(word=>word.toLowerCase()).filter(word=>word.length>=5&&!common.has(word)))]:['letter','fox','compass','door','key','map','book','river','boat','light','train','window','page','name','bell','home','friend','rain','hand','tea'];
- const focusWords=candidates.filter(word=>new RegExp(`\\b${word}\\b`,'i').test(entry.text)).slice(0,3);
- if(!focusWords.length) focusWords.push(words.find(word=>word.length>=4).toLowerCase());
- const answer=focusWords[0];
- const sentence=source.split(/(?<=[.!?])\s+/).find(s=>new RegExp(`\\b${answer}\\b`,'i').test(s));
- const options=[answer,...['chair','bread','garden','clock','pencil'].filter(word=>word!==answer).slice(index%3,index%3+2)];
- // Rotate the correct position without relying on render-time randomness.
- const offset=index%3; options.push(...options.splice(0,offset));
- return {...entry,id:stageId,arc:arcNames[arcIndex],sceneClass:`story-chapter story-chapter-${arcIndex+1} story-cell-${index%10}`,regionSceneClass:`story-scene-${sceneIndices[arcIndex]}`,focusWords,wordCount:words.length,format:stageId<=20?'short':stageId<=40?'dialogue':'passage',quiz:{prompt:sentence.replace(new RegExp(`\\b${answer}\\b`,'i'),'_____'),answer,options,evidence:sentence}};
+ return {...entry,id:stageId,arc:arcNames[arcIndex],sceneClass:`story-chapter story-chapter-${arcIndex+1} story-cell-${index%10}`,regionSceneClass:`story-scene-${sceneIndices[arcIndex]}`,format:stageId<=20?'short':stageId<=40?'dialogue':'passage'};
+}
+export function getReading(stageId) {
+ const entry=getChapter(stageId),words=stages[stageId-1].words;
+ const source=curatedMissions[stageId];
+ if(!Array.isArray(source)||source.length!==3)throw new Error(`Chapter ${stageId} needs three authored mission words`);
+ const missions=source.map(mission=>{
+  const word=words.find(word=>word.id===mission.wordId);
+  if(!word||!wordPattern(word.word).test(mission.sentence))throw new Error(`Chapter ${stageId}: invalid mission word ${mission.wordId}`);
+  return {...mission,word:word.word,meaning:word.meaning};
+ });
+ if(new Set(missions.map(m=>m.wordId)).size!==3)throw new Error(`Chapter ${stageId} has duplicate mission words`);
+ const focusWords=missions.map(m=>m.word);
+ const quizzes=missions.map((mission,index)=>{
+  const options=[...focusWords],offset=(stageId+index)%3;options.push(...options.splice(0,offset));
+  return {wordId:mission.wordId,prompt:mission.sentence.replace(wordPattern(mission.word),'_____'),answer:mission.word,options,evidence:mission.sentence};
+ });
+ const missionText=missions.map(m=>m.sentence).join(' '),missionTranslation=missions.map(m=>m.translation).join('');
+ const text=`${entry.text}\n\n${missionText}`,translation=`${entry.translation}\n\n${missionTranslation}`;
+ return {...entry,text,translation,storyText:entry.text,storyTranslation:entry.translation,missionText,missionTranslation,missions,focusWords,missionWordIds:missions.map(m=>m.wordId),wordCount:countWords(text),storyWordCount:countWords(entry.text),quizzes,quiz:quizzes[0]};
 }
 
 const STORAGE_KEY='word-odyssey-story-v1'+(typeof location!=='undefined'&&new URLSearchParams(location.search).has('test')?'-test':'');
@@ -185,32 +188,40 @@ export function getStoryStats(value=adventure){const scores={curiosity:0,courage
 const labels={curiosity:pair('Curiosity','好奇'),courage:pair('Courage','勇氣'),kindness:pair('Kindness','善意')};
 const esc=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const roleIndex=id=>Math.max(0,roles.findIndex(role=>role.id===id));
-export function getStoryOpening(stageId){const r=getReading(stageId);const text=storyLocale==='en'?(r.quizSource||r.text).split(/(?<=[.!?])\s+/).slice(0,2).join(' '):r.translation.split('。').slice(stageId>40?2:0,stageId>40?4:2).join('。')+'。';return {title:pick(r.title),text,sceneClass:r.sceneClass};}
+export function getStoryOpening(stageId){const r=getChapter(stageId);return {title:pick(r.title),text:pick(pair(r.text,r.translation)),sceneClass:r.sceneClass};}
+export function getStoryEnding(value=adventure){
+ const state=validateAdventure(value);
+ const echoes=storyBranches.flatMap(branch=>{const choice=state.choices[branch.key];return choice?[{key:branch.key,action:choice.action,...branch.choices[choice.action].ending}]:[];});
+ return {en:echoes.map(echo=>echo.en).join(' '),zh:echoes.map(echo=>echo.zh).join(''),echoes};
+}
+export function getStoryReturn(stageId,value=adventure){
+ const r=getChapter(stageId),ending=stageId===100?getStoryEnding(value):null;
+ return pair([r.text,ending?.en].filter(Boolean).join(' '),[r.translation,ending?.zh].filter(Boolean).join(''));
+}
 export function mountAdventure(container,onChange=()=>{}) {
  if(!container)return;
  const stats=getStoryStats();
  container.innerHTML=`<section class="adventure-cast"><div class="story-section-heading"><div><span class="story-eyebrow">THE LIVING ATLAS</span><h2>${pick(pair('Choose who you become','選擇你的冒險角色'))}</h2></div><p>${pick(pair('One mysterious letter. Three ways to meet the world.','一封神祕來信，三種與世界相遇的方式。'))}</p></div><div class="story-role-grid">${roles.map((role,index)=>`<button class="story-role ${adventure.role===role.id?'selected':''}" data-role="${role.id}" aria-pressed="${adventure.role===role.id}"><span class="story-portrait story-person-${index}" role="img" aria-label="${esc(pick(role.name))}"></span><span class="story-role-copy"><strong>${esc(pick(role.name))}</strong><small>${esc(pick(role.trait))}</small><span class="story-role-choose">${pick(adventure.role===role.id?pair('Your role ✓','你的角色 ✓'):pair('Choose this role →','選擇角色 →'))}</span></span></button>`).join('')}</div><div class="story-traits">${Object.entries(stats).map(([stat,score])=>`<span>${pick(labels[stat])}<b>${score}</b></span>`).join('')}<small>${pick(pair('Traits reflect story decisions; vocabulary progress is earned separately.','特質記錄劇情選擇；單字進度仍須完成學習與測驗。'))}</small></div>${storageFailed?`<p role="status">${pick(pair('Story progress could not be saved on this device.','此裝置暫時無法儲存故事進度。'))}</p>`:''}</section>`;
  container.querySelectorAll('[data-role]').forEach(button=>button.addEventListener('click',()=>{adventure.role=button.dataset.role;persist();mountAdventure(container,onChange);onChange(getAdventure());}));
 }
-const events=[
- {npc:'Mira',person:0,title:pair('A path no one has drawn','沒有人畫過的小路'),text:pair('Mira finds a narrow path beside the route. A fresh footprint leads towards it. How will you investigate?','米拉在路線旁找到一條小徑。一個新腳印朝那裡延伸。你想如何調查？')},
- {npc:'Rowan',person:1,title:pair('A note between the pages','書頁之間的字條'),text:pair('A note from Rowan describes a missing detail. It could change the next page of the atlas. Where will you begin?','羅恩的字條描述一個被遺漏的細節，可能改變地圖集的下一頁。你想從哪裡開始？')},
- {npc:'Iona',person:2,title:pair('A light beyond the window','窗外的燈光'),text:pair('Iona spots a light where the map shows an empty space. Someone may have a story to tell. What will you do?','艾歐娜在地圖空白處看見燈光。那裡或許有人想說故事。你會怎麼做？')},
-];
 const actions={
- curiosity:{label:pair('Examine the clue','仔細觀察線索'),result:pair('You compare the details and mark a question for your next conversation. A small pattern begins to emerge.','你比對細節，記下下次對話要問的問題。一個小小的規律開始浮現。')},
- courage:{label:pair('Ask the difficult question','勇敢提出問題'),result:pair('You admit what you do not know and ask directly. The reply changes one assumption you carried into this place.','你坦白承認不知道的事，直接提問。對方的回答改變了你來到這裡前的一項假設。')},
- kindness:{label:pair('Listen to someone’s story','先聽對方的故事'),result:pair('You make room for an overlooked voice. Your companion adds their account to the notes, with permission.','你為被忽略的聲音留出空間。同伴取得對方同意後，把他的故事記進筆記。')},
+ curiosity:{label:pair('Compare what you can observe','比對能觀察到的事'),result:pair('You record one observation from this chapter without adding an explanation you cannot support.','你記下本章的一項觀察，沒有加上尚無證據的解釋。')},
+ courage:{label:pair('Name the question still open','說出仍待回答的問題'),result:pair('You name the unanswered question in this chapter and leave room to return to it.','你說出本章仍待回答的問題，留下日後確認的空間。')},
+ kindness:{label:pair('Consider whose account is missing','想想還缺了誰的說法'),result:pair('You note whose account has not been heard in this chapter and avoid speaking for them.','你記下本章還沒聽到誰的說法，避免替對方發言。')},
 };
 export function getEncounter(stageId,quest=1,value=adventure){
  validStage(stageId);if(!Number.isInteger(quest)||quest<1||quest>9)throw new RangeError('Quest must be between 1 and 9');
- const state=validateAdventure(value),key=`${stageId}:${quest}`,index=((state.seed>>>0)+stageId*17+quest*7)%events.length;
- let event=events[index];
- if(stageId===1&&quest===1)event={npc:'Mira',person:0,title:pair('The letter on the path','路上的那封信'),text:pair('A fox guards a red letter with no name. Mira kneels beside it. Your first choice will be remembered when you reach the old man’s gate.','一隻狐狸守著沒有名字的紅色信封。米拉蹲在旁邊。到了老人的門口，這次選擇會有回應。')};
- let echo=null;
- const first=state.choices['1:1'];
- if(stageId===3&&first)echo={curiosity:pair('The mark you studied on the letter matches the old man’s gate. He recognises your careful sketch and opens his notebook.','你仔細看過的信封記號，和老人門上的記號相同。他認出你用心描下的圖，打開了筆記。'),courage:pair('The old man remembers the question you called out on the path. He has been waiting to answer it: the letter is an invitation.','老人記得你在路上勇敢喊出的問題。他一直等著回答：那封信是一份邀請。'),kindness:pair('The fox remembers your patience and leads you to the old man. He thanks you for giving a frightened creature room to approach.','狐狸記得你的耐心，帶你來到老人身邊。他謝謝你願意等，讓害怕的動物慢慢靠近。')}[first.action];
- return {key,...event,echo,choice:state.choices[key]||null,sceneClass:getReading(stageId).regionSceneClass};
+ const state=validateAdventure(value),key=`${stageId}:${quest}`,arcIndex=Math.floor((stageId-1)/10),chapter=getChapter(stageId);
+ const branch=storyBranches[arcIndex],isBranch=key===branch.key,choice=state.choices[key]||null;
+ const role=choice?.role||state.role,observation=role?roleObservations[arcIndex][role]:null;
+ const npc=stageId<11?'Mira':stageId<=20?'Rowan':stageId===21?'Mira':stageId>=75&&stageId<=80?'Rowan':stageId>=22&&stageId<=40?'Iona':arcIndex%2?'Iona':'Mira';
+ let echo=null,echoKeys=[];
+ if(quest===1){
+  const remembered=storyBranches.find(branch=>branch.payoff===stageId&&state.choices[branch.key]);
+  if(remembered){echo=remembered.choices[state.choices[remembered.key].action].echo;echoKeys=[remembered.key];}
+  if(stageId===100){const ending=getStoryEnding(state);if(ending.echoes.length){echo=pair(ending.en,ending.zh);echoKeys=ending.echoes.map(item=>item.key);}}
+ }
+ return {key,npc,person:{Mira:0,Rowan:1,Iona:2}[npc],title:chapter.title,arc:chapter.arc,text:pair(chapter.text,chapter.translation),observation,echo,echoKeys,choice,isBranch,branchKey:branch.key,actions:isBranch?branch.choices:actions,sceneClass:chapter.regionSceneClass};
 }
 export function chooseEncounter(stageId,quest,action){
  if(!Object.hasOwn(actions,action))throw new TypeError('Unknown story action');
@@ -221,25 +232,25 @@ export function chooseEncounter(stageId,quest,action){
 export function mountEncounter(container,{stageId,quest=1,isStageComplete=false,onChange=()=>{}}={}){
  if(!container)return;
  const event=getEncounter(stageId,quest);const choice=event.choice,role=roles.find(r=>r.id===(choice?.role||adventure.role));
- const first=stageId===1&&quest===1;
- const firstLabels={curiosity:pair('Study the mark on the letter','看看信封上的記號'),courage:pair('Call out: “Who is this for?”','大聲問：「這封信要給誰？」'),kindness:pair('Give the fox time to approach','耐心等狐狸靠近')};
- const firstResults={curiosity:pair('You sketch the tiny oak leaf on the seal. Mira thinks she has seen that shape on a village gate.','你畫下封口的小橡樹葉。米拉覺得自己曾在村莊的一扇門上看過這形狀。'),courage:pair('Your question carries down the lane. Somewhere beyond the trees, an old man answers: “Bring your questions with you.”','你的問題沿著小巷傳去。樹林另一邊，一位老人回答：「把你的問題一起帶來。」'),kindness:pair('You wait quietly. The fox steps closer, then turns towards a blue door as though inviting you to follow.','你安靜等待。狐狸走近，再轉向一扇藍色的門，像在邀請你跟上。')};
- container.innerHTML=`<section class="story-encounter"><div class="story-encounter-image story-scene ${event.sceneClass}" role="img" aria-label="${esc(pick(getReading(stageId).arc))}"><span class="story-npc story-portrait story-person-${event.person}" aria-hidden="true"></span></div><div class="story-encounter-copy"><span class="story-eyebrow">${pick(isStageComplete?pair('CHAPTER EPILOGUE','章節後記'):pair('A MOMENT ON THE ROAD','旅途中的相遇'))} · ${event.npc}</span><h3>${esc(pick(event.title))}</h3><p>${esc(pick(event.text))}</p>${event.echo?`<p class="story-echo">${esc(pick(event.echo))}</p>`:''}${choice?`<div class="story-outcome" role="status"><strong>${pick(pair('Your choice stays in the story','你的選擇已留在故事裡'))} · ${pick(labels[choice.action])} +1</strong><p>${esc(pick(first?firstResults[choice.action]:actions[choice.action].result))} ${esc(pick(role.voice))}</p></div>`:role?`<div class="story-choice-buttons">${Object.entries(actions).map(([action,entry])=>`<button class="story-button" data-story-choice="${action}">${esc(pick(first?firstLabels[action]:entry.label))}</button>`).join('')}</div>`:`<p class="story-role-needed">${pick(pair('Choose your role to make this decision.','先選擇角色，就能作出這次決定。'))}</p><div class="story-choice-buttons">${roles.map(r=>`<button class="story-button" data-encounter-role="${r.id}">${esc(pick(r.name))}</button>`).join('')}</div>`}<small class="story-aside">${pick(pair('Story choices shape this journey. They do not replace word practice.','劇情選擇塑造旅程，單字仍需透過練習累積。'))}</small>${storageFailed?`<p role="status">${pick(pair('This choice could not be saved on this device.','這次選擇暫時無法儲存在此裝置。'))}</p>`:''}</div></section>`;
+ container.innerHTML=`<section class="story-encounter"><div class="story-encounter-image story-scene ${event.sceneClass}" role="img" aria-label="${esc(pick(event.arc))}"><span class="story-npc story-portrait story-person-${event.person}" aria-hidden="true"></span></div><div class="story-encounter-copy"><span class="story-eyebrow">${pick(isStageComplete?pair('CHAPTER EPILOGUE','章節後記'):pair('A MOMENT ON THE ROAD','旅途中的相遇'))} · ${event.npc}</span><h3>${esc(pick(event.title))}</h3><p>${esc(pick(event.text))}</p>${event.observation?`<p class="story-role-observation"><strong>${esc(pick(role.name))}</strong> · ${esc(pick(event.observation))}</p>`:''}${event.echo?`<p class="story-echo">${esc(pick(event.echo))}</p>`:''}${choice?`<div class="story-outcome" role="status"><strong>${pick(pair('Your choice stays in the story','你的選擇已留在故事裡'))} · ${pick(labels[choice.action])} +1</strong><p>${esc(pick(event.actions[choice.action].result))}</p></div>`:role?`<div class="story-choice-buttons">${Object.entries(event.actions).map(([action,entry])=>`<button class="story-button" data-story-choice="${action}">${esc(pick(entry.label))}</button>`).join('')}</div>`:`<p class="story-role-needed">${pick(pair('Choose your role to make this decision.','先選擇角色，就能作出這次決定。'))}</p><div class="story-choice-buttons">${roles.map(r=>`<button class="story-button" data-encounter-role="${r.id}">${esc(pick(r.name))}</button>`).join('')}</div>`}<small class="story-aside">${pick(pair('Story choices shape this journey. They do not replace word practice.','劇情選擇塑造旅程，單字仍需透過練習累積。'))}</small>${storageFailed?`<p role="status">${pick(pair('This choice could not be saved on this device.','這次選擇暫時無法儲存在此裝置。'))}</p>`:''}</div></section>`;
  container.querySelectorAll('[data-story-choice]').forEach(button=>button.addEventListener('click',()=>{chooseEncounter(stageId,quest,button.dataset.storyChoice);mountEncounter(container,{stageId,quest,isStageComplete,onChange});onChange(getAdventure());}));
  container.querySelectorAll('[data-encounter-role]').forEach(button=>button.addEventListener('click',()=>{adventure.role=button.dataset.encounterRole;persist();mountEncounter(container,{stageId,quest,isStageComplete,onChange});onChange(getAdventure());}));
 }
 export function mountReading(container,{stageId}={}){
  if(!container)return;
  const reading=getReading(stageId);
- let text=esc(reading.text);
- for(const word of reading.focusWords)text=text.replace(new RegExp(`\\b${word}\\b`,'gi'),match=>`<mark>${match}</mark>`);
- container.innerHTML=`<section class="story-reading"><div class="story-reading-image story-scene ${reading.sceneClass}" role="img" aria-label="${esc(pick(reading.arc))}"><span>${esc(pick(reading.arc))}</span></div><div class="story-reading-body"><div class="story-reading-meta"><span>CHAPTER ${String(stageId).padStart(2,'0')}</span><span>${reading.wordCount} ${pick(pair('words','字'))} · ${pick(reading.format==='short'?pair('Short reading','短句閱讀'):reading.format==='dialogue'?pair('Dialogue','對話閱讀'):pair('Story passage','故事閱讀'))}</span></div><h3>${esc(pick(reading.title))}</h3><button class="voice-read" type="button" data-read-passage>${voiceLabel('passage',storyLocale)}</button><p class="story-passage" lang="en">${text}</p><div class="story-focus"><span>${pick(pair('Words in this passage','本篇情境字'))}</span>${reading.focusWords.map(word=>`<button class="voice-read" type="button" data-read-word="${esc(word)}" aria-label="${esc(pick(pair('Read word','朗讀單字')))} ${esc(word)}">${esc(word)}</button>`).join('')}</div>${storyLocale==='zh'?`<details class="story-translation"><summary>展開中文對照</summary><p>${esc(reading.translation)}</p></details>`:''}<details class="story-comprehension"><summary>${pick(pair('Try a quick reading check','試試閱讀小挑戰'))}</summary><p class="story-quiz-label">${pick(pair('Choose the word used in the passage.','選出原文使用的單字。'))}</p><p class="story-cloze" lang="en">${esc(reading.quiz.prompt)}</p><div class="story-quiz-options">${reading.quiz.options.map(option=>`<button class="story-button" data-reading-answer="${option}">${option}</button>`).join('')}</div><p class="story-reading-feedback" aria-live="polite"></p><button class="story-reveal" type="button">${pick(pair('Show answer and evidence','查看答案與原句'))}</button></details><small class="story-aside">${pick(pair('An original, levelled story. Highlighted words come from this passage; reading does not unlock vocabulary stages.','原創分級故事。標示字均出現在本文；閱讀不會直接解鎖單字關卡。'))}</small></div></section>`;
+ const pattern=new RegExp(`\\b(${reading.focusWords.map(escapePattern).sort((a,b)=>b.length-a.length).join('|')})\\b`,'gi');
+ const highlight=text=>text.split(pattern).map((piece,index)=>index%2?`<mark>${esc(piece)}</mark>`:esc(piece)).join('');
+ container.innerHTML=`<section class="story-reading"><div class="story-reading-image story-scene ${reading.sceneClass}" role="img" aria-label="${esc(pick(reading.arc))}"><span>${esc(pick(reading.arc))}</span></div><div class="story-reading-body"><div class="story-reading-meta"><span>CHAPTER ${String(stageId).padStart(2,'0')}</span><span>${reading.wordCount} ${pick(pair('words','字'))} · ${pick(reading.format==='short'?pair('Short reading','短句閱讀'):reading.format==='dialogue'?pair('Dialogue','對話閱讀'):pair('Story passage','故事閱讀'))}</span></div><h3>${esc(pick(reading.title))}</h3><button class="voice-read" type="button" data-read-passage>${voiceLabel('passage',storyLocale)}</button><p class="story-passage" lang="en">${highlight(reading.storyText)}</p><h4>${pick(pair('Field-note mission · 3 words from this stage','旅途手札任務 · 本關 3 個單字'))}</h4><p class="story-passage story-mission" lang="en">${highlight(reading.missionText)}</p><div class="story-focus"><span>${pick(pair('This stage’s mission words','本關任務詞'))}</span>${reading.missions.map(mission=>`<button class="voice-read" type="button" data-read-word="${esc(mission.word)}" data-mission-word-id="${esc(mission.wordId)}" aria-label="${esc(pick(pair('Read word','朗讀單字')))} ${esc(mission.word)}">${esc(mission.word)}</button>`).join('')}</div>${storyLocale==='zh'?`<details class="story-translation"><summary>展開中文對照</summary><p>${esc(reading.translation)}</p></details>`:''}${reading.quizzes.map((quiz,index)=>`<details class="story-comprehension"><summary>${pick(pair('Reading check','閱讀小挑戰'))} ${index+1} / 3</summary><p class="story-quiz-label">${pick(pair('Choose the word used in the field note.','選出旅途手札原句使用的單字。'))}</p><p class="story-cloze" lang="en">${esc(quiz.prompt)}</p><div class="story-quiz-options">${quiz.options.map(option=>`<button class="story-button" data-reading-answer="${esc(option)}" data-reading-quiz="${index}">${esc(option)}</button>`).join('')}</div><p class="story-reading-feedback" data-reading-feedback="${index}" aria-live="polite"></p><button class="story-reveal" type="button" data-reading-reveal="${index}">${pick(pair('Show answer and evidence','查看答案與原句'))}</button></details>`).join('')}<small class="story-aside">${pick(pair('Each mission word belongs to this stage’s vocabulary list. Reading checks and story choices do not unlock vocabulary stages.','每個任務詞都來自本關詞表。閱讀小挑戰與劇情選擇不會直接解鎖單字關卡。'))}</small></div></section>`;
  container.querySelector('[data-read-passage]').addEventListener('click',()=>speakText(reading.text));
  container.querySelectorAll('[data-read-word]').forEach(button=>button.addEventListener('click',()=>speakWord(button.dataset.readWord)));
- const feedback=container.querySelector('.story-reading-feedback');
  container.querySelectorAll('[data-reading-answer]').forEach(button=>button.addEventListener('click',()=>{
-  const correct=button.dataset.readingAnswer===reading.quiz.answer;button.classList.toggle('is-correct',correct);button.classList.toggle('is-wrong',!correct);
-  feedback.textContent=correct?`${pick(pair('Correct. Read the sentence again:','答對了。再讀一次原句：'))} ${reading.quiz.evidence}`:pick(pair('Not the word in the passage. Read the highlighted sentence and try again.','這不是原文使用的字。找找標示字所在的句子，再試一次。'));
+  const index=Number(button.dataset.readingQuiz),quiz=reading.quizzes[index],feedback=container.querySelector(`[data-reading-feedback="${index}"]`);
+  const correct=button.dataset.readingAnswer===quiz.answer;button.classList.toggle('is-correct',correct);button.classList.toggle('is-wrong',!correct);
+  feedback.textContent=correct?`${pick(pair('Correct. Read the sentence again:','答對了。再讀一次原句：'))} ${quiz.evidence}`:pick(pair('Not the word in the passage. Read the highlighted sentence and try again.','這不是原文使用的字。找找標示字所在的句子，再試一次。'));
  }));
- container.querySelector('.story-reveal').addEventListener('click',()=>{feedback.textContent=`${pick(pair('Answer','答案'))}: ${reading.quiz.answer}. ${reading.quiz.evidence}`;});
+ container.querySelectorAll('[data-reading-reveal]').forEach(button=>button.addEventListener('click',()=>{
+  const index=Number(button.dataset.readingReveal),quiz=reading.quizzes[index];
+  container.querySelector(`[data-reading-feedback="${index}"]`).textContent=`${pick(pair('Answer','答案'))}: ${quiz.answer}. ${quiz.evidence}`;
+ }));
 }

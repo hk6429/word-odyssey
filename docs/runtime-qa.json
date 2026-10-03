@@ -1,0 +1,183 @@
+{
+  "generatedAt": "2026-10-03T09:49:48.785Z",
+  "status": "passed",
+  "runtime": "Wrangler local workerd Durable Object SQLite",
+  "wranglerVersion": "4.110.0",
+  "compatibilityDate": "2026-07-15",
+  "productionCompatibilityDate": "2026-10-01",
+  "scope": "Local runtime only. No production request or deployment. Google token verification is replaced only in an ignored local subclass; parent constructor/storage/schema/fetch and production router are used.",
+  "limitations": [
+    "Local workerd supports 2026-07-15, so this does not validate the production compatibility date 2026-10-01.",
+    "Synthetic identities only; this does not claim real Google OAuth acceptance."
+  ],
+  "sourceSha256": {
+    "edge.mjs": "1bcc0a27e9e7b0d38f9bf47ce432f6005bbb6d4fd0224d281f5920e50bb6bdbc",
+    "worker.mjs": "4ea842eabd6f9f01629d9307ecfd982e93f0f4355cfcf3bd7ea226c9b8846b11",
+    "sqlite-store.js": "3678405394370a3f49184617506b11e19afb560a351d1c550cf6963155cd4148",
+    "store-schema.js": "03529fe3e5ae4667c11e434e87449a82beb9a8be4b64cf513d21b7ed50cf2564",
+    "engine.js": "6f559959082781204acdb34346966afa6e729760dd3a11f51427d362c1eb18c7",
+    "data.js": "ac05dfa6de7ad35ece0616332245edde34c0cbe355cbd12504374916754745db"
+  },
+  "checks": [
+    {
+      "name": "production-route-to-real-durable-sqlite",
+      "status": "passed",
+      "httpStatus": 200,
+      "storage": "durable-sqlite"
+    },
+    {
+      "name": "invalid-fixture-credential-rejected",
+      "status": "passed",
+      "httpStatus": 401
+    },
+    {
+      "name": "two-independent-sessions",
+      "status": "passed",
+      "httpStatuses": [
+        200,
+        200
+      ],
+      "cookieFlags": [
+        "HttpOnly",
+        "Secure",
+        "SameSite=Lax",
+        "Path=/",
+        "Max-Age=604800"
+      ]
+    },
+    {
+      "name": "complete-7000-word-roundtrip",
+      "status": "passed",
+      "httpStatuses": [
+        200,
+        200
+      ],
+      "wordCount": 7000,
+      "requestSnapshotBytes": 1629668,
+      "expectedSha256": "9d65351340b749d0e2c12138327b65120d4bfa8bfb13e41f14f72cd09e4d072e",
+      "actualSha256": "9d65351340b749d0e2c12138327b65120d4bfa8bfb13e41f14f72cd09e4d072e",
+      "revision": 1
+    },
+    {
+      "name": "actual-workerd-sqlite-arraybuffer-gzip-blob",
+      "status": "passed",
+      "databaseSize": 114688,
+      "tables": [
+        "progress",
+        "sessions",
+        "users"
+      ],
+      "userCount": 2,
+      "sessionCount": 2,
+      "rawSessionsNotStored": true,
+      "progress": [
+        {
+          "learnedCount": 7000,
+          "revision": 1,
+          "blobIsArrayBuffer": true,
+          "blobBytes": 77204,
+          "gzipMagic": [
+            31,
+            139,
+            8
+          ]
+        }
+      ],
+      "blobStorageTypes": [
+        "blob"
+      ]
+    },
+    {
+      "name": "per-account-isolation",
+      "status": "passed",
+      "initialOtherRevision": 0,
+      "wrongAccountHttpStatus": 409,
+      "ownSaveHttpStatus": 200,
+      "wordCounts": [
+        7000,
+        10
+      ]
+    },
+    {
+      "name": "concurrent-same-revision-exactly-one-winner",
+      "status": "passed",
+      "httpStatuses": [
+        200,
+        409
+      ],
+      "finalRevision": 2,
+      "persistedWinnerSha256": "9d65351340b749d0e2c12138327b65120d4bfa8bfb13e41f14f72cd09e4d072e"
+    },
+    {
+      "name": "regressive-save-protected",
+      "status": "passed",
+      "httpStatus": 409,
+      "error": "newer_progress_exists"
+    },
+    {
+      "name": "actual-storage-transactionSync-rolls-back-failed-batch",
+      "status": "passed",
+      "failedAsExpected": true,
+      "remainingRows": 0
+    },
+    {
+      "name": "logout-revokes-session-without-affecting-other-account",
+      "status": "passed",
+      "httpStatuses": {
+        "logout": 200,
+        "oldSession": 401,
+        "otherSession": 200
+      }
+    },
+    {
+      "name": "durable-state-survives-runtime-process-restart",
+      "status": "passed",
+      "httpStatuses": [
+        200,
+        200
+      ],
+      "revisions": [
+        2,
+        1
+      ],
+      "wordCounts": [
+        7000,
+        10
+      ],
+      "snapshotDigestsMatch": true,
+      "sqliteDatabaseBytes": 114688
+    }
+  ],
+  "completedAt": "2026-10-03T09:50:02.165Z",
+  "passedCheckCount": 11,
+  "failedCheckCount": 0,
+  "localPersistenceEvidence": {
+    "sqliteFiles": [
+      {
+        "extension": ".sqlite",
+        "bytes": 4096,
+        "sqliteHeaderVerified": true
+      },
+      {
+        "extension": ".sqlite",
+        "bytes": 188416,
+        "sqliteHeaderVerified": true
+      },
+      {
+        "extension": ".sqlite",
+        "bytes": 4096,
+        "sqliteHeaderVerified": true
+      }
+    ],
+    "runtimeStoppedAfterVerification": true
+  },
+  "commands": [
+    "wrangler dev --help",
+    "WRANGLER_SEND_METRICS=false wrangler dev --local --config artifacts/runtime-wrangler.jsonc --port 8792 --inspector-port 9232 --persist-to artifacts/runtime-state --log-level info --show-interactive-dev-session=false",
+    "node artifacts/runtime-verify.mjs initial",
+    "Stop own Wrangler process; restart same command with same persistence directory",
+    "node artifacts/runtime-verify.mjs restart"
+  ],
+  "releaseCompatibilityDate": "2026-07-15",
+  "releaseNote": "Release configuration was subsequently aligned with the verified 2026-07-15 runtime date. Original test metadata is retained."
+}

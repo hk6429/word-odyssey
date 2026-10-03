@@ -10,6 +10,7 @@ from hashlib import sha256
 from pathlib import Path
 import json
 import re
+import subprocess
 
 from opencc import OpenCC
 
@@ -606,6 +607,12 @@ def main():
     assert len(supplements) == 7000 - len(official), len(supplements)
     assert len(first_1200) == 1200 and len(second_800) == 800
     order = first_1200 + second_800 + advanced + supplements
+    # Preserve the first chapter while teaching basic pronouns before later journeys.
+    foundation = "i you he she it we they me him her us them his its our your their mine yours hers ours".split()
+    head = order[:60]
+    front = [word for word in foundation if word in prepared and word not in head]
+    front_set = set(head + front)
+    order = head + front + [word for word in order if word not in front_set]
     vocabulary = [prepared[word] for word in order]
     assert len(vocabulary) == 7000
     assert len({item["id"].casefold() for item in vocabulary}) == 7000
@@ -661,3 +668,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    subprocess.run(["node", "scripts/enrich-vocabulary.mjs"], cwd=ROOT, check=True)
+    subprocess.run(["node", "scripts/build-missions.mjs"], cwd=ROOT, check=True)
