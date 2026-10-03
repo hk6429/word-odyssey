@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const destination = resolve(root, 'dist');
 const frontendModules = new Set([
-  'app.js', 'auto-advance.js', 'adventure-state.js', 'auth.js', 'auth-state.js', 'audio-manifest.js',
+  'learning-station.js', 'app.js', 'auto-advance.js', 'adventure-state.js', 'auth.js', 'auth-state.js', 'audio-manifest.js',
   'data.js', 'engine.js', 'i18n.js', 'map-scenes.js', 'story.js', 'vocabulary.js',
   'voice.js', 'quest-visuals.js', 'microquest-scenes.js', 'curated-missions.js', 'story-content.js', 'story-contract.js', 'curriculum-support.js',
 ]);
@@ -24,7 +24,10 @@ async function includeModule(name) {
     await includeModule(specifier.slice(2));
   }
 }
-for (const [, source] of html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["']/g)) await includeModule(source.replace(/^\.\//, ''));
+for (const [, source] of html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["']/g)) {
+  if (source === 'https://xuexi-hangzhan-api.hk6429.workers.dev/naicheng-sso.js') continue;
+  await includeModule(source.replace(/^\.\//, ''));
+}
 for (const tag of html.matchAll(/<link\b[^>]*>/g)) {
   if (!/\brel=["']stylesheet["']/.test(tag[0])) continue;
   const name = tag[0].match(/\bhref=["']([^"']+)["']/)?.[1];
@@ -65,7 +68,7 @@ await writeFile(resolve(destination, '_headers'), `/*
   Referrer-Policy: strict-origin-when-cross-origin
   Cross-Origin-Opener-Policy: same-origin-allow-popups
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style https://fonts.googleapis.com; img-src 'self' data: https://*.googleusercontent.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://accounts.google.com/gsi/; frame-src https://accounts.google.com/gsi/; media-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client https://xuexi-hangzhan-api.hk6429.workers.dev; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style https://fonts.googleapis.com; img-src 'self' data: https://*.googleusercontent.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://accounts.google.com/gsi/ https://xuexi-hangzhan-api.hk6429.workers.dev; frame-src https://accounts.google.com/gsi/; media-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
 /
   Cache-Control: no-cache

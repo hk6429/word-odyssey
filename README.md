@@ -92,3 +92,7 @@ wrangler deploy
 公開網站使用 34 張 WebP 圖片，約 22.3 MB；原 PNG 共約 122.6 MB，保留作為素材來源，不放入正式靜態輸出。參數與逐檔大小見 [圖片傳輸紀錄](docs/image-delivery.json)。
 
 首次正式發布使用 SQLite Durable Object。已完成真實 Google 登入，並將原本 10 字、100 XP 的本機學習備份匯入；重新載入後的伺服器回應仍為 10 字。發布版本與靜態檔雜湊見 [正式站讀回](docs/production-readback.json)。
+
+## 學習航站
+
+已加入 [學習航站](https://xuexi-hangzhan.pages.dev/) 英文分類。從航站登入後進入，可記錄到訪與停留時間；字旅的 Google 登入、訪客存檔與雲端進度仍由本站管理，航站不讀寫本站進度。
