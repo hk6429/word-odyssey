@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-04",
+  "url": "https://word-odyssey.hk6429.workers.dev",
+  "version": "9ae2931b-e3ae-4d52-be99-b83acea92305",
+  "tests": {
+    "passed": 102,
+    "failed": 0
+  },
+  "assets": [
+    {
+      "bytes": 43591,
+      "path": "app.js",
+      "sha256": "226a3b44428f0d3b176dd052714645670df28155505ade16c07292aa3028527c",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 23979,
+      "path": "engine.js",
+      "sha256": "3c65f6e3c0a26452ec80e18264820421508384eb6146418b553df9d4d58eb01a",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 9940,
+      "path": "auth-state.js",
+      "sha256": "5e8b72c696ed4dc3fbda49e160a8014ff7f61512ca9814843ae075077ea19817",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 1322,
+      "path": "adventure-state.js",
+      "sha256": "e063f521b63b3d686ce644e4a7d28fee6f4de42d586ae07516284b8ce2eeec4a",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 1521,
+      "path": "learning-state.js",
+      "sha256": "1341dbd1c043843063ed37fe8d58cab093040c44f464e4429bd4737e965109d0",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 10440,
+      "path": "practice-panel.js",
+      "sha256": "a26f36f4c1ed38b5dbb4602693d42a4a616f8b2e59b5f354ef0618c02e0ce1bc",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 8565,
+      "path": "reading-practice.js",
+      "sha256": "a9df456d6dee727355aaa314ff2dbea510023d9810cd14a7b5797300deaa5ab3",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 2885,
+      "path": "recall-support.js",
+      "sha256": "752b976b72835c4e8d1338a0d371072336241cf7e0a5b7c963f6ace0ad89a453",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 54237,
+      "path": "story.js",
+      "sha256": "71044751dce3ed30a70993381e84677cb361c859e284be43e952ed8d25379a3c",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 8805,
+      "path": "quest-visuals.js",
+      "sha256": "b83f0a71c57eb85270c654f295e272ca4b8acdc0c17f283fda7c9dd5935abe41",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 20668,
+      "path": "i18n.js",
+      "sha256": "38fe1423055a045d454653f479637f9a28d8115a35202b8e1f3fe352147578c4",
+      "status": 200,
+      "match": true
+    },
+    {
+      "bytes": 2616,
+      "path": "learning.css",
+      "sha256": "b93a5cd66a95c28410c59b8d66622398764eab6a34e29918beb306aa1e147cff",
+      "status": 200,
+      "match": true
+    }
+  ],
+  "cloud": {
+    "authenticated": true,
+    "batch3SavedAndReloaded": true,
+    "restoredBatch": 5,
+    "progressUnchanged": true
+  },
+  "viewport": {
+    "mobile390NoHorizontalOverflow": true,
+    "desktop1236NoHorizontalOverflow": true
+  },
+  "limits": [
+    "No second physical device trial",
+    "Open responses require learner or teacher review"
+  ]
+}

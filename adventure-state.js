@@ -1,3 +1,4 @@
+import { validateLearning } from './learning-state.js';
 /** Shared browser/server contract. An adventure is always a complete v1 object, never null. */
 export const adventureRoles = ['cartographer', 'scholar', 'scout'];
 export function freshAdventure() {
@@ -11,5 +12,5 @@ export function validateAdventure(value) {
   if(!/^(?:[1-9]|[1-9]\d|100):[1-9]$/.test(key)||!choice||typeof choice!=='object'||!['curiosity','courage','kindness'].includes(choice.action)||!adventureRoles.includes(choice.role))throw new TypeError('Invalid adventure choice');
   choices[key]={action:choice.action,role:choice.role};
  }
- return {version:1,seed:value.seed,role:value.role,choices};
+ return {version:1,seed:value.seed,role:value.role,choices,...(value.learning===undefined?{}:{learning:validateLearning(value.learning)})};
 }

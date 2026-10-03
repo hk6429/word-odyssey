@@ -107,13 +107,28 @@ export function createEngine(stageData) {
         // Acquisition is atomic per quest; truncated backups do not grant a
         // fraction of an unfinished challenge. Later stages cannot leap the gap.
         const full = stage.ids.length === stage.quota && prefix.length === stage.quota;
-        const keep = full ? prefix.length : Math.floor(prefix.length / QUEST_SIZE) * QUEST_SIZE;
+        let keep = full ? prefix.length : Math.floor(prefix.length / QUEST_SIZE) * QUEST_SIZE;
+        let batches;
+        if (owns(source, 'questBatches')) {
+          batches = [];
+          keep = 0;
+          const offset = state.history.length;
+          if (Array.isArray(source.questBatches)) for (const ids of source.questBatches.slice(offset)) {
+            if (!Array.isArray(ids) || !ids.length || ids.length > QUEST_SIZE ||
+                ![3, 5, 10].includes(ids.length) && ids.length !== stage.quota - keep ||
+                !equal(ids, prefix.slice(keep, keep + ids.length).map(([id]) => id))) break;
+            batches.push(ids); keep += ids.length;
+            if (keep === stage.quota) break;
+          }
+          state.questBatches ??= [];
+          state.questBatches.push(...batches.map(ids => [...ids]));
+        }
         for (const [id, entry] of prefix.slice(0, keep)) state.words[id] = entry;
-        for (let offset = 0; offset < keep; offset += QUEST_SIZE) {
-          const ids = prefix.slice(offset, Math.min(offset + QUEST_SIZE, keep)).map(([id]) => id);
+        for (const ids of batches ?? Array.from({ length: Math.ceil(keep / QUEST_SIZE) }, (_, i) =>
+          prefix.slice(i * QUEST_SIZE, Math.min((i + 1) * QUEST_SIZE, keep)).map(([id]) => id))) {
           state.history.push(historyItem(stage, ids, Math.max(...ids.map(id => state.words[id].learnedAt))));
         }
-        if (!full) break;
+        if (!full || keep !== stage.quota) break;
         state.completed.push(stage.id);
       }
       state.xp = Object.keys(state.words).length * 10;
@@ -144,40 +159,43 @@ export function createEngine(stageData) {
     return state;
   }
 
-  function reviewIds(state, now, includeRecent) {
-    const due = learnedIds(state).filter(id => state.words[id].nextDue <= now)
+  function reviewIds(state, now, includeRecent, stageId) {
+    const eligible = learnedIds(state).filter(id => stageId == null || state.words[id].stageId === stageId);
+    const due = eligible.filter(id => state.words[id].nextDue <= now)
       .sort((a, b) => state.words[a].nextDue - state.words[b].nextDue);
-    const recent = state.history.at(-1)?.wordIds ?? learnedIds(state).slice(-QUEST_SIZE);
+    const recent = stageId == null ? state.history.at(-1)?.wordIds ?? eligible.slice(-QUEST_SIZE) : eligible.slice(-QUEST_SIZE);
     const previous = recent.filter(id => owns(state.words, id)).slice(-QUEST_SIZE);
     return includeRecent ? [...new Set([...previous, ...due])].slice(0, REVIEW_SIZE)
-      : (due.length ? due : previous).slice(0, REVIEW_SIZE);
+      : [...new Set([...due, ...previous])].slice(0, REVIEW_SIZE);
   }
 
   function sessionFor(state, stageId, mode, phase, queue, newWords, now) {
     return {
       stageId, mode, phase, queue: [...queue], index: 0, newWords: [...newWords],
       startedAt: now, correctCount: 0, wrongCount: 0, earnedXp: 0,
-      stageComplete: false, attempts: {}, reviewAttempts: {}, phaseTotal: queue.length,
+      stageComplete: false, currentAssisted: false, attempts: {}, reviewAttempts: {}, phaseTotal: queue.length,
       reviewModes: Object.fromEntries(queue.filter(id => owns(state.words, id)).map(id => [id, state.words[id].nextReviewMode])),
     };
   }
 
-  function startSession(state, stageId, now = Date.now()) {
+  function startSession(state, stageId, now = Date.now(), { size = QUEST_SIZE } = {}) {
+    if (![3, 5, 10].includes(size)) throw new RangeError('每次請選擇 3、5 或 10 個單字。');
     const stage = currentStage(state);
     if (!Number.isInteger(stageId) || !stage || stageId !== stage.id) {
       throw new RangeError('請從目前已解鎖、尚未完成的旅程開始。');
     }
     if (stage.ids.length !== stage.quota) throw new RangeError('本關單字資料尚未完整，請稍後再開始。');
     const time = timestamp(now);
-    const newWords = stage.ids.filter(id => !owns(state.words, id)).slice(0, QUEST_SIZE);
+    const newWords = stage.ids.filter(id => !owns(state.words, id)).slice(0, size);
     const review = reviewIds(state, time, true);
-    return sessionFor(state, stageId, 'stage', review.length ? 'review' : 'learn', review.length ? review : newWords, newWords, time);
+    return trackDraft(state, sessionFor(state, stageId, 'stage', review.length ? 'review' : 'learn', review.length ? review : newWords, newWords, time), { size });
   }
 
-  function reviewSession(state, now = Date.now()) {
+  function reviewSession(state, now = Date.now(), { stageId } = {}) {
+    if (stageId !== undefined && !catalog.some(stage => stage.id === stageId)) throw new RangeError('找不到這個章節。');
     const time = timestamp(now);
-    const queue = reviewIds(state, time, false);
-    return sessionFor(state, null, 'review', queue.length ? 'review' : 'complete', queue, [], time);
+    const queue = reviewIds(state, time, false, stageId);
+    return trackDraft(state, sessionFor(state, stageId ?? null, 'review', queue.length ? 'review' : 'complete', queue, [], time), stageId === undefined ? {} : { stageId });
   }
 
   function setPhase(session, phase, queue = []) {
@@ -197,11 +215,15 @@ export function createEngine(stageData) {
     return Math.min(3, entry.mastery, entry.reviewCount, entry.recallCount > 0 ? 3 : 2);
   }
 
-  function updateReview(entry, correct, now, firstAttempt, attempt) {
+  function updateReview(entry, correct, now, firstAttempt, attempt, assisted) {
     const time = Math.max(now, entry.lastReviewed);
     const due = entry.nextDue <= time;
     entry.lastReviewed = time;
-    if (firstAttempt && attempt.type !== 'copy') entry.nextReviewMode = attempt.type === 'recall' ? 'recognition' : 'recall';
+    if (firstAttempt && !assisted && attempt.type !== 'copy') entry.nextReviewMode = attempt.type === 'recall' ? 'recognition' : 'recall';
+    if (correct && assisted) {
+      entry.nextDue = dueAt(time, 0);
+      return;
+    }
     if (correct) {
       entry.correct += 1;
       entry.streak += 1;
@@ -228,6 +250,13 @@ export function createEngine(stageData) {
       throw new RangeError('旅程進度已改變，請重新開啟目前關卡。');
     }
     if (unseen.some(id => !session.attempts[id]?.correct)) throw new RangeError('還有新單字尚未通過試煉。');
+    if (unseen.length && !equal(unseen, stage.ids.filter(id => !owns(state.words, id)).slice(0, session.newWords.length))) {
+      throw new RangeError('旅程進度已改變，請重新開始。');
+    }
+    if (unseen.length && (state.questBatches || unseen.length !== Math.min(QUEST_SIZE, stage.quota - stage.ids.indexOf(unseen[0])))) {
+      state.questBatches ??= state.history.map(item => [...item.wordIds]);
+      state.questBatches.push([...unseen]);
+    }
     for (const id of unseen) {
       const attempts = session.attempts[id];
       state.words[id] = {
@@ -247,14 +276,26 @@ export function createEngine(stageData) {
 
   function learnNext(state, session) {
     if (session.phase !== 'learn') return session;
+    session._draft?.events.push({ kind: 'learn' });
     session.index += 1;
     if (session.index >= session.queue.length) setPhase(session, 'challenge', session.newWords);
     return session;
   }
 
-  function answer(state, session, correct, now = Date.now(), { type = questionType(state, session) } = {}) {
+  function markSessionHint(state, session) {
+    if (!['review', 'challenge'].includes(session.phase) || session.currentAssisted) return session;
+    const id = session.queue[session.index];
+    if (!byId.has(id) || session.phase === 'review' && !owns(state.words, id)) return session;
+    session.currentAssisted = true;
+    session._draft?.events.push({ kind: 'hint' });
+    return session;
+  }
+
+  function answer(state, session, correct, now = Date.now(), { type = questionType(state, session), assisted = false } = {}) {
     if (session.phase !== 'review' && session.phase !== 'challenge') return session;
     if (typeof correct !== 'boolean') throw new TypeError('答案結果必須是布林值。');
+    if (typeof assisted !== 'boolean') throw new TypeError('提示狀態必須是布林值。');
+    assisted ||= session.currentAssisted === true;
     if (!QUESTION_TYPES.includes(type)) throw new TypeError('練習類型不正確。');
     const wordId = session.queue[session.index];
     if (!byId.has(wordId)) throw new RangeError('找不到這個單字，請重新開始本次練習。');
@@ -262,10 +303,10 @@ export function createEngine(stageData) {
     const attempts = (session.phase === 'review' ? session.reviewAttempts : session.attempts);
     const firstAttempt = !owns(attempts, wordId);
     const attempt = firstAttempt ? (attempts[wordId] = { correct: 0, incorrect: 0, type }) : attempts[wordId];
-    attempt[correct ? 'correct' : 'incorrect'] += 1;
+    if (!correct || !assisted) attempt[correct ? 'correct' : 'incorrect'] += 1;
     if (session.phase === 'review') {
       if (!owns(state.words, wordId)) throw new RangeError('這個單字尚未完成學習。');
-      updateReview(state.words[wordId], correct, time, firstAttempt, attempt);
+      updateReview(state.words[wordId], correct, time, firstAttempt, attempt, assisted);
       if (!session.reviewSummary) {
         session.reviewSummary = { id: reviewId(), startedAt: session.startedAt, date: Math.max(time, session.startedAt), count: session.phaseTotal,
           firstAttempts: 0, firstCorrect: 0, retries: 0, completed: false };
@@ -274,11 +315,13 @@ export function createEngine(stageData) {
       }
       const summary = session.reviewSummary;
       summary.date = Math.max(summary.date, time);
-      if (firstAttempt) { summary.firstAttempts += 1; if (correct) summary.firstCorrect += 1; }
+      if (firstAttempt) { summary.firstAttempts += 1; if (correct && !assisted && type !== 'copy') summary.firstCorrect += 1; }
       else summary.retries += 1;
     }
-    session[correct ? 'correctCount' : 'wrongCount'] += 1;
-    if (!correct) session.queue.push(wordId);
+    if (!correct || !assisted) session[correct ? 'correctCount' : 'wrongCount'] += 1;
+    session._draft?.events.push({ kind: 'answer', correct, now: time, type, assisted, summaryId: session.reviewSummary?.id ?? null });
+    if (!correct || assisted && session.phase === 'challenge') session.queue.push(wordId);
+    session.currentAssisted = false;
     session.index += 1;
     if (session.index < session.queue.length) return session;
     if (session.phase === 'review') {
@@ -287,6 +330,73 @@ export function createEngine(stageData) {
       else setPhase(session, 'learn', session.newWords);
     } else completeQuest(state, session, time);
     return session;
+  }
+
+  function fingerprint(value) {
+    const stable = value => Array.isArray(value) ? value.map(stable) : isRecord(value)
+      ? Object.fromEntries(Object.keys(value).sort().map(key => [key, stable(value[key])])) : value;
+    const text = JSON.stringify(stable(value));
+    let a = 2166136261, b = 5381;
+    for (let i = 0; i < text.length; i++) { a = Math.imul(a ^ text.charCodeAt(i), 16777619); b = Math.imul(b, 33) ^ text.charCodeAt(i); }
+    return `${text.length}:${a >>> 0}:${b >>> 0}`;
+  }
+
+  function trackDraft(state, session, options) {
+    Object.defineProperty(session, '_draft', { value: { version: 1, base: { fingerprint: fingerprint(state), words: Object.fromEntries(session.queue.filter(id => owns(state.words, id)).map(id => [id, { ...state.words[id] }])), reviewHistory: structuredClone(state.reviewHistory) }, mode: session.mode,
+      stageId: session.stageId, now: session.startedAt, options, events: [] } });
+    return session;
+  }
+
+  function serializeSessionDraft(state, session) {
+    if (!session?._draft || session.phase === 'complete' || session._draft.events.length > 10000) return null;
+    const raw = JSON.stringify({ ...session._draft, session });
+    return raw.length <= 60_000 ? JSON.parse(raw) : null;
+  }
+
+  function restoreSessionDraft(state, raw) {
+    try {
+      if ((typeof raw === 'string' ? raw : JSON.stringify(raw)).length > 60_000) return null;
+      const draft = typeof raw === 'string' ? JSON.parse(raw) : raw;
+      if (!isRecord(draft) || draft.version !== 1 || !isDate(draft.now) || !isRecord(draft.options) ||
+          !Array.isArray(draft.events) || draft.events.length > 10000 || !['stage', 'review'].includes(draft.mode)) return null;
+      if (!isRecord(draft.base) || !isRecord(draft.base.words) || Object.keys(draft.base.words).length > REVIEW_SIZE ||
+          !Array.isArray(draft.base.reviewHistory) || draft.base.reviewHistory.length > REVIEW_HISTORY_LIMIT) return null;
+      const replayState = loadState(state, { strict: true });
+      for (const [id, entry] of Object.entries(draft.base.words)) {
+        if (!owns(replayState.words, id)) return null;
+        replayState.words[id] = structuredClone(entry);
+      }
+      replayState.reviewHistory = structuredClone(draft.base.reviewHistory);
+      loadState(replayState, { strict: true });
+      if (fingerprint(replayState) !== draft.base.fingerprint) return null;
+      const session = draft.mode === 'stage' ? startSession(replayState, draft.stageId, draft.now, draft.options)
+        : reviewSession(replayState, draft.now, draft.options);
+      let lastTime = draft.now;
+      for (const event of draft.events) {
+        if (!isRecord(event) || session.phase === 'complete') return null;
+        if (event.kind === 'learn') {
+          if (session.phase !== 'learn' || !equal(event, { kind: 'learn' })) return null;
+          learnNext(replayState, session);
+        } else if (event.kind === 'hint') {
+          if (!['review', 'challenge'].includes(session.phase) || session.currentAssisted || !equal(event, { kind: 'hint' })) return null;
+          markSessionHint(replayState, session);
+        } else if (event.kind === 'answer') {
+          if (!['review', 'challenge'].includes(session.phase) || !isDate(event.now) || event.now < lastTime) return null;
+          lastTime = event.now;
+          answer(replayState, session, event.correct, event.now, { type: event.type, assisted: event.assisted });
+          if (session.reviewSummary) {
+            if (typeof event.summaryId !== 'string' || !/^[a-zA-Z0-9-]{8,80}$/.test(event.summaryId)) return null;
+            session.reviewSummary.id = event.summaryId;
+            session._draft.events.at(-1).summaryId = event.summaryId;
+          }
+          if (!equal(session._draft.events.at(-1), event)) return null;
+        } else return null;
+      }
+      if (session.phase === 'complete' || !equal(replayState, loadState(state, { strict: true })) ||
+          !equal(JSON.parse(JSON.stringify(session)), draft.session)) return null;
+      if (session.reviewSummary) session.reviewSummary = state.reviewHistory.find(item => item.id === session.reviewSummary.id);
+      return session;
+    } catch { return null; }
   }
 
   function getStats(state, now = Date.now()) {
@@ -299,8 +409,8 @@ export function createEngine(stageData) {
     };
   }
 
-  return { createState, loadState, startSession, reviewSession, answer, learnNext, questionType, masteryLevel, getStats };
+  return { createState, loadState, startSession, reviewSession, answer, learnNext, questionType, masteryLevel, getStats, serializeSessionDraft, restoreSessionDraft, markSessionHint };
 }
 
 const engine = createEngine(stages);
-export const { createState, loadState, startSession, reviewSession, answer, learnNext, questionType, masteryLevel, getStats } = engine;
+export const { createState, loadState, startSession, reviewSession, answer, learnNext, questionType, masteryLevel, getStats, serializeSessionDraft, restoreSessionDraft, markSessionHint } = engine;

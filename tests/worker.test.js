@@ -180,3 +180,11 @@ test('a complete 7,000-word snapshot round-trips below the D1 row limit', async 
     assert.deepEqual((await request('/api/progress', { cookie: account.cookie })).data.snapshot, value);
   });
 });
+test('short batches and separate learning records roundtrip through account API without leaking to another account',()=>fixture(async({request})=>{
+ const progress=createState(),q=startSession(progress,1,Date.now(),{size:3});
+ while(q.phase!=='complete'){if(q.phase==='learn')learnNext(progress,q);else answer(progress,q,true);}
+ const value=snapshot(progress);value.adventure.learning={batchSize:3,draft:null,activities:[{id:'transfer:home:test',kind:'transfer',stageId:1,response:'I went home.',evidence:'Home is the destination.',result:'needs-review',at:new Date().toISOString()}]};
+ const a=await login(request);const result=await save(request,a,0,value);assert.equal(result.status,200);
+ const loaded=await request('/api/session',{cookie:a.cookie});assert.equal(loaded.status,200);assert.equal(loaded.data.snapshot.progress.xp,30);assert.deepEqual(loaded.data.snapshot.adventure.learning,value.adventure.learning);
+ const b=await login(request,'bob');const other=await request('/api/session',{cookie:b.cookie});assert.equal(other.data.snapshot,null);
+}));

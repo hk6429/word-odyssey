@@ -30,7 +30,7 @@ export function renderMicroquestTrail(stage, state, locale, locked = false) {
   const count = en ? `${number(completed, locale)} / ${number(quests.length, locale)} small quests complete` : `已完成 ${number(completed, locale)} / ${number(quests.length, locale)} 小關`;
   const goal = locked
     ? (en ? 'Your next chapter opens after the current chapter.' : '完成目前的大章節後，這條小徑就會開啟。')
-    : next ? (en ? `Next: small quest ${number(next.number, locale)} · ${number(next.words.length, locale)} new words` : `下一小步：第 ${number(next.number, locale)} 小關・${number(next.words.length, locale)} 個新字`)
+    : next ? (en ? `Next: small quest ${number(next.number, locale)} · ${number(next.words.filter(w=>!state.words[w.id]).length, locale)} words remaining at this landmark` : `下一小步：第 ${number(next.number, locale)} 小關・尚有 ${number(next.words.filter(w=>!state.words[w.id]).length, locale)} 字`)
     : (en ? 'Every small quest in this chapter is complete.' : '這個大章節的每一小關，都留下你的足跡。');
   return `<section class="microquest-journal" aria-label="${esc(en ? 'Small quest route' : '小關卡探索路線')}"><div class="microquest-heading"><span>${title}</span><strong>${count}</strong></div><ol class="microquest-trail" tabindex="0" aria-label="${en ? 'Illustrated small quests. Scroll sideways to explore.' : '小關卡插畫路線，可左右捲動探索。'}">${quests.map((quest, questIndex) => {
     const current = !locked && quest === next;
@@ -41,7 +41,7 @@ export function renderMicroquestTrail(stage, state, locale, locked = false) {
     const sceneName=microquestScenes[region-1][slot][en?'en':'zh'];
     const imageLabel = en ? `Regional journey illustration for small quest ${quest.number}` : `第 ${quest.number} 小關的區域旅途插畫`;
     return `<li class="microquest-node is-${status}" aria-label="${esc(accessible)}"${current ? ' aria-current="step"' : ''}><div class="microquest-picture" role="img" aria-label="${esc(imageLabel)}" data-quest-image="${imagePath}" data-quest-slot="${slot}" style="background-image:url('${imagePath}');background-position:${slot % 3 * 50}% ${Math.floor(slot / 3) * 50}%"></div><span class="microquest-marker" aria-hidden="true">${current ? `<span class="microquest-lantern">${lantern}</span>` : ''}${quest.complete ? '<span class="microquest-seal">✦</span>' : ''}<b>${number(quest.number, locale)}</b></span><strong class="microquest-scene-title">${esc(sceneName)}</strong><span class="microquest-node-label">${label}</span><small class="microquest-word-count">${en ? `${number(quest.words.length, locale)} words` : `${number(quest.words.length, locale)} 個字`}</small></li>`;
-  }).join('')}</ol><p class="microquest-scroll-hint">${en ? '↔ Follow the illustrated trail' : '↔ 左右滑動，看看前方風景'}</p><div class="microquest-next"><span aria-hidden="true">✧</span><p>${goal}</p></div><p class="microquest-rest">${en ? 'You can stop after any small quest. Your next step will be waiting.' : '每完成一小關就能休息，下次接著走。'}</p></section>`;
+  }).join('')}</ol><p class="microquest-scroll-hint">${en ? '↔ Follow the illustrated trail' : '↔ 左右滑動，看看前方風景'}</p><div class="microquest-next"><span aria-hidden="true">✧</span><p>${goal}</p></div><p class="microquest-rest">${en ? 'Ten-word quests are map landmarks. Practise batches of 3, 5 or 10, then rest.' : '十字小關是地圖路標；每批可練3、5或10字，完成後就能休息。'}</p></section>`;
 }
 
 const wordScenes = [
@@ -74,9 +74,9 @@ export function renderQuestPostcard(stage, state, locale, finished) {
   return `<div class="quest-reward-postcard">${renderChapterBanner(stage, locale)}<div class="quest-reward-note"><span class="quest-reward-seal" aria-hidden="true">✦</span><div><span class="quest-reward-eyebrow">${en ? 'A FOOTPRINT TO KEEP' : '收藏這一小步'}</span><strong>${en ? `Chapter ${stage.id} · ${completed} / ${quests.length} small quests` : `第 ${stage.id} 大章節・${completed} / ${quests.length} 小關`}</strong><p>${finished ? (en ? 'A whole chapter of your journey, now in your journal.' : '一整段冒險，已收進你的旅途手札。') : (en ? 'Rest here, or follow the trail a little further.' : '在這裡歇歇腳，也可以再向前一小步。')}</p></div></div></div>`;
 }
 
-export function renderMicroquestArrival(stage,state,locale){
+export function renderMicroquestArrival(stage,state,locale,batchSize){
  const {next,quests}=getMicroquests(stage,state);if(!next)return '';
  const en=locale==='en',region=Math.floor((stage.id-1)/10)+1,slot=(stage.id-1+next.number-1)%9;
  const label=microquestScenes[region-1][slot][en?'en':'zh'],path=`assets/miniquests-${String(region).padStart(2,'0')}.webp`;
- return `<figure class="microquest-arrival"><div class="microquest-arrival-picture" role="img" aria-label="${esc(label)}" data-quest-image="${path}" style="background-image:url('${path}');background-position:${slot%3*50}% ${Math.floor(slot/3)*50}%"></div><figcaption><span>${en?`SMALL QUEST ${next.number} / ${quests.length}`:`第 ${next.number} / ${quests.length} 小關`}</span><strong>${esc(label)}</strong><small>${en?`${next.words.length} new words · a little further today`:`${next.words.length} 個新字・今天，往前一小步`}</small></figcaption></figure>`;
+ return `<figure class="microquest-arrival"><div class="microquest-arrival-picture" role="img" aria-label="${esc(label)}" data-quest-image="${path}" style="background-image:url('${path}');background-position:${slot%3*50}% ${Math.floor(slot/3)*50}%"></div><figcaption><span>${en?`SMALL QUEST ${next.number} / ${quests.length}`:`第 ${next.number} / ${quests.length} 小關`}</span><strong>${esc(label)}</strong><small>${en?`${batchSize??next.words.length} new words this batch · a little further today`:`本批 ${batchSize??next.words.length} 個新字・今天，往前一小步`}</small></figcaption></figure>`;
 }

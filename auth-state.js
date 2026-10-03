@@ -1,4 +1,5 @@
-import {createState,loadState} from './engine.js';
+import {createState,loadState,restoreSessionDraft} from './engine.js';
+import {validateLearning,freshLearning} from './learning-state.js';
 import {freshAdventure,validateAdventure} from './adventure-state.js';
 
 export const OWNER_KEY='word-odyssey-local-owner-v1';
@@ -27,7 +28,17 @@ export function mergeSnapshots(local,remote,{preferLocalProfile=false}={}){
  progress.reviewHistory=mergeReviewHistory(progress.reviewHistory,other.reviewHistory);
  // Vocabulary coverage is independent of account settings and story choices.
  const profile=preferLocalProfile?local:remote;
- return {progress,adventure:structuredClone(profile.adventure),locale:profile.locale};
+ const adventure=structuredClone(profile.adventure);
+ const left=local.adventure.learning,right=remote.adventure.learning;
+ if(left||right){
+  const preferred=profile.adventure.learning||left||right||freshLearning();
+  const records=new Map();
+  for(const record of [...(left?.activities||[]),...(right?.activities||[])]){const old=records.get(record.id);if(!old||Date.parse(record.at)>Date.parse(old.at))records.set(record.id,record);}
+  const activities=[...records.values()].sort((a,b)=>Date.parse(a.at)-Date.parse(b.at)||a.id.localeCompare(b.id)).slice(-20);
+  const candidate=preferred.draft;
+  adventure.learning=validateLearning({...preferred,activities,draft:candidate&&restoreSessionDraft(progress,candidate)?candidate:null});
+ }
+ return {progress,adventure,locale:profile.locale};
 }
 
 /** Account-scoped local backups and request generations prevent cross-account writes. */
