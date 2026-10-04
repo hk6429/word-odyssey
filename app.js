@@ -1,3 +1,4 @@
+import {installChoiceKeyboard,choiceHint} from './choice-keyboard.js';
 import { freshLearning, addActivity } from './learning-state.js';
 import { judgeRecall, recallPrompt, spellingHint, spellingDifference } from './recall-support.js';
 import { mountPracticePanel, mountTransfer } from './practice-panel.js';
@@ -221,7 +222,7 @@ function renderLesson(){
  const distractors=[];for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
  for(const item of pool){if(!distractors.some(x=>meaningsOverlap(wordMeaning(x),wordMeaning(item))))distractors.push(item);if(distractors.length===3)break;}
  const choices=[w,...distractors].sort(()=>Math.random()-.5);
- $('#answer-area').innerHTML=`<div class="options">${choices.map((x,i)=>`<button class="option" data-answer="${esc(x.id)}"><span class="option-label">${'ABCD'[i]}</span><span>${esc(wordMeaning(x))}</span></button>`).join('')}</div>`;
+ $('#answer-area').innerHTML=`<p class="lesson-sub">${locale==='en'?'Keys: A ← / 1 · B ↑ / 2 · C ↓ / 3 · D → / 4':choiceHint}</p><div class="options" data-quiz-options>${choices.map((x,i)=>`<button class="option" data-quiz-choice data-answer="${esc(x.id)}"><span class="option-label">${'ABCD'[i]}</span><span>${esc(wordMeaning(x))}</span></button>`).join('')}</div>`;
  $$('[data-answer]').forEach(b=>b.onclick=()=>showFeedback(b.dataset.answer===w.id,w,b));
  }
 }
@@ -233,6 +234,7 @@ async function showFeedback(correct,w,button){
  if($('.answer-form')){$('.answer-form input').disabled=true;$('.answer-form button').disabled=true;}
  const questionSession=session;answer(state,session,correct,Date.now(),{type:activeQuestionType,assisted});
  if(!await save()||session!==questionSession||!$('#lesson-dialog').open)return;
+ if(correct){render();renderLesson();$('#lesson-title')?.setAttribute('tabindex','-1');$('#lesson-title')?.focus({preventScroll:true});return;}
  $('#feedback').innerHTML=`<div class="feedback ${correct?'':'wrong'}"><strong>${t(correct?'correct':'incorrect')}</strong><p><span lang="en">${esc(w.word)}</span> — ${esc(wordMeaning(w))}${correct?'':` · ${t('retry')}`}</p>${assisted?`<p>${say('這題使用提示，不計獨立首答成功。','Assisted answer; not an independent first recall.')}</p>`:''}${!correct?`<p>${say('比較你剛才的回答：','Your answer: ')}${esc(typed||button?.textContent||say('還不會','Not yet'))}</p>${button?.dataset.answer?`<p>${esc(wordMap.get(button.dataset.answer)?.word||'')} — ${esc(wordMeaning(wordMap.get(button.dataset.answer)||w))}；${esc(w.word)} — ${esc(wordMeaning(w))}</p>`:''}${typed?`<p>${say('正確拼法：','Target spelling: ')}${esc(w.word)} · ${say('從第','First different position: ')} ${spellingDifference(typed,w.word).firstDifference+1} ${say('個字元開始核對；也檢查是否多打字元。','; also check extra characters.')}</p>`:''}<p lang="en">${esc(w.example||'')}</p><p>${esc(w.translation||'')}</p>${(session.phase==='review'?session.reviewAttempts:session.attempts)[w.id]?.incorrect>=1?`<p>${say('先分段拼讀，再試一次：','Read the letters in groups, then retry: ')}${esc([...w.word].join(' · '))}</p>`:''}`:''}</div>`;
  $('#quiz-actions').innerHTML=`<button class="secondary" data-speak="${esc(w.id)}">${icon('sound')} ${t('listen')}</button><button class="primary" id="next-question">${correct?(locale==='en'?'Next question…':'自動前往下一題…'):t('nextHint')} ${icon('arrow')}</button>`;
  const advance=feedbackAdvance.prepare(async()=>{
@@ -294,3 +296,5 @@ $('#confirm-import').onclick=async()=>{if(!pendingImport)return;const imported=p
 initAuth({getSnapshot:snapshot,applySnapshot,getLocale:()=>locale,onAuthChange:()=>{}});
 translateShell();render();if(['words','journal'].includes(location.hash.slice(1)))setView(location.hash.slice(1));
 if(!storageOK)toast(t('storageUnavailable'));
+
+installChoiceKeyboard(document);
