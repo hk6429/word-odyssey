@@ -5,11 +5,11 @@ import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('..', import.meta.url));
 const destination = resolve(root, 'dist');
 const frontendModules = new Set([
-  'practice-panel.js', 'learning-state.js', 'recall-support.js', 'reading-practice.js', 'learning-station.js', 'app.js', 'choice-keyboard.js', 'auto-advance.js', 'adventure-state.js', 'auth.js', 'auth-state.js', 'audio-manifest.js',
+  'practice-panel.js', 'learning-state.js', 'recall-support.js', 'reading-practice.js', 'learning-station.js', 'app.js', 'immersive.js', 'choice-keyboard.js', 'auto-advance.js', 'adventure-state.js', 'auth.js', 'auth-state.js', 'audio-manifest.js',
   'data.js', 'engine.js', 'i18n.js', 'map-scenes.js', 'story.js', 'vocabulary.js',
   'voice.js', 'quest-visuals.js', 'microquest-scenes.js', 'curated-missions.js', 'story-content.js', 'story-contract.js', 'curriculum-support.js',
 ]);
-const styles = new Set(['style.css', 'story.css', 'voice.css', 'learning.css', 'quest-visuals.css']);
+const styles = new Set(['style.css', 'story.css', 'voice.css', 'learning.css', 'quest-visuals.css', 'immersive.css']);
 const files = new Set(['index.html']);
 const html = await readFile(resolve(root, 'index.html'), 'utf8');
 

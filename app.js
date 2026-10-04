@@ -1,3 +1,4 @@
+import {createImmersion} from './immersive.js';
 import {installChoiceKeyboard,choiceHint} from './choice-keyboard.js';
 import { freshLearning, addActivity } from './learning-state.js';
 import { judgeRecall, recallPrompt, spellingHint, spellingDifference } from './recall-support.js';
@@ -54,7 +55,7 @@ function recordActivity(record){updateLearning(addActivity(learning(),record));}
 function renderPracticePanel(){const node=$('#practice-panel');if(node)mountPracticePanel(node,{getLearning:learning,updateLearning,getState:()=>state,onReview:()=>beginReview(),onResume:resumeDraft,onRead:readChapter});}
 function readChapter(stageId){if(!canUseLocalSnapshot())return;const dialog=document.createElement('dialog');dialog.className='practice-dialog';dialog.innerHTML=`<button type="button" class="read-close">${say('關閉閱讀','Close reading')}</button><div class="independent-reading"></div>`;document.body.append(dialog);mountReading(dialog.querySelector('.independent-reading'),{stageId,records:learning().activities,onPractice:recordActivity});dialog.querySelector('.read-close').onclick=()=>dialog.close();dialog.addEventListener('close',()=>{stopSpeaking();dialog.remove();});dialog.showModal();}
 function checkpoint(){if(session&&!applyingCloud)setAdventure({...getAdventure(),learning:{...learning(),draft:serializeSessionDraft(state,session)}});}
-function resumeDraft(){if(!canUseLocalSnapshot())return;const restored=restoreSessionDraft(state,learning().draft);if(!restored){updateLearning({...learning(),draft:null});toast(say('草稿與目前進度不符，請重新開始；已學紀錄仍保留。','Draft no longer matches progress. Start a fresh batch; learned words are safe.'));return;}session=restored;pendingResult=null;$('#lesson-dialog').showModal();updateLanguageButton();renderLesson();}
+function resumeDraft(){if(!canUseLocalSnapshot())return;const restored=restoreSessionDraft(state,learning().draft);if(!restored){updateLearning({...learning(),draft:null});toast(say('草稿與目前進度不符，請重新開始；已學紀錄仍保留。','Draft no longer matches progress. Start a fresh batch; learned words are safe.'));return;}session=restored;pendingResult=null;immersion.close();$('#lesson-dialog').showModal();updateLanguageButton();renderLesson();}
 const snapshot=()=>({progress:state,adventure:getAdventure(),locale});
 const adventureChanged=()=>{if(!applyingCloud&&storageOK)queueCloudSave(snapshot());};
 function toast(message){ $('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),4200); }
@@ -101,12 +102,12 @@ function render(){
  $('#hero-footnote').textContent=state.completed.length===100?t('allDone'):(locale==='en'?`Chapter ${current.id} · Small quest ${smallQuest.next?.number||smallQuest.quests.length} / ${smallQuest.quests.length} · Up to 10 new words`:`第 ${current.id} 大章節・第 ${smallQuest.next?.number||smallQuest.quests.length} / ${smallQuest.quests.length} 小關・每次最多 10 個新字`);
  $('.map-tag').textContent=locale==='en'?`100 chapters · ${totalQuests.toLocaleString()} small quests`:`100 大章節・${totalQuests.toLocaleString()} 小關`;
  $('[data-i18n="mapSubtitle"]').textContent=locale==='en'?`${totalQuests.toLocaleString()} small quests. 7,000 words.`:`${totalQuests.toLocaleString()} 個小關，累積 7,000 字`;
- mountAdventure($('#adventure-panel'),adventureChanged);
+ mountAdventure($('#adventure-panel'),()=>{adventureChanged();renderChapter();});
  renderPracticePanel();renderMilestones(stats);renderMap();renderChapter();if(currentView==='words')renderWords();if(currentView==='journal')renderJournal();updateLanguageButton();
 }
 function renderMilestones(stats){
  $('#milestones').innerHTML=MILESTONES.map((band,i)=>`<button class="milestone ${stats.learned>=band.target?'achieved':''}" data-band="${band.from}"><span class="milestone-index">0${i+1}</span><div><small>${t('chapterRange',{from:band.from,to:band.to})} · ${esc(locale==='en'?band.english:band.title)}</small><strong>${band.target.toLocaleString()}<em> ${t('cumulative')}</em></strong><div class="milestone-track"><span style="width:${Math.min(100,stats.learned/band.target*100)}%"></span></div></div>${icon(stats.learned>=band.target?'check':'arrow')}</button>`).join('');
- $$('[data-band]').forEach(b=>b.onclick=()=>{selected=Number(b.dataset.band);mapPage=Math.floor((selected-1)/10);renderMap();renderChapter();$('#map-title').scrollIntoView({behavior:'smooth',block:'center'});});
+ $$('[data-band]').forEach(b=>b.onclick=()=>{selected=Number(b.dataset.band);mapPage=Math.floor((selected-1)/10);renderMap();renderChapter();immersion.open('route');});
 }
 const mapImages=new Map();
 let displayedMap=-1,mapImageRequest=0,mapImageStatus='loading',mapSelection=null;
@@ -163,7 +164,7 @@ function renderMap(){
  const focusStage=document.activeElement?.dataset.stage;
  $('#map-nodes').innerHTML=pageStages.map((s,i)=>{const complete=state.completed.includes(s.id),current=s.id===unlocked()&&!complete;return `<button class="map-node ${complete?'complete':current?'current':'locked'} ${selected===s.id?'selected':''}" style="left:${MAP_POINTS[i][0]}%;top:${MAP_POINTS[i][1]}%" data-stage="${s.id}" aria-label="${esc(t('stageLabel',{id:s.id,title:stageTitle(s),status:t(complete?'completed':current?'available':'locked')}))}" aria-pressed="${selected===s.id}" ${current?'aria-current="step"':''}>${current?`<span class="node-flag">${icon('flag')} ${locale==='en'?'YOU ARE HERE':'你的足跡'}</span>`:''}<span class="node-circle">${complete?icon('check'):s.id}${!complete&&!current?`<span class="node-lock">${icon('lock')}</span>`:''}</span><span class="node-title">${String(s.id).padStart(2,'0')} · ${esc(stageTitle(s))}</span></button>`}).join('');
  $$('[data-stage]').forEach(b=>{
-  b.onclick=()=>{selected=Number(b.dataset.stage);renderMap();renderChapter();};
+  b.onclick=()=>{selected=Number(b.dataset.stage);renderMap();renderChapter();immersion.close();};
   b.onfocus=()=>revealMapStage(Number(b.dataset.stage),{smooth:true});
  });
  if(focusStage)$(`[data-stage="${focusStage}"]`)?.focus({preventScroll:true});
@@ -182,13 +183,14 @@ function renderChapter(){
  const startLabel=locked?t('waitChapter'):!available?t('dataPending'):complete?t('reviewLearned'):(en?`Start small quest ${smallQuest.next?.number||1} · ${Math.min(learning().batchSize,remaining)} words`:`出發・第 ${smallQuest.next?.number||1} 小關・${Math.min(learning().batchSize,remaining)} 字`);
  $('#chapter-panel').innerHTML=`${renderChapterBanner(s,locale)}<div class="chapter-overline"><span>${en?'CHAPTER':'大章節'} ${String(s.id).padStart(3,'0')} / 100</span><span class="chapter-seal">✦</span></div><h3>${esc(stageTitle(s))}</h3>${en?'':`<p class="chapter-english">${esc(getReading(s.id).title.en)}</p>`}<p class="chapter-story">${esc(opening?.text||stageStory(s))}</p><div class="chapter-meta"><span>${icon('book')} ${learnedIn(s)} / ${t('wordCount',{n:s.quota})}</span><span>${icon('flag')} ${esc(stagePlace(s))}</span><span>${esc(difficultyLabel(s,locale))}</span><span>${icon('spark')} ${t('chapterTotal',{n:s.cumulative.toLocaleString()})}</span></div>${renderMicroquestTrail(s,state,locale,locked)}<button class="primary" id="chapter-start" ${locked||!available?'disabled':''}>${startLabel} ${icon(locked?'lock':'arrow')}</button><p class="chapter-hint">${t(locked?'lockedHint':complete?'completeHint':'questHint')}</p>`;
  $('#chapter-start').onclick=()=>complete?beginReview(s.id):beginStage(s.id);
+ immersion.update({stageId:s.id,title:stageTitle(s),place:stagePlace(s),story:opening?.text||stageStory(s),action:startLabel,disabled:locked||!available,locale,role:getAdventure().role,progress:en?`Chapter ${s.id} · ${smallQuest.completed}/${smallQuest.quests.length} small quests · ${learnedIn(s)}/${s.quota} words`:`第 ${s.id} 大關 · 已過 ${smallQuest.completed}/${smallQuest.quests.length} 小關 · ${learnedIn(s)}/${s.quota} 字`});
  const current=$('.microquest-node.is-current');if(current)current.parentElement.scrollLeft=Math.max(0,current.offsetLeft-current.parentElement.offsetLeft-12);
 }
-function setView(view){stopSpeaking();currentView=view;$$('.view').forEach(v=>v.hidden=v.id!==view+'-view');$$('[data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);if(b.dataset.view===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});$('#page-label').textContent=t(view);if(view==='words')renderWords();if(view==='journal')renderJournal();history.replaceState(null,'','#'+view);window.scrollTo({top:0,behavior:'instant'});}
+function setView(view){immersion.close();stopSpeaking();currentView=view;$$('.view').forEach(v=>v.hidden=v.id!==view+'-view');$$('[data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===view);if(b.dataset.view===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});$('#page-label').textContent=t(view);if(view==='words')renderWords();if(view==='journal')renderJournal();history.replaceState(null,'','#'+view);window.scrollTo({top:0,behavior:'instant'});}
 function speak(id){const w=wordMap.get(id);if(w)requiresContextAudio(w)?speakText(w.example):speakWord(w.word);}
 function wireSounds(){ $$('[data-speak]').forEach(b=>b.onclick=()=>speak(b.dataset.speak));$$('[data-speak-example]').forEach(b=>b.onclick=()=>{const w=wordMap.get(b.dataset.speakExample);if(w?.example)speakText(w.example);}); }
-function beginStage(id){if(!canUseLocalSnapshot())return;stopSpeaking();if(learning().draft){resumeDraft();return;}try{session=startSession(state,id,Date.now(),{size:learning().batchSize});checkpoint();adventureChanged();pendingResult=null;$('#lesson-dialog').showModal();updateLanguageButton();renderInvitation();}catch(e){console.error(e);toast(t(e instanceof RangeError?'startError':'dataError'));}}
-function beginReview(stageId){if(!canUseLocalSnapshot())return;stopSpeaking();if(learning().draft){toast(say('已有未完成練習，先接續並完成，再選新的複習。','Resume your unfinished practice before starting another review.'));resumeDraft();return;}if(!Object.keys(state.words).length){toast(t('noReview'));return;}session=reviewSession(state,Date.now(),{stageId:Number.isInteger(stageId)?stageId:undefined});checkpoint();adventureChanged();pendingResult=null;$('#lesson-dialog').showModal();updateLanguageButton();renderLesson();}
+function beginStage(id){if(!canUseLocalSnapshot())return;stopSpeaking();if(learning().draft){resumeDraft();return;}try{session=startSession(state,id,Date.now(),{size:learning().batchSize});checkpoint();adventureChanged();pendingResult=null;immersion.close();$('#lesson-dialog').showModal();updateLanguageButton();renderInvitation();}catch(e){console.error(e);toast(t(e instanceof RangeError?'startError':'dataError'));}}
+function beginReview(stageId){if(!canUseLocalSnapshot())return;stopSpeaking();if(learning().draft){toast(say('已有未完成練習，先接續並完成，再選新的複習。','Resume your unfinished practice before starting another review.'));resumeDraft();return;}if(!Object.keys(state.words).length){toast(t('noReview'));return;}session=reviewSession(state,Date.now(),{stageId:Number.isInteger(stageId)?stageId:undefined});checkpoint();adventureChanged();pendingResult=null;immersion.close();$('#lesson-dialog').showModal();updateLanguageButton();renderLesson();}
 function reviewRoundNote(){const warm=session.queue.every(id=>state.words[id]?.nextDue>Date.now());return (warm?`<p>${say('目前是未到期暖身；答對不增加熟練。','Not yet due: this warm-up does not increase mastery.')}</p>`:'')+ `<p class="review-round-note">${t('reviewRound',{due:getStats(state).due,n:new Set(session.queue.slice(session.index)).size,total:session.phaseTotal})}</p>`;}
 function renderInvitation(){
  const s=stages[session.stageId-1],opening=getStoryOpening(s.id);
@@ -286,6 +288,7 @@ initVoice({getLanguage:()=>locale});
 const pageVoiceControls=document.createElement('div');pageVoiceControls.id='page-voice-controls';$('.topbar').after(pageVoiceControls);mountVoiceControls(pageVoiceControls);
 const lessonVoiceControls=document.createElement('div');lessonVoiceControls.id='lesson-voice-controls';$('.lesson-top').after(lessonVoiceControls);mountVoiceControls(lessonVoiceControls);
 const practicePanel=document.createElement('section');practicePanel.id='practice-panel';practicePanel.className='practice-panel';$('#milestones').before(practicePanel);
+const immersion=createImmersion();
 applyIcons();
 $$('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));$('.brand').onclick=e=>{e.preventDefault();setView('journey');};
 $('#start-adventure').onclick=()=>state.completed.length===100?beginReview():beginStage(unlocked());$('#review-all').onclick=()=>beginReview();

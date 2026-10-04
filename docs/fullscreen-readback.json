@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-04T09:19:14.113658+00:00",
+  "assets": [
+    {
+      "file": "index.html",
+      "url": "https://word-odyssey.hk6429.workers.dev/?release=fullscreen-20261004-final",
+      "status": 200,
+      "sha256": "f89f0e26049ca35ef5d97b74f78216a5626e44e5a2ffa133259182350fe41501",
+      "matches": true,
+      "mime": "text/html",
+      "nosniff": "nosniff"
+    },
+    {
+      "file": "app.js",
+      "url": "https://word-odyssey.hk6429.workers.dev/app.js?release=fullscreen-20261004-final",
+      "status": 200,
+      "sha256": "2e63a07314732ed0c6cfd0cf5921de85db0b108610a3e54b7cbe3030b9733435",
+      "matches": true,
+      "mime": "text/javascript",
+      "nosniff": "nosniff"
+    },
+    {
+      "file": "immersive.js",
+      "url": "https://word-odyssey.hk6429.workers.dev/immersive.js?release=fullscreen-20261004-final",
+      "status": 200,
+      "sha256": "d178352b518b4ca500ef5a91f1c40220746b7c4190cb7f07f574407448b478cd",
+      "matches": true,
+      "mime": "text/javascript",
+      "nosniff": "nosniff"
+    },
+    {
+      "file": "immersive.css",
+      "url": "https://word-odyssey.hk6429.workers.dev/immersive.css?release=fullscreen-20261004-final",
+      "status": 200,
+      "sha256": "8a6091f8b04fc606d90183de69b826840c451f557bd85a21acce67b73ef5c0b5",
+      "matches": true,
+      "mime": "text/css",
+      "nosniff": "nosniff"
+    }
+  ]
+}
