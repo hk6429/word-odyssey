@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-04T09:00:40.955191+00:00",
+  "assets": [
+    {
+      "file": "app.js",
+      "url": "https://word-odyssey.hk6429.workers.dev/app.js",
+      "status": 200,
+      "sha256": "91cedf8109719677ff256f28c44ba4d1b9e986fa569845f491f78db2ff38a054",
+      "matches": true,
+      "mime": "text/javascript",
+      "nosniff": "nosniff"
+    },
+    {
+      "file": "quest-visuals.js",
+      "url": "https://word-odyssey.hk6429.workers.dev/quest-visuals.js",
+      "status": 200,
+      "sha256": "497022eb818589ff40b560eb3b6850ac666af0cdca19328dc744093cd1ec0481",
+      "matches": true,
+      "mime": "text/javascript",
+      "nosniff": "nosniff"
+    },
+    {
+      "file": "style.css",
+      "url": "https://word-odyssey.hk6429.workers.dev/style.css",
+      "status": 200,
+      "sha256": "ec3039edb21b8fbb3c2d13e1bc421824931a426651687cd73ea6e1a9cea560f0",
+      "matches": true,
+      "mime": "text/css",
+      "nosniff": "nosniff"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "viewport": {
+    "width": 390,
+    "horizontalOverflow": false
+  },
+  "consoleErrors": [],
+  "testsTotalAcrossFourSites": 218,
+  "productionVersion": "ba9bd044-249d-4940-a119-72bb652ba35c",
+  "scenarios": [
+    "review then learn and challenge",
+    "6/10 small quest and 6/60 chapter",
+    "partial batch no encounter",
+    "story continuation"
+  ]
+}
