@@ -41,3 +41,58 @@ body{background:#f5f1e6}.sidebar{position:absolute;inset:0 0 auto;width:100%;hei
 @media(max-width:700px){.sidebar{display:block}.sidebar nav{width:auto}.world-portrait{width:72vw;height:57%}}
 .topbar{z-index:35}
 .world-dialogue{bottom:60px}
+
+/* The current small-quest painting is the stage, not a postcard. */
+.world-stage .world-landscape{background-image:var(--quest-art);background-size:var(--quest-size,cover);background-position:var(--quest-x) var(--quest-y)}
+.world-stage .world-portrait{display:none}
+.world-stage .world-shade{background:linear-gradient(90deg,#f9f4e89c,transparent 63%),linear-gradient(180deg,#faf5e450,transparent 65%)}
+#lesson-dialog,.scenic-reading{isolation:isolate;background:transparent;overflow:auto}
+#lesson-dialog::before,.scenic-reading::before{content:"";position:fixed;inset:0;z-index:-2;background-image:linear-gradient(90deg,#f9f4e866,transparent 70%),var(--quest-art);background-size:100% 100%,var(--quest-size,cover);background-position:center,var(--quest-x) var(--quest-y);background-repeat:no-repeat;pointer-events:none}
+#lesson-dialog::backdrop,.scenic-reading::backdrop{background:#20362d;backdrop-filter:none}
+#lesson-dialog>.lesson-top,#lesson-dialog>#lesson-voice-controls,#lesson-dialog>.lesson-language-note{background:#fff9e9e8;border-radius:5px;padding:9px 14px;max-width:690px}
+#lesson-dialog>.lesson-progress{max-width:690px;background:#fff9e9d9;padding:12px;border-radius:5px;margin-top:8px}
+#lesson-dialog>#lesson-body{max-width:690px}
+#lesson-dialog .lesson-inner{background:#fffaf0eb;border:1px solid #c8b995;border-radius:7px;padding:24px;margin-top:14px;backdrop-filter:blur(5px)}
+#lesson-dialog .invitation{background:#fffaf0d9}
+#lesson-dialog .microquest-arrival{margin:14px 0;width:auto;max-width:none;border:0;box-shadow:none;background:transparent;padding:0}
+#lesson-dialog .microquest-arrival-picture{display:none}
+#lesson-dialog .microquest-arrival figcaption{padding:8px 0;border-bottom:1px solid #b4a583}
+#lesson-dialog .invitation-outline{margin:18px 0}
+#lesson-dialog .invitation-plan{padding:12px 0;gap:10px}
+#lesson-dialog .chapter-reading-fold,#lesson-dialog .grammar-support{padding:12px 0;margin:10px 0;border-top:1px solid #d1c5ad}
+#lesson-dialog .story-reading{display:block;background:none;border:0;box-shadow:none}
+#lesson-dialog .story-reading-image,.scenic-reading .story-reading-image{display:none}
+#lesson-dialog .story-reading-body{padding:12px 0}
+.scenic-reading{width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:25px 5vw;border:0;border-radius:0}
+.scenic-reading>.read-close{position:sticky;top:0;z-index:4;background:#fff9e8}
+.scenic-reading .independent-reading{max-width:690px;margin-top:20px}
+.scenic-reading .story-reading{display:block;background:#fffaf0ed;border:1px solid #c8b995;border-radius:7px;padding:20px}
+.scenic-reading .story-reading-body{padding:0}
+.task-card{border:1px solid #aaba9a;border-radius:6px;padding:18px;margin:14px 0;background:#fffdf4}
+.task-card legend{padding:0 8px;color:#486b52;font-weight:700}
+.task-card h4{font-size:18px;line-height:1.65;margin:5px 0 16px}
+.task-context{font:22px/1.65 Georgia,serif;color:#223d2e;background:#edf0e3;padding:15px;border-radius:4px}
+.task-options{display:grid;gap:10px}
+.task-options button{display:flex;align-items:flex-start;gap:12px;width:100%;text-align:left;white-space:normal;font-size:16px;line-height:1.65;padding:12px 15px;min-height:48px;color:#294638;background:#f6f8ed;border:1px solid #aebe9e;border-radius:5px}
+.task-options button:hover:not(:disabled){background:#e1e9d8}
+.task-options button small{font:700 12px/2 system-ui;flex:0 0 20px}
+.task-options button:disabled{opacity:.55}
+.task-feedback{font-size:14px;line-height:1.8;color:#654a24}
+.task-order{padding-left:22px;line-height:1.7}.task-order:empty{display:none}
+.task-order li{padding:5px}.task-finish{padding:20px;background:#e6ecdf;border-radius:6px}
+.task-card>[data-task-next],.task-card>[data-task-undo]{margin-top:12px;min-height:42px}
+.grammar-reference{margin-top:15px;border-top:1px solid #d1c5ad;padding-top:10px}
+@media(max-width:700px){
+ #lesson-dialog{padding:12px 12px 35px;background:transparent}
+ #lesson-dialog::before,.scenic-reading::before{background-image:linear-gradient(180deg,#fff7e930,#16392825),var(--quest-art)}
+ #lesson-dialog .lesson-inner{padding:18px 15px;margin-top:22vh}
+ #lesson-dialog .lesson-inner.invitation{margin-top:28vh}
+ #lesson-dialog>.lesson-progress .journey-progress{font-size:12px;padding:10px}
+ #lesson-dialog .illustrated-flashcard{display:block}.illustrated-flashcard .word-scene-card{display:none}
+ .scenic-reading{padding:16px 14px 35px}.scenic-reading .independent-reading{margin-top:28vh}.scenic-reading .story-reading{padding:18px 14px}
+ .task-card{padding:14px 10px}.task-card h4{font-size:17px}.task-context{font-size:20px;padding:12px}.task-options button{font-size:15px;padding:11px}
+}
+
+.letter-tiles{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.letter-tiles button{min-width:42px;min-height:44px;font-size:22px;background:#f4f7e9;border:1px solid #9aac87;border-radius:5px}.letter-tiles button:disabled{opacity:.3}#recall-tiles{margin:12px 0;min-height:44px}
+
+.scene-missions{display:grid;gap:10px;margin:18px 0}.scene-missions button{min-height:48px;background:#eff2e4;border:1px solid #a8b795;border-radius:5px;padding:12px;font-size:15px;color:#294638;text-align:left}.reading-source>summary{font-size:13px;padding:10px 0;cursor:pointer}.scenic-reading .grammar-support{background:#fffaf0ed;padding:22px;border:1px solid #c8b995;border-radius:7px}.scenic-reading .grammar-support>summary{font-size:19px;font-weight:600}.scenic-reading>.independent-reading,#lesson-dialog>#lesson-body,#lesson-dialog>.lesson-top,#lesson-dialog>.lesson-progress,#lesson-dialog>#lesson-voice-controls,#lesson-dialog>.lesson-language-note{max-width:600px}

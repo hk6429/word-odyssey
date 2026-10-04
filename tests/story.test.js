@@ -1,3 +1,4 @@
+import {buildReadingTasks,createTaskRun} from '../reading-practice.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { getReading, getAdventure, setAdventure, validateAdventure, getStoryStats, getEncounter, chooseEncounter, setStoryLocale, mountAdventure, mountEncounter, mountReading, getStoryOpening, getStoryReturn, getStoryEnding, storyBranches, roleObservations, roles } from '../story.js';
@@ -78,13 +79,14 @@ test('malformed snapshots and unknown choices cannot mutate existing state',()=>
 class NodeStub {
  constructor(dataset={}){this.dataset=dataset;this.textContent='';this.listeners={};this.classList={toggle(){}};}
  addEventListener(type,listener){this.listeners[type]=listener;}
- click(){this.listeners.click?.();}
+ click(){this.listeners.click?.();this.onclick?.();}
+ focus(){}
 }
 class ContainerStub {
  constructor(){this.nodes=new Map();this.html='';}
  set innerHTML(value){this.html=value;this.nodes=new Map();}
  get innerHTML(){return this.html;}
- querySelector(selector){if(!this.nodes.has(selector))this.nodes.set(selector,new NodeStub());return this.nodes.get(selector);}
+ querySelector(selector){if(!this.nodes.has(selector))this.nodes.set(selector,selector==='[data-reading-deck]'?new ContainerStub():new NodeStub());return this.nodes.get(selector);}
  querySelectorAll(selector){
   const attribute=selector.match(/^\[(data-[\w-]+)\]$/)?.[1];if(!attribute)return [];
   if(!this.nodes.has(selector)){
@@ -102,14 +104,12 @@ test('English story views have no Chinese and all 300 checks provide actual feed
   const reading=getReading(stageId),container=new ContainerStub();mountReading(container,{stageId});
   assert.equal(chinese.test(container.innerHTML),false,`Reading ${stageId}`);
   assert.equal(chinese.test(getStoryOpening(stageId).title+getStoryOpening(stageId).text),false);
-  for(const [index,quiz] of reading.quizzes.entries()){
-   const options=container.querySelectorAll('[data-reading-answer]').filter(option=>Number(option.dataset.readingQuiz)===index);
-   options.find(option=>option.dataset.readingAnswer!==quiz.answer).click();
-   assert.match(container.querySelector(`[data-reading-feedback="${index}"]`).textContent,/try again/);
-   options.find(option=>option.dataset.readingAnswer===quiz.answer).click();
-   assert.ok(container.querySelector(`[data-reading-feedback="${index}"]`).textContent.includes(quiz.evidence));
-   container.querySelectorAll('[data-reading-reveal]')[index].click();
-   assert.ok(container.querySelector(`[data-reading-feedback="${index}"]`).textContent.includes(quiz.answer));
+  assert.equal(chinese.test(container.querySelector('[data-reading-deck]').innerHTML),false);
+  for(const task of buildReadingTasks(reading,'en').filter(q=>q.kind==='reading-word')){
+   const run=createTaskRun([task]);run.answer((task.answer+1)%task.options.length);
+   assert.equal(run.index,0);assert.equal(run.awaiting,true);assert.equal(run.results[0].correct,false);
+   const correct=createTaskRun([task]);correct.answer(task.answer);assert.equal(correct.done,true);
+   assert.ok(reading.missionText.includes(task.evidence));
   }
  }
  const encounter=new ContainerStub();mountEncounter(encounter,{stageId:1,quest:1});

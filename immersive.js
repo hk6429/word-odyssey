@@ -31,7 +31,8 @@ export function createImmersion(){
   $('#world-speaker').textContent=text('同行的旅伴','Your companion');
   const role=['cartographer','scholar','scout'].indexOf(data.role);$('.world-portrait').style.backgroundPosition=`${Math.max(0,role)*50}% center`;
   $('.world-portrait').setAttribute('aria-label',text('與你同行的英倫旅人','Your travelling companion'));
-  $('.world-landscape').style.backgroundImage=`url('assets/${data.stageId<=10?'hero-journey':`map-region-${String(Math.floor((data.stageId-1)/10)+1).padStart(2,'0')}`}.webp')`;
+  if(data.scene){stage.style.setProperty('--quest-art',`url("${data.scene.image}")`);stage.style.setProperty('--quest-x',data.scene.x+'%');stage.style.setProperty('--quest-y',data.scene.y+'%');stage.style.setProperty('--quest-size',data.scene.tiled?'max(300vw,450svh) max(200vw,300svh)':'cover');}
+
   for(const b of stage.querySelectorAll('[data-world-panel]'))b.textContent=labels()[b.dataset.worldPanel];
   $('#world-close').textContent=text('收起 ×','Close ×');$('#world-drawer-title').textContent=labels()[panel];paint();
  }};

@@ -1,3 +1,4 @@
+import {bindTaskDeck,makeReadingRecord} from './reading-practice.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 const contextualWords = new Set(['lead', 'bow', 'minute', 'read']);
 
@@ -47,7 +48,7 @@ export function renderGrammarSupport(stageId, language = 'zh') {
   };
   const table = `<table style="width:100%;table-layout:fixed;border-collapse:collapse;text-align:left"><caption>${escape(copy.caption)}</caption><thead><tr>${copy.headers.map(header => `<th scope="col" style="padding:.5rem .25rem;overflow-wrap:anywhere">${escape(header)}</th>`).join('')}</tr></thead><tbody>${pronouns.map(row => `<tr>${row.forms.map((form, index) => index === 0 ? `<th scope="row" lang="en" style="padding:.35rem .25rem">${escape(form)}</th>` : `<td lang="en" style="padding:.35rem .25rem">${escape(form)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
   const examples = pronouns.map(row => `<p><span lang="en">${escape(row.en)}</span>${en ? '' : `<br><span>${escape(row.zh)}</span>`}</p>`).join('');
-  return `<details class="story-translation grammar-support" style="text-align:left;line-height:1.8"><summary style="min-height:44px">${escape(copy.title)}</summary><p>${escape(copy.note)}</p><p>${escape(copy.roles)}</p>${table}<p><strong>${escape(copy.examples)}</strong></p>${examples}<p>${escape(copy.theirs)}</p><p>${escape(copy.be)}</p><p><span lang="en">I am ready. She is here. We are friends.</span>${en ? '' : `<br>${escape(copy.beExample)}`}</p></details>`;
+  return `<details class="story-translation grammar-support" style="text-align:left;line-height:1.8"><summary style="min-height:44px">${escape(copy.title)}</summary><p>${escape(copy.note)}</p><div data-grammar-deck></div><details class="grammar-reference"><summary>${en?'Look up the table and examples':'需要時再查：人稱表與例句'}</summary><p>${escape(copy.roles)}</p>${table}<p><strong>${escape(copy.examples)}</strong></p>${examples}<p>${escape(copy.theirs)}</p><p>${escape(copy.be)}</p><p><span lang="en">I am ready. She is here. We are friends.</span>${en ? '' : `<br>${escape(copy.beExample)}`}</p></details></details>`;
 }
 
 const difficultyLabels={
@@ -58,4 +59,17 @@ export function difficultyLabel(stage,language='zh'){
  const bands=[...new Set(stage.words.map(word=>word.difficultyBand).filter(Boolean))];
  const labels=difficultyLabels[language==='en'?'en':'zh'];
  return bands.map(band=>labels[band-1]).join(' → ');
+}
+
+export const grammarTasks=[
+ {id:'grammar-my',context:'I have _____ bag.',options:['me','my','I'],answer:1,evidence:'I have my bag. Please help me.'},
+ {id:'grammar-him',context:'He has his key. Give it to _____.',options:['him','he','his'],answer:0,evidence:'He has his key. Give it to him.'},
+ {id:'grammar-her',context:'She has _____ book.',options:['she','her','hers'],answer:1,evidence:'She has her book. I help her.'},
+ {id:'grammar-us',context:'We have our map. Come with _____.',options:['we','our','us'],answer:2,evidence:'We have our map. Come with us.'},
+ {id:'grammar-them',context:'They have their bags. I help _____.',options:['their','them','they'],answer:1,evidence:'They have their bags. I help them.'},
+ {id:'grammar-be',context:'We _____ friends.',options:['am','is','are'],answer:2,evidence:'I am ready. She is here. We are friends.'},
+];
+export function bindGrammarSupport(container,stageId,locale='zh',onPractice=()=>{}){
+ const tasks=grammarTasks.map(q=>({...q,type:'choice',prompt:locale==='en'?'Choose the form that fits this sentence.':'選出適合這個句子的形式。'}));
+ return bindTaskDeck(container.querySelector('[data-grammar-deck]'),tasks,locale,r=>onPractice(makeReadingRecord(stageId,r.task.id,'reading-check',r.response,r.task.evidence,r.correct?'correct':'incorrect')));
 }

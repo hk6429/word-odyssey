@@ -88,3 +88,12 @@ export function renderJourneyProgress(stage,state,locale,batchSize=5){
  const remaining=next?next.words.filter(w=>!Object.hasOwn(state.words,w.id)).length:0;
  return `<section class="journey-progress" aria-label="${en?'Chapter progress':'大關與小關進度'}"><strong>${en?`Chapter ${stage.id} · ${completed}/${quests.length} small quests complete`:`第 ${stage.id} 大關 · 已過 ${completed} / ${quests.length} 小關`}</strong><p>${next?(en?`Small quest ${next.number}: ${esc(label(next))} · ${next.words.length-remaining}/${next.words.length} words; ${remaining} left`:`目前第 ${next.number} 小關「${esc(label(next))}」· ${next.words.length-remaining}/${next.words.length} 字，還差 ${remaining} 字`):(en?'All small quests complete.':'本大關所有小關已完成。')}</p><progress value="${known}" max="${stage.words.length}" aria-label="${en?'Collected chapter words':'本大關已收集單字'}"></progress><p>${en?`${known}/${stage.words.length} chapter words · ${quests.length-completed} small quests and ${left} words left.`:`本大關已收集 ${known}/${stage.words.length} 字 · 還有 ${quests.length-completed} 小關、${left} 字。`}</p><details><summary>${en?'View completed and remaining small quests':'查看已完成與尚未完成的小關'}</summary><ol>${quests.map(q=>`<li ${q===next?'aria-current="step"':''}>${q.complete?'✓':q===next?'→':'○'} ${q.number}. ${esc(label(q))} · ${q.words.filter(w=>Object.hasOwn(state.words,w.id)).length}/${q.words.length} ${en?'words':'字'}</li>`).join('')}</ol><p>${en?`A batch of ${batchSize} words is practice, not a whole small quest. Words count after the batch is completed; review and retries add no new landmarks.`:`每批 ${batchSize} 字是一次練習；小關以各自的字數為準。完成整批才收集，複習與重試不增加小關數。`}</p></details></section>`;
 }
+
+export function getJourneyScene(stage,state){
+ const {next,quests}=getMicroquests(stage,state),quest=next??quests.at(-1);
+ const region=Math.floor((stage.id-1)/10)+1,slot=(stage.id+quest.number-2)%9;
+ return {image:region===1?`assets/quest-scenes/01-${slot+1}.webp`:`assets/miniquests-${String(region).padStart(2,'0')}.webp`,tiled:region!==1,x:region===1?65:slot%3*50,y:region===1?50:Math.floor(slot/3)*50,number:quest.number,label:microquestScenes[region-1][slot]};
+}
+export function applyJourneyScene(node,stage,state){
+ const scene=getJourneyScene(stage,state);node.style.setProperty('--quest-art',`url("${scene.image}")`);node.style.setProperty('--quest-x',scene.x+'%');node.style.setProperty('--quest-y',scene.y+'%');node.style.setProperty('--quest-size',scene.tiled?'max(300vw,450dvh) max(200vw,300dvh)':'cover');return scene;
+}

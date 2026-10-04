@@ -1,0 +1,146 @@
+[
+  {
+    "path": "app.js",
+    "status": 200,
+    "match": true,
+    "type": "text/javascript",
+    "nosniff": true,
+    "bytes": 48935
+  },
+  {
+    "path": "story.js",
+    "status": 200,
+    "match": true,
+    "type": "text/javascript",
+    "nosniff": true,
+    "bytes": 51944
+  },
+  {
+    "path": "reading-practice.js",
+    "status": 200,
+    "match": true,
+    "type": "text/javascript",
+    "nosniff": true,
+    "bytes": 8334
+  },
+  {
+    "path": "curriculum-support.js",
+    "status": 200,
+    "match": true,
+    "type": "text/javascript",
+    "nosniff": true,
+    "bytes": 6356
+  },
+  {
+    "path": "quest-visuals.js",
+    "status": 200,
+    "match": true,
+    "type": "text/javascript",
+    "nosniff": true,
+    "bytes": 11808
+  },
+  {
+    "path": "immersive.js",
+    "status": 200,
+    "match": true,
+    "type": "text/javascript",
+    "nosniff": true,
+    "bytes": 4523
+  },
+  {
+    "path": "practice-panel.js",
+    "status": 200,
+    "match": true,
+    "type": "text/javascript",
+    "nosniff": true,
+    "bytes": 10581
+  },
+  {
+    "path": "immersive.css",
+    "status": 200,
+    "match": true,
+    "type": "text/css",
+    "nosniff": true,
+    "bytes": 15484
+  },
+  {
+    "path": "index.html",
+    "status": 200,
+    "match": true,
+    "type": "text/html",
+    "nosniff": true,
+    "bytes": 12425
+  },
+  {
+    "path": "assets/quest-scenes/01-1.webp",
+    "status": 200,
+    "match": true,
+    "type": "image/webp",
+    "nosniff": true,
+    "bytes": 504056
+  },
+  {
+    "path": "assets/quest-scenes/01-2.webp",
+    "status": 200,
+    "match": true,
+    "type": "image/webp",
+    "nosniff": true,
+    "bytes": 484194
+  },
+  {
+    "path": "assets/quest-scenes/01-3.webp",
+    "status": 200,
+    "match": true,
+    "type": "image/webp",
+    "nosniff": true,
+    "bytes": 542156
+  },
+  {
+    "path": "assets/quest-scenes/01-4.webp",
+    "status": 200,
+    "match": true,
+    "type": "image/webp",
+    "nosniff": true,
+    "bytes": 497222
+  },
+  {
+    "path": "assets/quest-scenes/01-5.webp",
+    "status": 200,
+    "match": true,
+    "type": "image/webp",
+    "nosniff": true,
+    "bytes": 497934
+  },
+  {
+    "path": "assets/quest-scenes/01-6.webp",
+    "status": 200,
+    "match": true,
+    "type": "image/webp",
+    "nosniff": true,
+    "bytes": 440974
+  },
+  {
+    "path": "assets/quest-scenes/01-7.webp",
+    "status": 200,
+    "match": true,
+    "type": "image/webp",
+    "nosniff": true,
+    "bytes": 447764
+  },
+  {
+    "path": "assets/quest-scenes/01-8.webp",
+    "status": 200,
+    "match": true,
+    "type": "image/webp",
+    "nosniff": true,
+    "bytes": 449642
+  },
+  {
+    "path": "assets/quest-scenes/01-9.webp",
+    "status": 200,
+    "match": true,
+    "type": "image/webp",
+    "nosniff": true,
+    "bytes": 445796
+  }
+]

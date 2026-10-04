@@ -6,12 +6,6 @@ export const firstChapterChecks = [
  {id:'reference',prompt:text('What does “it” in “A fox sits beside it” refer to?','「A fox sits beside it」中的 it 指什麼？'),options:[text('The red letter','紅色的信'),text('The fox','狐狸'),text('A named traveller','有名字的旅人')],answer:0,evidence:'A red letter is on the path. A fox sits beside it.'},
  {id:'inference',prompt:text('Which conclusion is supported by this passage?','哪一個判斷有這段原文支持？'),options:[text('The fox wrote the letter.','狐狸寫了這封信。'),text('We cannot identify the owner from a name on the letter.','我們無法根據信上的名字確認主人。'),text('The letter is addressed to the fox.','這封信是寄給狐狸的。')],answer:1,evidence:'The letter has no name.'},
 ];
-export const interpretationTasks = [
- {id:'purpose',label:text('Purpose','人物目的'),prompt:text('Choose a character or speaker. What might they want? Explain which action or words support your reading. If the purpose is unstated, say what is still unknown.','選一位人物或說話者：他可能想達成什麼？用動作或話語說明理由；若原文沒說，指出仍不知道的部分。')},
- {id:'cause',label:text('Cause and effect','前因後果'),prompt:text('Explain how one event affects the next. Distinguish a stated cause from your guess; if no cause is given, explain what is missing.','說明一件事如何影響後續。分清楚原文明說的原因與你的猜測；若沒有交代因果，說明缺少什麼資訊。')},
- {id:'reference',label:text('Reference and connection','指涉連結'),prompt:text('Choose a pronoun or repeated description. Explain who or what it refers to, using a nearby sentence. If there is no pronoun, explain how two mentions connect.','選一個代名詞或重複出現的描述，用前後句說明它指誰或什麼；若沒有代名詞，說明兩處提及的內容如何連結。')},
- {id:'inference',label:text('Inference and uncertainty','推論與疑問'),prompt:text('Make one inference about the scene. Explain how your quotation supports it, and name one thing the passage does not yet establish.','對這個場景提出一個推論，說明引句如何支持它，再指出一件原文仍無法確定的事。')},
-];
 export function checkInterpretation(reading, response, evidence) {
  if (!normalize(response)) return 'response-missing';
  const quote = normalize(evidence);
@@ -20,37 +14,47 @@ export function checkInterpretation(reading, response, evidence) {
 export function makeReadingRecord(stageId, taskId, kind, response, evidence, result) {
  return {id:`${taskId}:${Date.now()}:${Math.random().toString(36).slice(2,10)}`,kind,stageId,response:String(response).slice(0,1200),evidence:String(evidence).slice(0,1000),result,at:new Date().toISOString()};
 }
-function latest(records, stageId, taskId, kind) {
- return [...records].reverse().find(record => record.stageId === stageId && record.kind === kind && String(record.id).startsWith(`${taskId}:`));
-}
 const reviewNotice = text('Only the quotation is checked against the story. Your interpretation has NOT been graded; review its reasoning yourself or with a teacher.','僅核對引句是否出現在主線原文；未自動評定解讀或推論是否正確，請自行檢核或與教師討論。');
-export function readingPracticeHtml(reading, locale='zh', records=[]) {
- const pick = value => value[locale === 'en' ? 'en' : 'zh'];
- const previous = latest(records, reading.id, 'interpretation', 'reading-comprehension');
- const glossary = reading.id === 1 ? `<details class="story-translation"><summary>${pick(text('Word and phrase support','詞句支援'))}</summary><dl><dt>path</dt><dd>${pick(text('a small way for walking; “on the path” tells where the letter is','小路；on the path 說明信的位置'))}</dd><dt>beside</dt><dd>${pick(text('next to; “beside it” means next to the letter','在……旁邊；beside it 指在那封信旁'))}</dd><dt>is made of</dt><dd>${pick(text('tells what material something uses; the bridge uses stone','由……製成；手札例句中的橋以石頭建造'))}</dd></dl></details>` : '';
- return `${glossary}<section class="story-comprehension" aria-label="${pick(text('Story understanding','主線理解'))}"><h4>${pick(text('Understand the main story','讀懂主線故事'))}</h4><p>${locale==='en'?'Keys: A ← / 1 · B ↑ / 2 · C ↓ / 3 · D → / 4':choiceHint}</p>${reading.id===1?firstChapterChecks.map((check,questionIndex)=>`<fieldset data-quiz-options ${questionIndex?'hidden':''}><legend>${escape(pick(check.prompt))}</legend>${check.options.map((option,index)=>`<button type="button" class="story-button" data-quiz-choice data-story-check="${check.id}" data-story-option="${index}"><small>${"ABCD"[index]}</small> ${escape(pick(option))}</button>`).join('')}<p data-story-check-feedback="${check.id}" aria-live="polite">${(()=>{const saved=latest(records,reading.id,check.id,'reading-check');return saved?escape(`${pick(saved.result==='correct'?text('Correct','答對了'):text('Revisit the evidence','再核對證據'))} ${saved.evidence}`):'';})()}</p></fieldset>`).join(''):''}<form data-interpretation><label>${pick(text('Choose a reading focus','選擇解讀角度'))}<select name="focus">${interpretationTasks.map(task=>`<option value="${task.id}" ${previous?.response.startsWith(`[${task.id}]`)?'selected':''}>${pick(task.label)}</option>`).join('')}</select></label><p data-interpretation-prompt></p><label>${pick(text('Your interpretation and reasoning (Chinese or English)','你的解讀與理由（中文或英文皆可）'))}<textarea name="response" rows="4" maxlength="1150" required>${escape(previous?.response.replace(/^\[[a-z]+\] /,'')||'')}</textarea></label><label>${pick(text('Quote at least 8 characters from the English main story above','引用上方英文主線原文（至少 8 個字元）'))}<textarea name="evidence" rows="2" maxlength="1000" required>${escape(previous?.evidence||'')}</textarea></label><button type="submit" class="story-button">${pick(text('Record and check quotation','記錄並核對引文'))}</button><p data-interpretation-feedback aria-live="polite">${previous?escape(pick(previous.result==='needs-review'?reviewNotice:text('This quotation was not found in the main story. Revise it and explain your reasoning.','上次引句未在主線原文找到，請修正引句並說明理由。'))):''}</p><small>${pick(reviewNotice)}</small></form></section>`;
-}
-export function bindReadingPractice(container, reading, locale='zh', onPractice=()=>{}) {
+
+export function buildReadingTasks(reading,locale='zh'){
  const pick=value=>value[locale==='en'?'en':'zh'];
- container.querySelectorAll('[data-story-check]').forEach(button=>button.addEventListener('click',()=>{
-  if(button.disabled)return;
-  const check=firstChapterChecks.find(item=>item.id===button.dataset.storyCheck);
-  const option=Number(button.dataset.storyOption),correct=option===check.answer;
-  container.querySelector(`[data-story-check-feedback="${check.id}"]`).textContent=`${pick(correct?text('Correct. Evidence:','答對了。證據：'):text('Revisit the evidence:','再核對證據：'))} ${check.evidence}`;
-  onPractice(makeReadingRecord(reading.id,check.id,'reading-check',check.options[option].en,check.evidence,correct?'correct':'incorrect'));
-  const field=button.closest('fieldset');field.querySelectorAll('[data-story-check]').forEach(b=>b.disabled=true);
-  const advance=()=>{field.hidden=true;const next=field.nextElementSibling;if(next){next.hidden=false;next.setAttribute('tabindex','-1');next.focus({preventScroll:true});}};
-  if(correct)advance();else{const next=document.createElement('button');next.type='button';next.textContent=pick(text('Read explanation — next question','看懂解析，下一題'));next.onclick=advance;field.append(next);next.focus({preventScroll:true});}
- }));
- const form=container.querySelector('[data-interpretation]');
- if(!form?.elements)return;
- const updatePrompt=()=>{form.querySelector('[data-interpretation-prompt]').textContent=pick(interpretationTasks.find(task=>task.id===form.elements.focus.value).prompt);};
- updatePrompt();form.elements.focus.addEventListener('change',updatePrompt);
- form.addEventListener('submit',event=>{
-  event.preventDefault();
-  const response=form.elements.response.value.trim(),evidence=form.elements.evidence.value.trim();
-  const result=checkInterpretation(reading,response,evidence);
-  form.querySelector('[data-interpretation-feedback]').textContent=pick(result==='needs-review'?reviewNotice:result==='response-missing'?text('Write your interpretation first.','請先寫下你的解讀。'):text('Quotation not found. Copy a complete phrase or sentence from the English main story, then explain its connection.','未找到這段引文。請從英文主線原文複製完整片語或句子，再說明與解讀的關聯。'));
-  if(result!=='response-missing')onPractice(makeReadingRecord(reading.id,'interpretation','reading-comprehension',`[${form.elements.focus.value}] ${response}`,evidence,result));
- });
+ const checks=reading.id===1?firstChapterChecks.map(q=>({...q,type:'choice',prompt:pick(q.prompt),options:q.options.map(pick)})):[];
+ const cloze=reading.quizzes.map((q,i)=>({id:`word-${i}`,type:'choice',kind:'reading-word',prompt:pick(text('Choose the word in the original sentence.','選出原句中的單字。')),context:q.prompt,options:q.options,answer:q.options.indexOf(q.answer),evidence:q.evidence}));
+ const match=reading.missions.map((m,i)=>({id:`pair-${i}`,type:'match',prompt:locale==='en'?'Match the word to its sentence.':`詞義配對：哪個單字表示「${m.meaning}」？`,context:locale==='en'?reading.quizzes[i].prompt:m.translation,options:reading.quizzes[i].options,answer:reading.quizzes[i].options.indexOf(m.word),evidence:m.sentence}));
+ const segments=[...new Intl.Segmenter('en',{granularity:'sentence'}).segment(reading.storyText)].map(x=>x.segment.trim()).filter(Boolean).slice(0,3);
+ const order=segments.length<2?[]:[{id:'story-order',type:'order',prompt:pick(text('Tap these excerpts in the order they appear in the story.','依照原文出現的順序，逐一點選這些片段。')),options:[...segments.slice(1),segments[0]],answer:segments.map((_,i)=>(i+segments.length-1)%segments.length),evidence:segments.join(' ')}];
+ return [...checks,...cloze,...match,...order];
+}
+export function createTaskRun(tasks){
+ const run={index:0,selected:[],awaiting:false,results:[],get done(){return this.index>=tasks.length;},
+ answer(option){
+  if(this.done||this.awaiting)return null;
+  const q=tasks[this.index];if(!Number.isInteger(option)||option<0||option>=q.options.length)return null;
+  if(q.type==='order'){if(this.selected.includes(option))return null;this.selected.push(option);if(this.selected.length<q.options.length)return {pending:true};}
+  const correct=q.type==='order'?this.selected.every((v,i)=>v===q.answer[i]):option===q.answer;
+  const result={correct,task:q,response:q.type==='order'?this.selected.map(i=>q.options[i]).join(' → '):q.options[option]};
+  this.results.push(result);this.awaiting=!correct;if(correct){this.index++;this.selected=[];}return result;
+ },next(){if(!this.awaiting)return false;this.index++;this.selected=[];this.awaiting=false;return true;},undo(){if(!this.awaiting)this.selected.pop();}};
+ return run;
+}
+export function bindTaskDeck(node,tasks,locale='zh',onResult=()=>{}){
+ if(!node)return;
+ const en=locale==='en',run=createTaskRun(tasks);let last='';
+ function render(focus=false){
+  if(run.done){node.innerHTML=`<div class="task-finish" role="status"><h4>${en?'This reading trail is complete':'這段閱讀任務完成了'}</h4><p>${en?'First answers correct':'首次作答答對'} ${run.results.filter(r=>r.correct).length} / ${tasks.length}</p><p>${en?'These practice records do not award vocabulary XP or unlock chapters.':'這些練習另存紀錄，不增加單字 XP 或解鎖大關。'}</p><button type="button" data-task-restart>${en?'Practise again':'再練一次'}</button></div>`;node.querySelector('[data-task-restart]').onclick=()=>bindTaskDeck(node,tasks,locale,onResult);return;}
+  const q=tasks[run.index],label=q.type==='order'?(en?'Order':'排序'):q.type==='match'?(en?'Match':'配對'):(en?'Choose':'選擇');
+  node.innerHTML=`<fieldset class="task-card" data-quiz-options tabindex="-1"><legend>${label} · ${run.index+1} / ${tasks.length}</legend><h4>${escape(q.prompt)}</h4>${q.context?`<p class="task-context">${escape(q.context)}</p>`:''}${q.type==='order'?`<ol class="task-order">${run.selected.map(i=>`<li>${escape(q.options[i])}</li>`).join('')}</ol><p>${en?'Tap to arrange; no dragging needed.':'點一下就能排列，不必拖曳。'}</p>`:''}<div class="task-options">${q.options.map((v,i)=>`<button type="button" data-quiz-choice data-task-option="${i}" ${run.awaiting||run.selected.includes(i)?'disabled':''}><small>${'ABCD'[i]}</small> ${escape(v)}</button>`).join('')}</div>${q.type==='order'?`<button type="button" data-task-undo ${!run.selected.length||run.awaiting?'disabled':''}>${en?'Undo last selection':'撤回上一個'}</button>`:''}<p class="task-feedback" role="status">${escape(last)}</p>${run.awaiting?`<button type="button" data-task-next>${en?'Read explanation, then continue':'看懂解析，繼續'}</button>`:''}</fieldset>`;
+  node.querySelectorAll('[data-task-option]').forEach(b=>b.onclick=()=>{const result=run.answer(Number(b.dataset.taskOption));if(!result)return;if(!result.pending){onResult(result);last=result.correct?(en?'Correct — next task.':'答對了，進入下一題。'):(en?'Compare with the original: ':'請核對原文：')+result.task.evidence;}render(true);});
+  const next=node.querySelector('[data-task-next]');if(next)next.onclick=()=>{run.next();last='';render(true);};
+  const undo=node.querySelector('[data-task-undo]');if(undo)undo.onclick=()=>{run.undo();render(true);};
+  if(focus)node.querySelector('fieldset').focus();
+ }
+ render();return run;
+}
+export function readingPracticeHtml(reading,locale='zh',records=[]){
+ const en=locale==='en',old=records.filter(r=>r.stageId===reading.id&&r.kind==='reading-comprehension');
+ return `<section class="story-comprehension" aria-label="${en?'Story understanding':'主線理解'}"><h4>${en?'Choose, match and order':'選一選、配一配、排一排'}</h4><p>${en?'One task at a time. No written response required.':'一次一題，不必輸入長篇文字。'}</p><p>${en?'Keys: A ← / 1 · B ↑ / 2 · C ↓ / 3 · D → / 4':choiceHint}</p><div data-reading-deck></div>${old.length?`<details class="saved-reading-notes"><summary>${en?'Your earlier written notes':'先前寫下的閱讀紀錄'}</summary>${old.map(r=>`<blockquote><p>${escape(r.response)}</p><p>${escape(r.evidence)}</p><small>${escape(en?reviewNotice.en:reviewNotice.zh)}</small></blockquote>`).join('')}</details>`:''}</section>`;
+}
+export function bindReadingPractice(container,reading,locale='zh',onPractice=()=>{}){
+ return bindTaskDeck(container.querySelector('[data-reading-deck]'),buildReadingTasks(reading,locale),locale,r=>{const source=container.querySelector('.reading-source');if(source)source.open=false;onPractice(makeReadingRecord(reading.id,r.task.id,r.task.kind??'reading-check',r.response,r.task.evidence,r.correct?'correct':'incorrect'));});
 }
