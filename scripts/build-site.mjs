@@ -25,7 +25,7 @@ async function includeModule(name) {
   }
 }
 for (const [, source] of html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["']/g)) {
-  if (source === 'https://xuexi-hangzhan-api.hk6429.workers.dev/naicheng-sso.js') continue;
+  if (source === 'https://xuexi-hangzhan-api.hk6429.workers.dev/naicheng-sso.js' || source === '//gc.zgo.at/count.js') continue;
   await includeModule(source.replace(/^\.\//, ''));
 }
 for (const tag of html.matchAll(/<link\b[^>]*>/g)) {
@@ -68,7 +68,7 @@ await writeFile(resolve(destination, '_headers'), `/*
   Referrer-Policy: strict-origin-when-cross-origin
   Cross-Origin-Opener-Policy: same-origin-allow-popups
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client https://xuexi-hangzhan-api.hk6429.workers.dev; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style https://fonts.googleapis.com; img-src 'self' data: https://*.googleusercontent.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://accounts.google.com/gsi/ https://xuexi-hangzhan-api.hk6429.workers.dev; frame-src https://accounts.google.com/gsi/; media-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client https://xuexi-hangzhan-api.hk6429.workers.dev 'sha256-EpxmpBpj87O3gD2W6fXohZe+pWhWuCQNvBOpMruS1s8=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style https://fonts.googleapis.com; img-src 'self' data: https://*.googleusercontent.com https://hk6429.goatcounter.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://accounts.google.com/gsi/ https://xuexi-hangzhan-api.hk6429.workers.dev https://hk6429.goatcounter.com; frame-src https://accounts.google.com/gsi/; media-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
 /
   Cache-Control: no-cache
